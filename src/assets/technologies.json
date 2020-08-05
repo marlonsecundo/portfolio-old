@@ -1,0 +1,12 @@
+[
+  {
+    "title": "AdonisJS",
+    "description": "AdonisJs is a Node.js web framework with a breath of fresh air and drizzle of elegant syntax on top of it.",
+    "srcImg": "adonis-logo.svg"
+  },
+  {
+    "title": "Node.js",
+    "description": "As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.",
+    "srcImg": "nodejs.svg"
+  }
+]

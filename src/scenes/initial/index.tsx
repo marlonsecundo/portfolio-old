@@ -13,7 +13,7 @@ import {
   ContactImg,
 } from './styles';
 
-const Home: React.FC = () => (
+const Initial: React.FC = () => (
   <Container>
     <TitleContainer>
       <Title>JS Developer</Title>
@@ -29,4 +29,4 @@ const Home: React.FC = () => (
   </Container>
 );
 
-export default Home;
+export default Initial;
