@@ -25,7 +25,9 @@
         "tsx": "never"
       }
     ],
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "import/resolver": {
