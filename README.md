@@ -6,3 +6,4 @@
 - https://karinasirqueira.com/
 - https://www.designbykmj.co.uk/about
 - http://www.anniezheng.me/about.html
+- http://qaisar.design/#me

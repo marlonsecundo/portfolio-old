@@ -1,7 +1,12 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import TopMenu from 'src/components/top-menu';
+import { Container } from './styles';
 
-const Header: React.FC = () => <div />;
+const Header: React.FC = () => (
+  <Container>
+    <TopMenu />
+  </Container>
+);
 
 export default Header;
