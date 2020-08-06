@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  margin-bottom: 1rem;
-`;
-
-interface LogoProps {
+interface Props {
   small?: boolean;
 }
 
-export const Logo = styled.img<LogoProps>`
-  max-height: ${(props) => (props.small ? 5 : 15)}em;
-  max-width: ${(props) => (props.small ? 5 : 15)}em;
+export const Container = styled.section<Props>`
+  height: ${(props) => (props.small ? 4 : 15)}em;
+  width: ${(props) => (props.small ? '4em' : '100%')};
+`;
+
+export const Logo = styled.img<Props>`
+  width: ${(props) => (props.small ? '4em' : '40%')};
+
+  object-fit: contain;
 `;
 
 export const TextContainer = styled.div`

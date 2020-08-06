@@ -27,6 +27,7 @@ export const Description = styled.p``;
 
 export const TechContainer = styled.section`
   flex: 1;
+  margin-right: -10rem;
   margin-top: 8rem;
   align-items: flex-end;
   flex-direction: column;
@@ -35,10 +36,13 @@ export const TechContainer = styled.section`
 export const TechList = styled.ul`
   list-style: none;
   display: flex;
+  width: 80%;
+  flex-wrap: wrap;
 `;
 
 export const TechListTitle = styled.h2`
   margin-bottom: 2rem;
+  margin-right: 2rem;
 `;
 
 export const CardContainer = styled.div``;

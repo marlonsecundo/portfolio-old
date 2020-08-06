@@ -29,7 +29,7 @@ const TechCard: React.FC<Props> = ({ tech, compacted }) => {
   }, [tech]);
 
   return (
-    <Container>
+    <Container small={compacted}>
       <Logo small={compacted} src={img} />
       {compacted ? (
         <></>

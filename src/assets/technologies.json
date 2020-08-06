@@ -2,11 +2,81 @@
   {
     "title": "AdonisJS",
     "description": "AdonisJs is a Node.js web framework with a breath of fresh air and drizzle of elegant syntax on top of it.",
-    "srcImg": "adonis-logo.svg"
+    "srcImg": "adonis-logo.png"
   },
   {
     "title": "Node.js",
     "description": "As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.",
-    "srcImg": "nodejs.svg"
+    "srcImg": "nodejs-logo.png"
+  },
+  {
+    "title": "React JS / React Native",
+    "description": "",
+    "srcImg": "react-logo.png"
+  },
+  {
+    "title": "Electron",
+    "description": "",
+    "srcImg": "electron-logo.png"
+  },
+  {
+    "title": "Express",
+    "description": "",
+    "srcImg": "express-logo.png"
+  },
+  {
+    "title": "Typescript",
+    "description": "",
+    "srcImg": "typescript-logo.png"
+  },
+  {
+    "title": "Mongo DB",
+    "description": "",
+    "srcImg": "mongodb-logo.png"
+  },
+  {
+    "title": "Postgres DB",
+    "description": "",
+    "srcImg": "postgres-logo.png"
+  },
+  {
+    "title": "Docker",
+    "description": "",
+    "srcImg": "docker-logo.png"
+  },
+  {
+    "title": "GraphQL",
+    "description": "",
+    "srcImg": "graphql-logo.svg"
+  },
+  {
+    "title": "Gatsby",
+    "description": "",
+    "srcImg": "gatsby-logo.png"
+  },
+  {
+    "title": "Python",
+    "description": "",
+    "srcImg": "python-logo.png"
+  },
+  {
+    "title": "Git",
+    "description": "",
+    "srcImg": "git-logo.png"
+  },
+  {
+    "title": "Eslint",
+    "description": "",
+    "srcImg": "eslint-logo.png"
+  },
+  {
+    "title": "Yarn",
+    "description": "",
+    "srcImg": "yarn-logo.png"
+  },
+  {
+    "title": "Npm",
+    "description": "",
+    "srcImg": "npm-logo.svg"
   }
 ]

@@ -1,4 +1,18 @@
 export enum Technologies {
   ADONIS_JS = 0,
   NODE_JS = 1,
+  REACT_JS = 2,
+  ELECTRON = 3,
+  EXPRESS = 4,
+  TYPESCRIPT = 5,
+  MONGODB = 6,
+  POSTGRES = 7,
+  DOCKER = 8,
+  GRAPHQL = 9,
+  GATSBY = 10,
+  PYTHON = 11,
+  GIT = 12,
+  ESLINT = 13,
+  YARN = 14,
+  NPM = 15,
 }
