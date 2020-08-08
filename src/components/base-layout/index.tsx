@@ -3,12 +3,12 @@ import React from 'react';
 import Header from 'src/scenes/header';
 import Footer from 'src/scenes/footer';
 
-// import { Container } from './styles';
+import { Background } from './styles';
 
 const BaseLayout: React.FC = ({ children }) => (
   <>
     <Header />
-
+    <Background />
     {children}
     <Footer />
   </>

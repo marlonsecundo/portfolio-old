@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, metrics } from 'src/styles';
 
 export const Container = styled.section`
   height: 100%;
@@ -11,15 +12,21 @@ export const TitleContainer = styled.section`
   flex-direction: column;
   margin-left: -40%;
   margin-top: -10%;
+  width: 35%;
 `;
 
 export const Title = styled.h1`
   font-size: 6em;
   padding-bottom: 3rem;
+  font-family: ${metrics.fontFamilyJS};
+  color: ${colors.secondary};
 `;
 
 export const Description = styled.p`
   margin-bottom: 0.5rem;
+  color: ${colors.primary};
+  font-family: ${metrics.fontFamily};
+  font-size: ${metrics.textSize};
 `;
 
 export const ContactContainer = styled.nav`
@@ -31,7 +38,11 @@ export const ContactContainer = styled.nav`
   align-items: center;
 `;
 
-export const ContactTitle = styled.h3``;
+export const ContactTitle = styled.h3`
+  color: ${colors.primary};
+  font-family: ${metrics.fontFamily};
+  font-weight: normal;
+`;
 
 export const ContactLink = styled.a`
   padding: 2rem;

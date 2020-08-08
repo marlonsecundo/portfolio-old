@@ -4,7 +4,14 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 import { Technologies } from 'src/types';
 import TechsData from 'src/assets/technologies.json';
-import { Container, Logo, TextContainer, Title, Description } from './styles';
+import {
+  Container,
+  Logo,
+  TextContainer,
+  Title,
+  Description,
+  BigContainer,
+} from './styles';
 
 interface Props {
   tech: Technologies;
@@ -28,8 +35,8 @@ const TechCard: React.FC<Props> = ({ tech, compacted }) => {
     updateContent();
   }, [tech]);
 
-  return (
-    <Container small={compacted}>
+  const content = (
+    <>
       <Logo small={compacted} src={img} />
       {compacted ? (
         <></>
@@ -39,7 +46,13 @@ const TechCard: React.FC<Props> = ({ tech, compacted }) => {
           <Description>{description}</Description>
         </TextContainer>
       )}
-    </Container>
+    </>
+  );
+
+  return compacted ? (
+    <Container>{content}</Container>
+  ) : (
+    <BigContainer>{content}</BigContainer>
   );
 };
 

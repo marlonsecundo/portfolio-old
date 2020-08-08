@@ -1,16 +1,31 @@
 import styled from 'styled-components';
+import { colors, metrics } from 'src/styles';
 
 interface Props {
   small?: boolean;
 }
 
-export const Container = styled.section<Props>`
-  height: ${(props) => (props.small ? 4 : 15)}em;
-  width: ${(props) => (props.small ? '4em' : '100%')};
+export const Container = styled.section`
+  height: 4em;
+  width: 4em;
+  margin-bottom: 2rem;
+  margin-left: 1em;
+  padding: 1em;
+  border-radius: 100%;
+`;
+
+export const BigContainer = styled.section`
+  height: 15em;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 2em;
+  padding-left: 0rem;
+  border-radius: 5px;
+  background-color: ${colors.card};
 `;
 
 export const Logo = styled.img<Props>`
-  width: ${(props) => (props.small ? '4em' : '40%')};
+  width: ${(props) => (props.small ? '100%' : '30%')};
 
   object-fit: contain;
 `;
@@ -19,12 +34,18 @@ export const TextContainer = styled.div`
   margin-left: 2rem;
   flex: 1;
   flex-direction: column;
-  padding-top: 2rem;
 `;
 export const Title = styled.h4`
   font-size: 1.7em;
   margin-bottom: 1em;
+  color: ${colors.secondary};
+  font-family: ${metrics.fontFamily};
+  font-size: ${metrics.subtitleSize};
+  font-weight: normal;
 `;
 export const Description = styled.p`
   line-height: 1.7em;
+  color: ${colors.primary};
+  font-family: ${metrics.fontFamily};
+  font-size: ${metrics.textSize};
 `;

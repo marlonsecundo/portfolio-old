@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+import NeutraText from 'src/assets/fonts/neutra-text-bold.otf';
+import Fantasque from 'src/assets/fonts/fantasque-sans-mono-regular.otf';
+
 const GlobalStyles = createGlobalStyle`
 html {
   font-size: 100%;
@@ -44,6 +47,21 @@ button, input {
 a {
   text-decoration: none;
 }
+
+
+@font-face {
+  font-family: 'Neutra Text';
+  src: url(${NeutraText}) format('woff2');
+}
+
+@font-face {
+  font-family: 'Fantasque Sans';
+  src: url(${Fantasque}) format('woff2');
+
+}
+
+
+
 `;
 
 export default GlobalStyles;
