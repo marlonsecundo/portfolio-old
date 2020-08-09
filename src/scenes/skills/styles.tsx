@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
+import { Container } from 'src/styles/global';
 
-export const Container = styled.section`
-  width: 100%;
-  height: 100%;
-  padding-left: 13%;
-  padding-right: 13%;
-  margin: auto;
-  padding-bottom: 3rem;
+export const StyledContainer = styled(Container)`
+  padding-top: 0rem;
 `;
 
 export const LeftContainer = styled.div`
@@ -20,13 +16,6 @@ export const LeftContainer = styled.div`
 export const TextContainer = styled.section`
   flex-direction: column;
   margin-top: 8rem;
-`;
-
-export const Title = styled.h1`
-  font-size: 4em;
-  font-family: ${metrics.fontFamilyJS};
-  color: ${colors.secondary};
-  margin-bottom: 1rem;
 `;
 
 export const Description = styled.p`

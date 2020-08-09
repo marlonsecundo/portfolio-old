@@ -15,4 +15,6 @@ export enum Technologies {
   ESLINT = 13,
   YARN = 14,
   NPM = 15,
+  JAVA = 16,
+  STYLED_COMPONENTS = 17,
 }

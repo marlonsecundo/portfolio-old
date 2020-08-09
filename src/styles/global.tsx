@@ -1,7 +1,23 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import NeutraText from 'src/assets/fonts/neutra-text-bold.otf';
 import Fantasque from 'src/assets/fonts/fantasque-sans-mono-regular.otf';
+import { metrics, colors } from '.';
+
+export const Title = styled.h1`
+  font-size: 4em;
+  font-family: ${metrics.fontFamilyJS};
+  color: ${colors.secondary};
+  margin-bottom: 1rem;
+`;
+
+export const Container = styled.section`
+  width: 100%;
+  height: 100%;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 7rem;
+`;
 
 const GlobalStyles = createGlobalStyle`
 html {

@@ -15,9 +15,8 @@ export const Container = styled.section`
 `;
 
 export const BigContainer = styled.section`
-  height: 15em;
+  height: 17em;
   width: 100%;
-  margin-bottom: 2rem;
   padding: 2em;
   padding-left: 0rem;
   border-radius: 5px;
@@ -26,6 +25,7 @@ export const BigContainer = styled.section`
 
 export const Logo = styled.img<Props>`
   width: ${(props) => (props.small ? '100%' : '30%')};
+  padding: ${(props) => (props.small ? '0' : '1em')};
 
   object-fit: contain;
 `;

@@ -11,7 +11,9 @@ const TopMenu: React.FC = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (scrollY >= height * 0.5) {
+    if (scrollY >= height * 1) {
+      setIndex(2);
+    } else if (scrollY >= height * 0.5) {
       setIndex(1);
     } else if (scrollY < height * 0.5) {
       setIndex(0);
@@ -23,7 +25,7 @@ const TopMenu: React.FC = () => {
       <LinkContainer>
         <LinkItem selected={index === 0}>Home</LinkItem>
         <LinkItem selected={index === 1}>Skills</LinkItem>
-        <LinkItem selected={index === 2}>Works</LinkItem>
+        <LinkItem selected={index === 2}>Projects</LinkItem>
         <LinkItem selected={index === 3}>About</LinkItem>
       </LinkContainer>
     </Container>

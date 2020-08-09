@@ -1,7 +1,7 @@
 [
   {
     "title": "AdonisJS",
-    "description": "AdonisJs is a Node.js web framework with a breath of fresh air and drizzle of elegant syntax on top of it.",
+    "description": "AdonisJs is a Node.js MVC framework that runs on all operating systems. It offers a stable eco-system to write a server-side web application so that you can focus on business needs over finalizing which package to choose or not.",
     "srcImg": "adonis-logo.png"
   },
   {
@@ -11,72 +11,82 @@
   },
   {
     "title": "React JS / React Native",
-    "description": "",
+    "description": "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.\nReact can also render on the server using Node and power mobile apps using React Native.",
     "srcImg": "react-logo.png"
   },
   {
     "title": "Electron",
-    "description": "",
+    "description": "Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. It takes care of the hard parts so you can focus on the core of your application.",
     "srcImg": "electron-logo.png"
   },
   {
     "title": "Express",
-    "description": "",
+    "description": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
     "srcImg": "express-logo.png"
   },
   {
     "title": "Typescript",
-    "description": "",
+    "description": "TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.\nTypes provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.",
     "srcImg": "typescript-logo.png"
   },
   {
     "title": "Mongo DB",
-    "description": "",
+    "description": "MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.",
     "srcImg": "mongodb-logo.png"
   },
   {
     "title": "Postgres DB",
-    "description": "",
+    "description": "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.",
     "srcImg": "postgres-logo.png"
   },
   {
     "title": "Docker",
-    "description": "",
+    "description": "Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. ",
     "srcImg": "docker-logo.png"
   },
   {
     "title": "GraphQL",
-    "description": "",
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.",
     "srcImg": "graphql-logo.svg"
   },
   {
     "title": "Gatsby",
-    "description": "",
+    "description": "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps",
     "srcImg": "gatsby-logo.png"
   },
   {
     "title": "Python",
-    "description": "",
+    "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
     "srcImg": "python-logo.png"
   },
   {
     "title": "Git",
-    "description": "",
+    "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
     "srcImg": "git-logo.png"
   },
   {
     "title": "Eslint",
-    "description": "",
+    "description": "ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:",
     "srcImg": "eslint-logo.png"
   },
   {
     "title": "Yarn",
-    "description": "",
+    "description": "Yarn is a package manager that doubles down as project manager. Whether you work on one-shot projects or large monorepos, as a hobbyist or an enterprise user, we've got you covered.",
     "srcImg": "yarn-logo.png"
   },
   {
     "title": "Npm",
-    "description": "",
+    "description": "npm is the package manager for Node.js. It was created in 2009 as an open source project to help JavaScript developers easily share packaged modules of code.",
     "srcImg": "npm-logo.svg"
+  },
+  {
+    "title": "Java",
+    "description": "Java is a programming language and computing platform first released by Sun Microsystems in 1995. There are lots of applications and websites that will not work unless you have Java installed, and more are created every day. Java is fast, secure, and reliable. From laptops to datacenters, game consoles to scientific supercomputers, cell phones to the Internet, Java is everywhere!",
+    "srcImg": "java-logo.png"
+  },
+  {
+    "title": "Styled Components",
+    "description": "Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components. It also removes the mapping between components and styles – using components as a low-level styling construct could not be easier!",
+    "srcImg": "styled-logo.png"
   }
 ]

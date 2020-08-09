@@ -16,23 +16,24 @@ import {
 interface Props {
   tech: Technologies;
   compacted?: boolean;
+  onMouserEnter?: (t: Technologies) => void;
 }
 
-const TechCard: React.FC<Props> = ({ tech, compacted }) => {
+const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }) => {
   const [img, setImg] = useState('');
   const [description, setDescription] = useState('');
   const [title, setTitle] = useState('');
 
-  const updateContent = useCallback(() => {
-    const srcImg = require(`src/assets/${TechsData[tech].srcImg}`);
+  const updateContent = useCallback((index: Technologies) => {
+    const srcImg = require(`src/assets/${TechsData[index].srcImg}`);
 
     setImg(srcImg);
-    setTitle(TechsData[tech].title);
-    setDescription(TechsData[tech].description);
+    setTitle(TechsData[index].title);
+    setDescription(TechsData[index].description);
   }, []);
 
   useEffect(() => {
-    updateContent();
+    updateContent(tech);
   }, [tech]);
 
   const content = (
@@ -50,7 +51,13 @@ const TechCard: React.FC<Props> = ({ tech, compacted }) => {
   );
 
   return compacted ? (
-    <Container>{content}</Container>
+    <Container
+      onMouseEnter={() => {
+        onMouserEnter(tech);
+      }}
+    >
+      {content}
+    </Container>
   ) : (
     <BigContainer>{content}</BigContainer>
   );
