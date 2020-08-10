@@ -8,7 +8,8 @@ export const Container = styled.nav`
   justify-content: center;
   align-items: center;
   padding: 0rem 35%;
-  background-color: ${colors.third};
+  /* background-color: ${colors.third}; */
+  z-index: 1;
 `;
 
 export const LinkContainer = styled.ul`

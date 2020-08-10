@@ -10,9 +10,18 @@ export const Container = styled.section`
 
 export const TitleContainer = styled.section`
   flex-direction: column;
-  margin-left: -40%;
   margin-top: -10%;
   width: 35%;
+`;
+
+export const CodeContainer = styled.section`
+  display: block;
+
+  width: 30%;
+  height: 60%;
+  background: red;
+  margin-left: -10rem;
+  margin-right: 10rem;
 `;
 
 export const Title = styled.h1`
@@ -32,7 +41,6 @@ export const Description = styled.p`
 export const ContactContainer = styled.nav`
   position: absolute;
   right: 0;
-  padding: 3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -42,6 +50,11 @@ export const ContactTitle = styled.h3`
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};
   font-weight: normal;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
 `;
 
 export const ContactLink = styled.a`

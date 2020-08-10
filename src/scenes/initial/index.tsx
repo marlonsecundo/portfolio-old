@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 import logoLinkedin from 'src/assets/logo-linkedin.png';
 
+import JSEditor from 'src/components/js-editor';
 import {
   Container,
   TitleContainer,
@@ -11,6 +11,7 @@ import {
   ContactTitle,
   ContactLink,
   ContactImg,
+  CodeContainer,
 } from './styles';
 
 const Initial: React.FC = () => {
@@ -24,6 +25,9 @@ const Initial: React.FC = () => {
 
   return (
     <Container>
+      <CodeContainer>
+        <JSEditor />
+      </CodeContainer>
       <TitleContainer>
         <Title>{`JS Developer${underscore}`}</Title>
         <Description>Hi! I am Marlon Secundo,</Description>
@@ -34,6 +38,7 @@ const Initial: React.FC = () => {
 
         <Description>and more!</Description>
       </TitleContainer>
+
       <ContactContainer>
         <ContactTitle>CONTACT ME!</ContactTitle>
         <ContactLink
