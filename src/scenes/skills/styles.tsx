@@ -3,7 +3,7 @@ import { colors, metrics } from 'src/styles';
 import { Container } from 'src/styles/global';
 
 export const StyledContainer = styled(Container)`
-  align-items: center;
+  flex-direction: column;
 `;
 
 export const LeftContainer = styled.div`
@@ -24,17 +24,27 @@ export const Description = styled.p`
   font-size: ${metrics.textSize};
   line-height: 2rem;
   text-align: justify;
-  width: 80%;
+  width: 60%;
+  margin-bottom: 5rem;
 `;
 
 export const TechContainer = styled.section`
-  width: 30%;
-  margin-right: -10rem;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
-  align-items: flex-end;
-  flex-direction: column;
+  padding-top: 3rem;
   background: ${colors.card};
   border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  align-items: flex-start;
+`;
+
+export const Lists = styled.div`
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const TechList = styled.ul`
@@ -43,6 +53,7 @@ export const TechList = styled.ul`
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 export const TechListTitle = styled.h2`

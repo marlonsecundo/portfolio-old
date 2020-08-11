@@ -11,6 +11,7 @@ import {
   Title,
   Description,
   BigContainer,
+  DivWrapper,
 } from './styles';
 
 interface Props {
@@ -59,7 +60,9 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
       {content}
     </Container>
   ) : (
-    <BigContainer>{content}</BigContainer>
+    <DivWrapper>
+      <BigContainer>{content}</BigContainer>
+    </DivWrapper>
   );
 };
 

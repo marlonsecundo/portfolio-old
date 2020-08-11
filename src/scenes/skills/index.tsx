@@ -11,6 +11,7 @@ import {
   TechListTitle,
   LeftContainer,
   StyledContainer,
+  Lists,
 } from './styles';
 
 const Skills: React.FC = () => {
@@ -41,96 +42,106 @@ const Skills: React.FC = () => {
             new technologies to work in the market.
           </Description>
         </TextContainer>
-
-        <TechCard tech={index} />
       </LeftContainer>
 
       <TechContainer>
-        <TechListTitle>I already worked</TechListTitle>
-        <TechList>
-          <TechCard
-            tech={Technologies.ADONIS_JS}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.NODE_JS}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.REACT_JS}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.ELECTRON}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.EXPRESS}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.TYPESCRIPT}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.MONGODB}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.POSTGRES}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-        </TechList>
+        <Lists>
+          <TechListTitle>I already worked</TechListTitle>
+          <TechList>
+            <TechCard
+              tech={Technologies.ADONIS_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.NODE_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.REACT_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.ELECTRON}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
 
-        <TechListTitle>And more...</TechListTitle>
-        <TechList>
-          <TechCard tech={Technologies.GIT} compacted onMouserEnter={onTechMouseEnter} />
-          <TechCard
-            tech={Technologies.ESLINT}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard tech={Technologies.YARN} compacted onMouserEnter={onTechMouseEnter} />
-          <TechCard tech={Technologies.NPM} compacted onMouserEnter={onTechMouseEnter} />
-          <TechCard
-            tech={Technologies.STYLED_COMPONENTS}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard tech={Technologies.JAVA} compacted onMouserEnter={onTechMouseEnter} />
-        </TechList>
+            <TechCard
+              tech={Technologies.TYPESCRIPT}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.MONGODB}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.POSTGRES}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
 
-        <TechListTitle>{`Learning${dots}`}</TechListTitle>
-        <TechList>
-          <TechCard
-            tech={Technologies.DOCKER}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.GRAPHQL}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.GATSBY}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-          <TechCard
-            tech={Technologies.PYTHON}
-            compacted
-            onMouserEnter={onTechMouseEnter}
-          />
-        </TechList>
+            <TechCard
+              tech={Technologies.GIT}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.ESLINT}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.YARN}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.NPM}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.STYLED_COMPONENTS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.JAVA}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+          </TechList>
+
+          <TechListTitle>{`Learning${dots}`}</TechListTitle>
+          <TechList>
+            <TechCard
+              tech={Technologies.DOCKER}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.GRAPHQL}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.GATSBY}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.PYTHON}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+          </TechList>
+        </Lists>
+        <TechCard tech={index} />
       </TechContainer>
     </StyledContainer>
   );

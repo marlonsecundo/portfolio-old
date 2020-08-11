@@ -6,22 +6,29 @@ interface Props {
 }
 
 export const Container = styled.section`
-  height: 4em;
-  width: 4em;
-  margin-bottom: 2rem;
-  margin-left: 1em;
+  height: 6em;
+  width: 6em;
+  margin: 2rem;
   padding: 1em;
   border-radius: 100%;
 `;
 
+export const DivWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  width: 50%;
+  margin-top: -10rem;
+`;
+
 export const BigContainer = styled.section`
-  height: 17em;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
   padding: 2em;
   padding-left: 2rem;
   border-radius: 5px;
   background-color: ${colors.card};
-  margin-bottom: 5rem;
+  margin-top: 10rem;
+  flex: 1;
 `;
 
 export const Logo = styled.img<Props>`
@@ -32,6 +39,7 @@ export const Logo = styled.img<Props>`
 `;
 
 export const TextContainer = styled.div`
+  margin-top: 2rem;
   margin-left: 2rem;
   flex: 1;
   flex-direction: column;

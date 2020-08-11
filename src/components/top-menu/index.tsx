@@ -16,7 +16,7 @@ const TopMenu: React.FC = () => {
   const [index, setIndex] = useState(0);
   const height = useWindowHeight();
   const [scrolling, setScrolling] = useState(false);
-  const timerRef = useRef(0);
+  const timerRef = useRef(-1);
   const [visible, setVisible] = useState(true);
 
   const yRange = [0, 100];
@@ -33,7 +33,10 @@ const TopMenu: React.FC = () => {
         setIndex(0);
       }
 
-      clearTimeout(timerRef.current);
+      if (timerRef.current !== -1) {
+        clearTimeout(timerRef.current);
+        timerRef.current = -1;
+      }
 
       setScrolling(true);
 

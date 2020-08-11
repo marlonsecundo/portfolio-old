@@ -13,7 +13,6 @@ export const Title = styled.h1`
 
 export const Container = styled.section`
   width: 100%;
-  height: 100%;
   padding-left: 13%;
   padding-right: 13%;
   padding-top: 5.5rem;
