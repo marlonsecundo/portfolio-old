@@ -3,7 +3,7 @@ import React from 'react';
 import { Title, Container } from 'src/styles/global';
 
 const Projects: React.FC = () => (
-  <Container>
+  <Container id="projects">
     <Title>Projects</Title>
   </Container>
 );

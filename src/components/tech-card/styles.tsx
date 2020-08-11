@@ -18,9 +18,10 @@ export const BigContainer = styled.section`
   height: 17em;
   width: 100%;
   padding: 2em;
-  padding-left: 0rem;
+  padding-left: 2rem;
   border-radius: 5px;
   background-color: ${colors.card};
+  margin-bottom: 5rem;
 `;
 
 export const Logo = styled.img<Props>`

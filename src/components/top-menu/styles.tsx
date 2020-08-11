@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 import { colors } from 'src/styles';
+import { motion } from 'framer-motion';
 
-export const Container = styled.nav`
+export const Background = styled(motion.nav)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.third};
+  z-index: 0;
+`;
+
+export const Container = styled(motion.nav)`
   height: 5rem;
   width: 100%;
   position: fixed;
   justify-content: center;
   align-items: center;
   padding: 0rem 35%;
-  /* background-color: ${colors.third}; */
   z-index: 1;
 `;
 
@@ -17,6 +25,7 @@ export const LinkContainer = styled.ul`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  z-index: 1;
 `;
 
 interface Props {

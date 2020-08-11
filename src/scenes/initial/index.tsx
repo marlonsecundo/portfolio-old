@@ -24,7 +24,7 @@ const Initial: React.FC = () => {
   }, []);
 
   return (
-    <Container>
+    <Container id="initial">
       <CodeContainer>
         <JSEditor />
       </CodeContainer>

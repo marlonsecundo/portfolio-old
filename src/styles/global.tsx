@@ -16,7 +16,7 @@ export const Container = styled.section`
   height: 100%;
   padding-left: 13%;
   padding-right: 13%;
-  padding-top: 7rem;
+  padding-top: 5.5rem;
 `;
 
 const GlobalStyles = createGlobalStyle`
@@ -26,6 +26,8 @@ html {
   overflow: auto;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
 
 #root

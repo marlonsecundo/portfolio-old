@@ -3,7 +3,7 @@ import { colors, metrics } from 'src/styles';
 import { Container } from 'src/styles/global';
 
 export const StyledContainer = styled(Container)`
-  padding-top: 0rem;
+  align-items: center;
 `;
 
 export const LeftContainer = styled.div`
@@ -11,11 +11,11 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding-right: 10rem;
+  height: 100%;
 `;
 
 export const TextContainer = styled.section`
   flex-direction: column;
-  margin-top: 8rem;
 `;
 
 export const Description = styled.p`
@@ -24,12 +24,12 @@ export const Description = styled.p`
   font-size: ${metrics.textSize};
   line-height: 2rem;
   text-align: justify;
+  width: 80%;
 `;
 
 export const TechContainer = styled.section`
   width: 30%;
   margin-right: -10rem;
-  margin-top: 6rem;
   padding: 2rem;
   align-items: flex-end;
   flex-direction: column;

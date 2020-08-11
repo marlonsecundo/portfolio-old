@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainer id="skills">
       <LeftContainer>
         <TextContainer>
           <Title>Skills</Title>
