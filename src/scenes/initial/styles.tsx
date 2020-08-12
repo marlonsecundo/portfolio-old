@@ -12,16 +12,17 @@ export const TitleContainer = styled.section`
   flex-direction: column;
   margin-top: -10%;
   width: 35%;
+  margin-left: -13rem;
 `;
 
 export const CodeContainer = styled.section`
   display: block;
 
-  width: 30%;
+  width: 50%;
   height: 60%;
   background: red;
-  margin-left: -10rem;
-  margin-right: 10rem;
+  margin-left: -14rem;
+  margin-right: 0rem;
 `;
 
 export const Title = styled.h1`

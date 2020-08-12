@@ -7,3 +7,6 @@
 - https://www.designbykmj.co.uk/about
 - http://www.anniezheng.me/about.html
 - http://qaisar.design/#me
+- https://www.femmefatale.paris/en
+- https://tobiasahlin.com/
+- https://jacekjeznach.com/about/

@@ -3,7 +3,7 @@ import BaseLayout from 'src/components/base-layout';
 
 import Initial from 'src/scenes/initial';
 import Skills from 'src/scenes/skills';
-import Projects from 'src/scenes/projects';
+import Works from 'src/scenes/works';
 import { Main, SpaceBlock } from './styles';
 
 const HomePage: React.FC = () => (
@@ -12,7 +12,7 @@ const HomePage: React.FC = () => (
       <Initial />
       <Skills />
       <SpaceBlock />
-      <Projects />
+      <Works />
     </Main>
   </BaseLayout>
 );

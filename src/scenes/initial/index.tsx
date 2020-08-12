@@ -40,7 +40,7 @@ const Initial: React.FC = () => {
       </TitleContainer>
 
       <ContactContainer>
-        <ContactTitle>CONTACT ME!</ContactTitle>
+        <ContactTitle>FIND ME!</ContactTitle>
         <ContactLink
           href="https://www.linkedin.com/in/marlon-s-b6065480/"
           target="_blank"

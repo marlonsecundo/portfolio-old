@@ -6,6 +6,6 @@ export const Main = styled.main`
 `;
 
 export const SpaceBlock = styled.div`
-  height: 7rem;
+  height: 5rem;
   width: 100%;
 `;

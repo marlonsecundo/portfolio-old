@@ -16,6 +16,7 @@ export const Container = styled.section`
   padding-left: 13%;
   padding-right: 13%;
   padding-top: 5.5rem;
+  flex-direction: column;
 `;
 
 const GlobalStyles = createGlobalStyle`

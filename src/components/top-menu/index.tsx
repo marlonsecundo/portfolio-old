@@ -70,8 +70,8 @@ const TopMenu: React.FC = () => {
           <LinkItem selected={index === 1}>Skills</LinkItem>
         </Link>
 
-        <Link to="#projects">
-          <LinkItem selected={index === 2}>Projects</LinkItem>
+        <Link to="#works">
+          <LinkItem selected={index === 2}>Works</LinkItem>
         </Link>
 
         <LinkItem selected={index === 3}>About</LinkItem>
