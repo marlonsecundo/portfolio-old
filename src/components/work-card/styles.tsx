@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
-import Color from 'color';
 
 interface Props {
   cardColor: string;
 }
 
 export const Container = styled.section<Props>`
-  max-height: 45rem;
-  width: 30rem;
+  min-height: 45rem;
+  width: 25rem;
   margin: 2rem;
   padding: 3rem;
   padding-bottom: 0rem;
@@ -26,9 +25,33 @@ export const Container = styled.section<Props>`
   position: relative;
 `;
 
-export const WorkImage = styled.img`
+export const WideContainer = styled.section<Props>`
+  min-height: 30rem;
+  width: 100%;
+  margin: 2rem;
+  padding: 3rem;
+  padding-bottom: 0rem;
+
+  background: ${(p) => p.cardColor};
+  border-radius: 20px;
+  flex-direction: column;
+
+  align-items: center;
+
+  box-shadow: 0px 2pt 6pt ${colors.shadow};
+
+  overflow: hidden;
+
+  position: relative;
+`;
+
+interface WorkImageProps {
+  wide?: boolean;
+}
+
+export const WorkImage = styled.img<WorkImageProps>`
   object-fit: contain;
-  width: 70%;
+  width: ${(p) => (p.wide ? '20%' : '70%')};
   border-radius: 20px;
 
   border-bottom-left-radius: 0px;
@@ -60,6 +83,13 @@ export const Description = styled.p<TextProps>`
 interface GradientProps {
   color1: string;
 }
+
+export const BackgroundImg = styled.img`
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+`;
 
 export const Gradient = styled.div<GradientProps>`
   background: linear-gradient(0deg, ${(p) => p.color1} 17%, rgba(255, 255, 255, 0) 75%);

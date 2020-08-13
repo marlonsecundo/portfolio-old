@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/typescript';
@@ -16,20 +16,34 @@ const JSEditor: React.FC = () => {
 
   const [bar, setBar] = useState('|');
 
+  const updateHighlight = useCallback(() => {
+    // eslint-disable-next-line no-unused-expressions
+    codeTagRef.current?.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+  }, []);
+
   useEffect(() => {
     setInterval(() => {
-      setText((prev) => jscode.substring(0, prev.length + 1));
-      // eslint-disable-next-line no-unused-expressions
-      codeTagRef.current?.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
+      setText((prev) => {
+        if (prev === jscode) {
+          return prev;
+        }
+
+        return jscode.substring(0, prev.length + 1);
       });
     }, 50);
   }, []);
 
   useEffect(() => {
-    if (text !== jscode) setBar('|');
-    else setBar('');
+    updateHighlight();
+
+    if (text === jscode) setBar('');
   }, [text]);
+
+  useEffect(() => {
+    updateHighlight();
+  }, [bar]);
 
   return (
     <Pre ref={codeTagRef}>

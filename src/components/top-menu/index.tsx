@@ -9,22 +9,20 @@ import { Container, LinkContainer, LinkItem, Background } from './styles';
 const variants = {
   hidden: { y: '-5rem' },
   visible: { y: '0rem' },
+  withBackground: { opacity: 1 },
+  withoutBackground: { opacity: 0 },
 };
 
 const TopMenu: React.FC = () => {
   const { scrollY } = useViewportScroll();
   const [index, setIndex] = useState(0);
   const height = useWindowHeight();
-  const [scrolling, setScrolling] = useState(false);
   const timerRef = useRef(-1);
   const [visible, setVisible] = useState(true);
-
-  const yRange = [0, 100];
-  const opacityRange = [0, 1];
-  const opacity = useTransform(scrollY, yRange, opacityRange);
+  const [background, setBackground] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = scrollY.onChange((v) => {
+    function updateOnScroll(v: any) {
       if (v >= height * 2) {
         setIndex(2);
       } else if (v >= height) {
@@ -38,21 +36,21 @@ const TopMenu: React.FC = () => {
         timerRef.current = -1;
       }
 
-      setScrolling(true);
+      setVisible(true);
+
+      setBackground(v !== 0);
 
       timerRef.current = setTimeout(() => {
-        setScrolling(false);
+        setVisible(scrollY.get() === 0);
       }, 1000);
-    });
+    }
+
+    const unsubscribe = scrollY.onChange(updateOnScroll);
 
     return () => {
       unsubscribe();
     };
   }, []);
-
-  useEffect(() => {
-    setVisible(scrolling || scrollY.get() === 0);
-  }, [scrolling]);
 
   return (
     <Container
@@ -60,7 +58,10 @@ const TopMenu: React.FC = () => {
       whileHover={variants.visible}
       variants={variants}
     >
-      <Background style={{ opacity }} />
+      <Background
+        animate={background ? 'withBackground' : 'withoutBackground'}
+        variants={variants}
+      />
       <LinkContainer>
         <Link to="#initial">
           <LinkItem selected={index === 0}>Home</LinkItem>
