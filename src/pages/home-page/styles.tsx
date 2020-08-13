@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'src/styles';
 
 export const Main = styled.main`
   width: 100%;
@@ -8,4 +9,5 @@ export const Main = styled.main`
 export const SpaceBlock = styled.div`
   height: 5rem;
   width: 100%;
+  background-color: ${colors.background};
 `;

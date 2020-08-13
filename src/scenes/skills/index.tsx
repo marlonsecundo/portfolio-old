@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import TechCard from 'src/components/tech-card';
 import { Technologies } from 'src/types';
-import { Title } from 'src/styles/global';
+import { Title, Background } from 'src/styles/global';
 import {
   TextContainer,
   Description,
@@ -16,7 +16,7 @@ import {
 
 const Skills: React.FC = () => {
   const [dots, setDots] = useState('');
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(2);
 
   useEffect(() => {
     setInterval(() => {
@@ -46,10 +46,15 @@ const Skills: React.FC = () => {
 
       <TechContainer>
         <Lists>
-          <TechListTitle>I already worked</TechListTitle>
+          <TechListTitle>Experience with</TechListTitle>
           <TechList>
             <TechCard
-              tech={Technologies.ADONIS_JS}
+              tech={Technologies.TYPESCRIPT}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.JAVA}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
@@ -64,13 +69,17 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
+              tech={Technologies.ADONIS_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
               tech={Technologies.ELECTRON}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
-
             <TechCard
-              tech={Technologies.TYPESCRIPT}
+              tech={Technologies.STYLED_COMPONENTS}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
@@ -84,7 +93,6 @@ const Skills: React.FC = () => {
               compacted
               onMouserEnter={onTechMouseEnter}
             />
-
             <TechCard
               tech={Technologies.GIT}
               compacted
@@ -106,12 +114,12 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
-              tech={Technologies.STYLED_COMPONENTS}
+              tech={Technologies.HTML}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
-              tech={Technologies.JAVA}
+              tech={Technologies.CSS}
               compacted
               onMouserEnter={onTechMouseEnter}
             />

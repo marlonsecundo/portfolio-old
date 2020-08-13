@@ -8,6 +8,7 @@ import github from 'src/assets/images/works/github.svg';
 import octocat from 'src/assets/images/works/octocat.png';
 
 import { colors } from 'src/styles';
+import { Background } from 'src/styles/global';
 import { StyledTitle, CardsContainer, StyledContainer } from './styles';
 
 const Works: React.FC = () => (

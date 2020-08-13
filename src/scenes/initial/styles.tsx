@@ -6,6 +6,7 @@ export const Container = styled.section`
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: ${colors.background};
 `;
 
 export const TitleContainer = styled.section`
@@ -40,7 +41,7 @@ export const Description = styled.p`
 `;
 
 export const ContactContainer = styled.nav`
-  position: absolute;
+  position: fixed;
   right: 0;
   flex-direction: column;
   justify-content: center;

@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import NeutraText from 'src/assets/fonts/neutra-text-bold.otf';
 import Fantasque from 'src/assets/fonts/fantasque-sans-mono-regular.otf';
+import Financer from 'src/assets/fonts/financier.ttf';
 import { metrics, colors } from '.';
 
 export const Title = styled.h1`
@@ -17,6 +18,16 @@ export const Container = styled.section`
   padding-right: 13%;
   padding-top: 5.5rem;
   flex-direction: column;
+  background-color: ${colors.background};
+`;
+
+export const Background = styled.div`
+  background-color: ${colors.background};
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
 `;
 
 const GlobalStyles = createGlobalStyle`
@@ -77,7 +88,11 @@ a {
   src: url(${Fantasque}) format('woff2');
 
 }
+@font-face {
+  font-family: 'Financier';
+  src: url(${Financer}) format('woff2');
 
+}
 
 
 `;

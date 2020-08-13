@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logoLinkedin from 'src/assets/logo-linkedin.png';
+import logoLinkedin from 'src/assets/images/techs/logo-linkedin.png';
 
 import JSEditor from 'src/components/js-editor';
+import { Background } from 'src/styles/global';
 import {
   Container,
   TitleContainer,

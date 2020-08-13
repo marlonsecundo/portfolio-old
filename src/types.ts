@@ -17,4 +17,6 @@ export enum Technologies {
   NPM = 15,
   JAVA = 16,
   STYLED_COMPONENTS = 17,
+  HTML = 18,
+  CSS = 19,
 }

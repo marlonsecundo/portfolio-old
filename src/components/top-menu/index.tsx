@@ -23,7 +23,9 @@ const TopMenu: React.FC = () => {
 
   useEffect(() => {
     function updateOnScroll(v: any) {
-      if (v >= height * 2) {
+      if (v >= height * 3) {
+        setIndex(3);
+      } else if (v >= height * 2) {
         setIndex(2);
       } else if (v >= height) {
         setIndex(1);
@@ -75,7 +77,9 @@ const TopMenu: React.FC = () => {
           <LinkItem selected={index === 2}>Works</LinkItem>
         </Link>
 
-        <LinkItem selected={index === 3}>About</LinkItem>
+        <Link to="#about">
+          <LinkItem selected={index === 3}>About</LinkItem>
+        </Link>
       </LinkContainer>
     </Container>
   );

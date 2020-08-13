@@ -1,16 +1,25 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
+import { motion } from 'framer-motion';
+import animations from './animations';
 
 interface Props {
   small?: boolean;
 }
 
-export const Container = styled.section`
+interface ContainerProps {
+  index: number;
+}
+
+export const Container = styled(motion.section)<ContainerProps>`
   height: 6em;
   width: 6em;
   margin: 2rem;
   padding: 1em;
   border-radius: 100%;
+  animation: ${animations.float} 6s ease-in-out infinite;
+  animation-delay: ${(p) => p.index * 100}ms;
+  opacity: 0.5;
 `;
 
 export const DivWrapper = styled.div`
@@ -24,7 +33,6 @@ export const BigContainer = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 2em;
-  padding-left: 2rem;
   border-radius: 5px;
   background-color: ${colors.card};
   margin-top: 10rem;
@@ -40,7 +48,6 @@ export const Logo = styled.img<Props>`
 
 export const TextContainer = styled.div`
   margin-top: 2rem;
-  margin-left: 2rem;
   flex: 1;
   flex-direction: column;
 `;
@@ -57,4 +64,29 @@ export const Description = styled.p`
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
+`;
+
+export const ProgressBar = styled.div`
+  height: 1rem;
+  width: 100%;
+  background-color: ${colors.background};
+  margin-top: 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+`;
+
+export const BarLength = styled(motion.div)`
+  height: 100%;
+  width: 0%;
+  background-color: ${colors.secondary};
+  border-radius: 20px;
+`;
+
+export const BarText = styled(motion.p)`
+  position: absolute;
+  right: 2rem;
+  margin-top: -2rem;
+  font-family: ${metrics.fontFamily};
+  color: ${colors.secondary};
+  font-size: 1.3em;
 `;

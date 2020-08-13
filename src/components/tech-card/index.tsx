@@ -3,7 +3,7 @@
 import React, { useEffect, useCallback, useState } from 'react';
 
 import { Technologies } from 'src/types';
-import TechsData from 'src/assets/technologies.json';
+import TechsData from 'src/assets/data/technologies.json';
 import {
   Container,
   Logo,
@@ -12,6 +12,9 @@ import {
   Description,
   BigContainer,
   DivWrapper,
+  ProgressBar,
+  BarLength,
+  BarText,
 } from './styles';
 
 interface Props {
@@ -24,13 +27,15 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [img, setImg] = useState('');
   const [description, setDescription] = useState('');
   const [title, setTitle] = useState('');
+  const [progress, setProgress] = useState(0);
 
   const updateContent = useCallback((index: Technologies) => {
-    const srcImg = require(`src/assets/${TechsData[index].srcImg}`);
+    const srcImg = require(`src/assets/images/techs/${TechsData[index].srcImg}`);
 
     setImg(srcImg);
     setTitle(TechsData[index].title);
     setDescription(TechsData[index].description);
+    setProgress(TechsData[index].progress);
   }, []);
 
   useEffect(() => {
@@ -53,6 +58,8 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
 
   return compacted ? (
     <Container
+      whileHover={{ opacity: 1 }}
+      index={tech}
       onMouseEnter={() => {
         onMouserEnter(tech);
       }}
@@ -61,7 +68,15 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
     </Container>
   ) : (
     <DivWrapper>
-      <BigContainer>{content}</BigContainer>
+      <BigContainer>
+        <>
+          {content}
+          <ProgressBar>
+            <BarLength animate={{ width: `${progress}%` }} />
+            <BarText>{progress}%</BarText>
+          </ProgressBar>
+        </>
+      </BigContainer>
     </DivWrapper>
   );
 };
