@@ -22,7 +22,7 @@ export const LeftContainer = styled.div`
   padding-right: 5rem;
 `;
 
-export const RightContainer = styled.nav`
+export const RightContainer = styled(motion.nav)`
   width: 100%;
   height: 100%;
   background-color: ${colors.shadow};
@@ -32,16 +32,26 @@ export const RightContainer = styled.nav`
   padding-left: 10rem;
 `;
 
-export const LinkText = styled.a`
+export const LinkText = styled(motion.a).attrs(() => ({
+  whileHover: {
+    borderBottom: '1px solid #FFFFFF ',
+    transition: { duration: 2, easing: 'easeInOut' },
+  },
+  target: '_blank',
+  rel: 'noreferrer',
+}))`
   color: ${colors.primary};
   font-family: ${metrics.aboutFontFamily};
   font-size: 3em;
   margin-bottom: 3rem;
+  border-bottom: 1px solid ${colors.shadow};
 `;
 
 export const TransparentContainer = styled.div`
   height: 100%;
   width: 100%;
+  z-index: -100;
+  pointer-events: none;
 `;
 
 interface Props {
@@ -64,4 +74,22 @@ export const Description = styled.p`
   line-height: 2rem;
   width: 100%;
   margin-bottom: 5rem;
+`;
+
+export const LocationTag = styled(LinkText)`
+  font-size: 1.5em;
+  margin: 1rem 0px;
+`;
+
+export const YearTag = styled.p`
+  color: ${colors.primary};
+  font-family: ${metrics.aboutFontFamily};
+  font-size: 1.5em;
+  margin: 1rem 0px;
+`;
+
+export const Tags = styled.div`
+  position: absolute;
+  bottom: 0;
+  margin: auto;
 `;

@@ -19,3 +19,10 @@ export const CardsContainer = styled.div`
   align-content: flex-start;
   margin-bottom: 3rem;
 `;
+
+export const WrapperLink = styled.a.attrs(() => ({
+  target: '_blank',
+  rel: 'noreferrer',
+}))`
+  width: 100%;
+`;

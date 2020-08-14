@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Color from 'color';
-import { Technologies } from 'src/types';
 import {
   Container,
   Title,
@@ -45,7 +43,9 @@ const WorkCard: React.FC<Props> = ({
   );
 
   return wide ? (
-    <WideContainer cardColor={cardColor}>{content}</WideContainer>
+    <WideContainer whileHover={{ scale: 0.99 }} cardColor={cardColor}>
+      {content}
+    </WideContainer>
   ) : (
     <Container whileHover={{ y: '-2rem' }} cardColor={cardColor}>
       {content}

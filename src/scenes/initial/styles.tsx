@@ -45,6 +45,8 @@ export const Description = styled.p`
 export const ContactContainer = styled.nav`
   position: fixed;
   right: 0;
+  margin: auto;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -59,12 +61,5 @@ export const ContactTitle = styled.h3`
   justify-content: center;
   align-items: center;
   transform: rotate(90deg);
-`;
-
-export const ContactLink = styled.a`
-  padding: 2rem;
-`;
-
-export const ContactImg = styled.img`
-  height: 2rem;
+  margin-bottom: 2rem;
 `;

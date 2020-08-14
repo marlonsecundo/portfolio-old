@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { colors } from 'src/styles';
+import links from 'src/assets/data/links.json';
 import {
   StyledContainer,
   TransparentContainer,
@@ -9,10 +9,15 @@ import {
   Title,
   Description,
   LinkText,
+  LocationTag,
+  YearTag,
+  Tags,
 } from './styles';
 
 const About: React.FC = () => (
   <>
+    <TransparentContainer id="about" />
+
     <StyledContainer>
       <LeftContainer>
         <Title fontSize="1em" marginBottom="2.5em">
@@ -32,15 +37,23 @@ const About: React.FC = () => (
         </Description>
       </LeftContainer>
       <RightContainer>
-        <LinkText href="mailto=marlon_secundo@outlook.com" target="blank">
+        <LinkText href={links.linkedin}>Text me on Linkedin</LinkText>
+        <LinkText href="mailto:marlon_secundo@outlook.com">
           Mail me at marlon_secundo@outlook.com
         </LinkText>
-        <LinkText>Find me on Linkedin</LinkText>
-        <LinkText>See my project on Github</LinkText>
-        <LinkText>Natal - RN</LinkText>
+        <LinkText href={links.github}>See my projects on Github</LinkText>
+
+        <LinkText href={links.lattes}>Lattes CV</LinkText>
+
+        <Tags>
+          <YearTag>{`${new Date().getFullYear()} /\u00A0`}</YearTag>
+
+          <LocationTag href="https://www.google.com/maps/place/Natal,+RN">
+            Natal - RN
+          </LocationTag>
+        </Tags>
       </RightContainer>
     </StyledContainer>
-    <TransparentContainer id="about" />
   </>
 );
 

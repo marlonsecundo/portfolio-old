@@ -7,6 +7,7 @@ const BaseLayout: React.FC = ({ children }) => (
   <>
     <Header />
     {children}
+
     <Footer />
   </>
 );

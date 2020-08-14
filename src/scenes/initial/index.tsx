@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import logoLinkedin from 'src/assets/images/techs/logo-linkedin.png';
 
 import JSEditor from 'src/components/js-editor';
-import { Background } from 'src/styles/global';
+
+import logoLinkedin from 'src/assets/images/contact/linkedin.png';
+import lattesLogo from 'src/assets/images/contact/lattes.png';
+import githubLogo from 'src/assets/images/contact/github.png';
+
+import ContactItem from 'src/components/contact-item';
+import links from 'src/assets/data/links.json';
 import {
   Container,
   TitleContainer,
   Title,
   Description,
+  CodeContainer,
   ContactContainer,
   ContactTitle,
-  ContactLink,
-  ContactImg,
-  CodeContainer,
 } from './styles';
 
 const Initial: React.FC = () => {
@@ -48,12 +51,10 @@ const Initial: React.FC = () => {
 
       <ContactContainer>
         <ContactTitle>FIND ME!</ContactTitle>
-        <ContactLink
-          href="https://www.linkedin.com/in/marlon-s-b6065480/"
-          target="_blank"
-        >
-          <ContactImg src={logoLinkedin} />
-        </ContactLink>
+        <ContactItem link={links.linkedin} imgSrc={logoLinkedin} />
+        <ContactItem link={links.lattes} imgSrc={lattesLogo} />
+
+        <ContactItem link={links.github} imgSrc={githubLogo} />
       </ContactContainer>
     </Container>
   );

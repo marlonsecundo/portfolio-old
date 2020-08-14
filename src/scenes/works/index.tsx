@@ -8,8 +8,7 @@ import github from 'src/assets/images/works/github.svg';
 import octocat from 'src/assets/images/works/octocat.png';
 
 import { colors } from 'src/styles';
-import { Background } from 'src/styles/global';
-import { StyledTitle, CardsContainer, StyledContainer } from './styles';
+import { StyledTitle, CardsContainer, StyledContainer, WrapperLink } from './styles';
 
 const Works: React.FC = () => (
   <StyledContainer id="works">
@@ -44,17 +43,19 @@ const Works: React.FC = () => (
         patrolling the UFRN campus, bringing security to students and university
         employees.
       </WorkCard>
-      <WorkCard
-        textColor={colors.primary}
-        cardColor="#222327"
-        title="GITHUB"
-        srcImg={octocat}
-        backgroundImg={github}
-        wide
-        tagText=""
-      >
-        More projects on Github!
-      </WorkCard>
+      <WrapperLink href="https://github.com/marlonsecundo">
+        <WorkCard
+          textColor={colors.primary}
+          cardColor="#222327"
+          title="GITHUB"
+          srcImg={octocat}
+          backgroundImg={github}
+          wide
+          tagText=""
+        >
+          More projects on Github!
+        </WorkCard>
+      </WrapperLink>
     </CardsContainer>
   </StyledContainer>
 );
