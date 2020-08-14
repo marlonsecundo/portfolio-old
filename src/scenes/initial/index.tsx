@@ -26,10 +26,16 @@ const Initial: React.FC = () => {
 
   return (
     <Container id="initial">
-      <CodeContainer>
+      <CodeContainer
+        animate={{ x: '0rem', transition: { duration: 1.5 } }}
+        initial={{ x: '-5rem' }}
+      >
         <JSEditor />
       </CodeContainer>
-      <TitleContainer>
+      <TitleContainer
+        animate={{ x: '0rem', transition: { duration: 3 } }}
+        initial={{ x: '5rem' }}
+      >
         <Title>{`JS Developer${underscore}`}</Title>
         <Description>Hi! I am Marlon Secundo,</Description>
         <Description>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { colors } from 'src/styles';
 import {
   StyledContainer,
   TransparentContainer,
@@ -31,7 +32,9 @@ const About: React.FC = () => (
         </Description>
       </LeftContainer>
       <RightContainer>
-        <LinkText>Mail me at marlon_secundo@outlook.com</LinkText>
+        <LinkText href="mailto=marlon_secundo@outlook.com" target="blank">
+          Mail me at marlon_secundo@outlook.com
+        </LinkText>
         <LinkText>Find me on Linkedin</LinkText>
         <LinkText>See my project on Github</LinkText>
         <LinkText>Natal - RN</LinkText>

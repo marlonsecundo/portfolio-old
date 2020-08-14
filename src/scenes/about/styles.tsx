@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
+import { motion } from 'framer-motion';
 
 export const StyledContainer = styled.section`
   position: fixed;

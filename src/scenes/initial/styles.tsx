@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
+import { motion } from 'framer-motion';
 
 export const Container = styled.section`
   height: 100%;
@@ -9,14 +10,15 @@ export const Container = styled.section`
   background-color: ${colors.background};
 `;
 
-export const TitleContainer = styled.section`
+export const TitleContainer = styled(motion.div)`
   flex-direction: column;
   margin-top: -10%;
   width: 35%;
   margin-left: -13rem;
+  z-index: 2;
 `;
 
-export const CodeContainer = styled.section`
+export const CodeContainer = styled(motion.div)`
   display: block;
 
   width: 50%;
