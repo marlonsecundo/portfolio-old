@@ -12,6 +12,7 @@ import {
   Container,
   TitleContainer,
   Title,
+  JSTitle,
   Description,
   CodeContainer,
   ContactContainer,
@@ -39,7 +40,14 @@ const Initial: React.FC = () => {
         animate={{ x: '0rem', transition: { duration: 3 } }}
         initial={{ x: '5rem' }}
       >
-        <Title>{`JS Developer${underscore}`}</Title>
+        <JSTitle
+          whileHover={{
+            x: [-0, 70],
+          }}
+        >
+          JS
+        </JSTitle>
+        <Title>{` Developer${underscore}`}</Title>
         <Description>Hi! I am Marlon Secundo,</Description>
         <Description>
           a fullstack developer with experience in JS technologies

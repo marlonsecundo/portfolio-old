@@ -12,9 +12,9 @@ export const Container = styled.section`
 
 export const TitleContainer = styled(motion.div)`
   flex-direction: column;
-  margin-top: -10%;
+  margin-top: -8%;
   width: 35%;
-  margin-left: -13rem;
+  margin-left: -14rem;
   z-index: 2;
 `;
 
@@ -23,7 +23,6 @@ export const CodeContainer = styled(motion.div)`
 
   width: 50%;
   height: 60%;
-  background: red;
   margin-left: -14rem;
   margin-right: 0rem;
 `;
@@ -33,6 +32,15 @@ export const Title = styled.h1`
   padding-bottom: 3rem;
   font-family: ${metrics.fontFamilyJS};
   color: ${colors.secondary};
+`;
+
+export const JSTitle = styled(motion.h1)`
+  font-size: 20em;
+  font-family: ${metrics.fontFamilyJS};
+  color: ${colors.secondary};
+  height: 16.5rem;
+  align-self: flex-start;
+  font-size-adjust: none;
 `;
 
 export const Description = styled.p`
