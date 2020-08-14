@@ -4,6 +4,8 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 import { Technologies } from 'src/types';
 import TechsData from 'src/assets/data/technologies.json';
+import { AnimatePresence, AnimateSharedLayout, useAnimation } from 'framer-motion';
+import { colors } from 'src/styles';
 import {
   Container,
   Logo,
@@ -28,6 +30,7 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [description, setDescription] = useState('');
   const [title, setTitle] = useState('');
   const [progress, setProgress] = useState(0);
+  const [color, setColor] = useState(colors.secondary);
 
   const updateContent = useCallback((index: Technologies) => {
     const srcImg = require(`src/assets/images/techs/${TechsData[index].srcImg}`);
@@ -36,25 +39,12 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
     setTitle(TechsData[index].title);
     setDescription(TechsData[index].description);
     setProgress(TechsData[index].progress);
+    setColor(TechsData[index].color);
   }, []);
 
   useEffect(() => {
     updateContent(tech);
   }, [tech]);
-
-  const content = (
-    <>
-      <Logo small={compacted} src={img} />
-      {compacted ? (
-        <></>
-      ) : (
-        <TextContainer>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </TextContainer>
-      )}
-    </>
-  );
 
   return compacted ? (
     <Container
@@ -64,18 +54,22 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
         onMouserEnter(tech);
       }}
     >
-      {content}
+      <Logo small={compacted} src={img} />
     </Container>
   ) : (
     <DivWrapper>
-      <BigContainer>
-        <>
-          {content}
-          <ProgressBar>
-            <BarLength animate={{ width: `${progress}%` }} />
-            <BarText>{progress}%</BarText>
-          </ProgressBar>
-        </>
+      <BigContainer transition={{ duration: 0.1 }} layout>
+        <Logo small={compacted} src={img} />
+
+        <TextContainer>
+          <Title animate={{ color }}>{title}</Title>
+          <Description>{description}</Description>
+        </TextContainer>
+
+        <ProgressBar>
+          <BarLength animate={{ width: `${progress}%`, backgroundColor: color }} />
+          <BarText animate={{ color }}>{progress}%</BarText>
+        </ProgressBar>
       </BigContainer>
     </DivWrapper>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Color from 'color';
+import { Technologies } from 'src/types';
 import {
   Container,
   Title,
@@ -9,6 +10,7 @@ import {
   Gradient,
   WideContainer,
   BackgroundImg,
+  TagText,
 } from './styles';
 
 interface Props {
@@ -18,6 +20,7 @@ interface Props {
   cardColor: string;
   wide?: boolean;
   backgroundImg?: string;
+  tagText: string;
 }
 
 const WorkCard: React.FC<Props> = ({
@@ -28,21 +31,25 @@ const WorkCard: React.FC<Props> = ({
   children,
   wide,
   backgroundImg,
+  tagText,
 }) => {
   const content = (
     <>
       {backgroundImg ? <BackgroundImg src={backgroundImg} /> : <></>}
       <Gradient color1={cardColor} />
+      <TagText textColor={textColor}>{tagText}</TagText>
       <Title textColor={textColor}>{title}</Title>
       <Description textColor={textColor}>{children}</Description>
-      <WorkImage wide={wide} src={srcImg} />
+      <WorkImage whileHover={{ scale: 1.1 }} wide={wide} src={srcImg} />
     </>
   );
 
   return wide ? (
     <WideContainer cardColor={cardColor}>{content}</WideContainer>
   ) : (
-    <Container cardColor={cardColor}>{content}</Container>
+    <Container whileHover={{ y: '-2rem' }} cardColor={cardColor}>
+      {content}
+    </Container>
   );
 };
 

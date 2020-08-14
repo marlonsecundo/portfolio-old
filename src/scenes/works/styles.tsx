@@ -12,7 +12,7 @@ export const StyledTitle = styled(Title)`
 
 export const CardsContainer = styled.div`
   align-self: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;

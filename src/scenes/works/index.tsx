@@ -20,6 +20,7 @@ const Works: React.FC = () => (
         cardColor="#5c81c2"
         title="MULTIPROVA"
         srcImg={multiprovaImage}
+        tagText="Mobile"
       >
         Application for SIGAA to automatic correction of tests and sending responses.
       </WorkCard>
@@ -28,6 +29,7 @@ const Works: React.FC = () => (
         cardColor="#edb926"
         title="ANOTAÍ"
         srcImg={anotaiImage}
+        tagText="Mobile, Backend"
       >
         Application created for order fulfillment and management in restaurants
       </WorkCard>
@@ -36,6 +38,7 @@ const Works: React.FC = () => (
         cardColor="#F4F9E9"
         title="AEDES"
         srcImg={aedesImage}
+        tagText="Frontend, Backend"
       >
         The AEDES project - Aircraft for Social Defense - increase with the objective of
         patrolling the UFRN campus, bringing security to students and university
@@ -48,6 +51,7 @@ const Works: React.FC = () => (
         srcImg={octocat}
         backgroundImg={github}
         wide
+        tagText=""
       >
         More projects on Github!
       </WorkCard>

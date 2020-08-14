@@ -29,7 +29,7 @@ export const DivWrapper = styled.div`
   margin-top: -10rem;
 `;
 
-export const BigContainer = styled.section`
+export const BigContainer = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   padding: 2em;
@@ -39,19 +39,19 @@ export const BigContainer = styled.section`
   flex: 1;
 `;
 
-export const Logo = styled.img<Props>`
+export const Logo = styled(motion.img)<Props>`
   width: ${(props) => (props.small ? '100%' : '30%')};
   padding: ${(props) => (props.small ? '0' : '1em')};
 
   object-fit: contain;
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   margin-top: 2rem;
   flex: 1;
   flex-direction: column;
 `;
-export const Title = styled.h4`
+export const Title = styled(motion.h4)`
   font-size: 1.7em;
   margin-bottom: 1em;
   color: ${colors.secondary};
@@ -59,7 +59,7 @@ export const Title = styled.h4`
   font-size: ${metrics.subtitleSize};
   font-weight: normal;
 `;
-export const Description = styled.p`
+export const Description = styled(motion.p)`
   line-height: 1.7em;
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};

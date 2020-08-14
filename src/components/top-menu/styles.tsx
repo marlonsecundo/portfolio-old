@@ -7,7 +7,6 @@ export const Background = styled(motion.nav)`
   width: 100%;
   height: 100%;
   background-color: ${colors.third};
-  z-index: 0;
 `;
 
 export const Container = styled(motion.nav)`
@@ -17,7 +16,7 @@ export const Container = styled(motion.nav)`
   justify-content: center;
   align-items: center;
   padding: 0rem 35%;
-  z-index: 1;
+  z-index: 50;
 `;
 
 export const LinkContainer = styled.ul`

@@ -1,39 +1,41 @@
 import styled from 'styled-components';
 import { colors, metrics } from 'src/styles';
+import { motion } from 'framer-motion';
 
 interface Props {
   cardColor: string;
 }
 
-export const Container = styled.section<Props>`
+export const Container = styled(motion.section)<Props>`
   min-height: 45rem;
-  width: 25rem;
-  margin: 2rem;
+  width: 32%;
   padding: 3rem;
   padding-bottom: 0rem;
 
   background: ${(p) => p.cardColor};
-  border-radius: 20px;
+
+  border-top-right-radius: 0px;
   flex-direction: column;
 
   align-items: center;
 
   box-shadow: 0px 2pt 6pt ${colors.shadow};
 
-  overflow: hidden;
-
   position: relative;
+  margin-bottom: 2rem;
+
+  overflow: hidden;
 `;
 
-export const WideContainer = styled.section<Props>`
+export const WideContainer = styled(motion.section)<Props>`
   min-height: 30rem;
   width: 100%;
-  margin: 2rem;
+  margin-bottom: 2rem;
   padding: 3rem;
   padding-bottom: 0rem;
 
   background: ${(p) => p.cardColor};
-  border-radius: 20px;
+  border-radius: 10px;
   flex-direction: column;
 
   align-items: center;
@@ -49,13 +51,15 @@ interface WorkImageProps {
   wide?: boolean;
 }
 
-export const WorkImage = styled.img<WorkImageProps>`
+export const WorkImage = styled(motion.img)<WorkImageProps>`
   object-fit: contain;
   width: ${(p) => (p.wide ? '20%' : '70%')};
   border-radius: 20px;
 
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  padding-bottom: 2rem;
+  z-index: 5;
 `;
 
 interface TextProps {
@@ -89,6 +93,7 @@ export const BackgroundImg = styled.img`
   object-fit: contain;
   width: 100%;
   height: 100%;
+  z-index: 1;
 `;
 
 export const Gradient = styled.div<GradientProps>`
@@ -105,5 +110,26 @@ export const Gradient = styled.div<GradientProps>`
   height: 30%;
   bottom: 0;
 
+  z-index: 30;
+
   /* background: red; */
+`;
+
+interface TagColors {
+  textColor: string;
+}
+
+export const TagText = styled.p<TagColors>`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: ${metrics.fontFamily};
+  padding: 1rem;
+  margin-top: -3rem;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: ${(p) => p.textColor};
+
+  font-size: 1.1em;
 `;

@@ -31,7 +31,7 @@ const About: React.FC = () => (
         </Description>
       </LeftContainer>
       <RightContainer>
-        <LinkText>Mail me at marlonsecundo@outlook.com</LinkText>
+        <LinkText>Mail me at marlon_secundo@outlook.com</LinkText>
         <LinkText>Find me on Linkedin</LinkText>
         <LinkText>See my project on Github</LinkText>
         <LinkText>Natal - RN</LinkText>
