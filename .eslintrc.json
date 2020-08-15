@@ -25,6 +25,7 @@
         "tsx": "never"
       }
     ],
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-filename-extension": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",

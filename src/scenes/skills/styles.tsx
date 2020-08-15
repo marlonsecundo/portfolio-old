@@ -23,7 +23,7 @@ export const Description = styled.p`
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
   line-height: 2rem;
-  width: 60%;
+  width: 40%;
   margin-bottom: 5rem;
 `;
 

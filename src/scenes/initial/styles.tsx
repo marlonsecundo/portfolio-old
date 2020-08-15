@@ -12,7 +12,7 @@ export const Container = styled.section`
 
 export const TitleContainer = styled(motion.div)`
   flex-direction: column;
-  margin-top: -8%;
+  margin-top: -10rem;
   width: 35%;
   margin-left: -14rem;
   z-index: 2;
@@ -20,6 +20,7 @@ export const TitleContainer = styled(motion.div)`
 
 export const CodeContainer = styled(motion.div)`
   display: block;
+  margin-top: 5rem;
 
   width: 50%;
   height: 60%;

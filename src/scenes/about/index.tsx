@@ -28,12 +28,9 @@ const About: React.FC = () => (
         </Title>
 
         <Description>
-          I work in the application development area with focus and experience in
-          Javascript development tools. Currently, I am taking the BootCamp from
-          RocketSeat to learn javascript technologies (backend, frontend, mobile),
-          obtaining in addition practices and development standards for the market. My
-          professional goal is to be a fullstack dev in javascript, always looking for new
-          technologies to work in the market.
+          In 6 years of learning and working with programming in different languages and
+          projects, in the last few years I have been moving towards the goal of becoming
+          a pleno developer. I am currently focused on JS technologies.
         </Description>
       </LeftContainer>
       <RightContainer>
@@ -48,9 +45,7 @@ const About: React.FC = () => (
         <Tags>
           <YearTag>{`${new Date().getFullYear()} /\u00A0`}</YearTag>
 
-          <LocationTag href="https://www.google.com/maps/place/Natal,+RN">
-            Natal - RN
-          </LocationTag>
+          <LocationTag href={links.natal}>Natal - RN</LocationTag>
         </Tags>
       </RightContainer>
     </StyledContainer>

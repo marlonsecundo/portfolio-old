@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useWindowHeight } from '@react-hook/window-size';
 
-import { useViewportScroll, useTransform } from 'framer-motion';
+import { useViewportScroll } from 'framer-motion';
 import { Container, LinkContainer, LinkItem, Background } from './styles';
 
 const variants = {
@@ -78,7 +78,7 @@ const TopMenu: React.FC = () => {
         </Link>
 
         <Link to="#about">
-          <LinkItem selected={index === 3}>About</LinkItem>
+          <LinkItem selected={index === 3}>About / Resume</LinkItem>
         </Link>
       </LinkContainer>
     </Container>
