@@ -1,6 +1,7 @@
 import React from 'react';
 
 import links from 'src/assets/data/links.json';
+import meImg from 'src/assets/images/me.png';
 import {
   StyledContainer,
   TransparentContainer,
@@ -12,6 +13,7 @@ import {
   LocationTag,
   YearTag,
   Tags,
+  Img,
 } from './styles';
 
 const About: React.FC = () => (
@@ -26,11 +28,9 @@ const About: React.FC = () => (
           Nice to meet you!
         </Title>
 
-        <Description>
-          In 6 years of learning and working with programming in different languages and
-          projects, in the last few years I have been moving towards the goal of becoming
-          a pleno developer. I am currently focused on JS technologies.
-        </Description>
+        <Description>Marlon Secundo de Oliveira Ferreia</Description>
+        <Description>{new Date().getFullYear() - 1999} years old</Description>
+        <Img src={meImg} />
       </LeftContainer>
       <RightContainer>
         <LinkText href={links.linkedin}>Text me on Linkedin</LinkText>

@@ -76,7 +76,14 @@ export const Description = styled.p`
   font-size: ${metrics.textSize};
   line-height: 2rem;
   width: 100%;
-  margin-bottom: 5rem;
+`;
+
+export const Img = styled.img`
+  object-fit: contain;
+  width: 40%;
+  border-radius: 100%;
+  align-self: center;
+  box-shadow: 0px 2pt 6pt ${colors.shadow};
 `;
 
 export const LocationTag = styled(LinkText)`
