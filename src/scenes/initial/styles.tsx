@@ -3,11 +3,11 @@ import { colors, metrics } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const Container = styled.section`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.background};
+  background: ${colors.background};
 `;
 
 export const TitleContainer = styled(motion.div)`

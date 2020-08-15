@@ -19,6 +19,7 @@ export const Container = styled.section`
   padding-top: 5.5rem;
   flex-direction: column;
   background-color: ${colors.background};
+  z-index: 1;
 `;
 
 export const Background = styled.div`
@@ -26,19 +27,20 @@ export const Background = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
   top: 0;
+  z-index: 1;
 `;
 
 const GlobalStyles = createGlobalStyle`
 html {
   font-size: 100%;
   height: 100%;
-  overflow: auto;
   box-sizing: border-box;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 
+
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #root
@@ -61,7 +63,6 @@ html {
 body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  height: 100%;
 }
 
 div, section, nav, a, button, form, main {

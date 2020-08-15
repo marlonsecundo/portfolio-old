@@ -48,7 +48,7 @@ export const LinkText = styled(motion.a).attrs(() => ({
 `;
 
 export const TransparentContainer = styled.div`
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   z-index: -100;
   pointer-events: none;

@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, RefObject } from 'react';
 
 import { HashLink as Link } from 'react-router-hash-link';
-import { useWindowHeight } from '@react-hook/window-size';
 
-import { useViewportScroll } from 'framer-motion';
+import { useElementScroll, useViewportScroll } from 'framer-motion';
 import { Container, LinkContainer, LinkItem, Background } from './styles';
 
 const variants = {
@@ -13,21 +12,24 @@ const variants = {
   withoutBackground: { opacity: 0 },
 };
 
-const TopMenu: React.FC = () => {
-  const { scrollY } = useViewportScroll();
+interface Props {
+  mainRef: RefObject<HTMLElement>;
+}
+
+const TopMenu: React.FC<Props> = ({}) => {
+  const { scrollYProgress } = useViewportScroll();
   const [index, setIndex] = useState(0);
-  const height = useWindowHeight();
   const timerRef = useRef(-1);
   const [visible, setVisible] = useState(true);
   const [background, setBackground] = useState(false);
 
   useEffect(() => {
     function updateOnScroll(v: any) {
-      if (v >= height * 3) {
+      if (v >= 0.9) {
         setIndex(3);
-      } else if (v >= height * 2) {
+      } else if (v >= 0.6) {
         setIndex(2);
-      } else if (v >= height) {
+      } else if (v >= 0.15) {
         setIndex(1);
       } else {
         setIndex(0);
@@ -43,11 +45,11 @@ const TopMenu: React.FC = () => {
       setBackground(v !== 0);
 
       timerRef.current = setTimeout(() => {
-        setVisible(scrollY.get() === 0);
+        setVisible(scrollYProgress.get() === 0);
       }, 1000);
     }
 
-    const unsubscribe = scrollY.onChange(updateOnScroll);
+    const unsubscribe = scrollYProgress.onChange(updateOnScroll);
 
     return () => {
       unsubscribe();
@@ -62,6 +64,7 @@ const TopMenu: React.FC = () => {
     >
       <Background
         animate={background ? 'withBackground' : 'withoutBackground'}
+        initial="withoutBackground"
         variants={variants}
       />
       <LinkContainer>

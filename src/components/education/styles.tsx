@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   width: 100%;
-  margin: 4rem 0rem;
+  margin: 13rem 0rem;
   padding: 2rem;
   align-items: center;
 
@@ -38,5 +38,5 @@ export const ImgsContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  margin: 5rem 0 0 0;
+  margin: 10rem 0 0 0;
 `;

@@ -17,7 +17,6 @@ import {
 const About: React.FC = () => (
   <>
     <TransparentContainer id="about" />
-
     <StyledContainer>
       <LeftContainer>
         <Title fontSize="1em" marginBottom="2.5em">

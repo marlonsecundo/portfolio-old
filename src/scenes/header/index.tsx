@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 
 import TopMenu from 'src/components/top-menu';
 import { Container } from './styles';
 
-const Header: React.FC = () => (
+interface Props {
+  mainRef: RefObject<HTMLElement>;
+}
+
+const Header: React.FC<Props> = ({ mainRef }) => (
   <Container>
-    <TopMenu />
+    <TopMenu mainRef={mainRef} />
   </Container>
 );
 
