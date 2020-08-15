@@ -10,7 +10,7 @@ export const Container = styled.section`
   align-items: center;
   background: ${colors.background};
 
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const TitleContainer = styled(motion.div)`
@@ -67,6 +67,7 @@ export const ContactContainer = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 `;
 
 export const ContactTitle = styled.h3`

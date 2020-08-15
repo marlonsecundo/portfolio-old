@@ -20,6 +20,7 @@ export const Container = styled.section`
   flex-direction: column;
   background-color: ${colors.background};
   z-index: 1;
+  margin: -0.1rem 0 0 0;
 `;
 
 export const Background = styled.div`

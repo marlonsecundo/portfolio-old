@@ -40,6 +40,6 @@ export const ImgsContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  margin: 6rem 0 6rem 0;
+  margin: 6rem 0 5rem 0;
   padding: 4rem;
 `;
