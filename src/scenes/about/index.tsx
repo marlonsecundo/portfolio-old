@@ -8,7 +8,9 @@ import {
   LeftContainer,
   RightContainer,
   Title,
-  Description,
+  Text,
+  Topic,
+  MeText,
   LinkText,
   LocationTag,
   YearTag,
@@ -21,16 +23,31 @@ const About: React.FC = () => (
     <TransparentContainer id="about" />
     <StyledContainer>
       <LeftContainer>
-        <Title fontSize="1em" marginBottom="2.5em">
+        <Title fontSize="1em" marginBottom="2.5rem">
           ABOUT
         </Title>
-        <Title fontSize="2em" marginBottom="1em">
+        <Title fontSize="2em" marginBottom="0rem">
           Nice to meet you!
         </Title>
 
-        <Description>Marlon Secundo de Oliveira Ferreia</Description>
-        <Description>{new Date().getFullYear() - 1999} years old</Description>
+        <Topic>LANGUAGES</Topic>
+        <Text>JS, TS, C#, Java</Text>
+        <Topic>Backend</Topic>
+        <Text>Adonis JS, NodeJS, Express, Mongo, Postgres</Text>
+
+        <Topic>Frontend</Topic>
+        <Text>React, Styled Components, HTML, CSS</Text>
+
+        <Topic>Mobile</Topic>
+        <Text>React</Text>
+
+        <Topic>Desktop</Topic>
+        <Text>Electron</Text>
+
         <Img src={meImg} />
+
+        <MeText>Marlon Secundo de Oliveira Ferreira</MeText>
+        <MeText>{new Date().getFullYear() - 1999} years old</MeText>
       </LeftContainer>
       <RightContainer>
         <LinkText href={links.linkedin}>Text me on Linkedin</LinkText>

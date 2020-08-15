@@ -44,7 +44,7 @@ export const LinkText = styled(motion.a).attrs(() => ({
   color: ${colors.primary};
   font-family: ${metrics.aboutFontFamily};
   font-size: 3em;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid ${colors.shadow};
 `;
 
@@ -70,12 +70,27 @@ export const Title = styled.h1<Props>`
   font-weight: lighter;
 `;
 
-export const Description = styled.p`
+export const MeText = styled.p`
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
   line-height: 2rem;
   width: 100%;
+  text-align: center;
+`;
+
+export const Text = styled(MeText)`
+  text-align: left;
+  font: ${metrics.textSize} ${metrics.fontFamily};
+`;
+
+export const Topic = styled(Text)`
+  font-weight: lighter;
+  margin: 1.5rem 0rem 1rem 0rem;
+  line-height: 1rem;
+  border-bottom: 1px solid;
+  align-self: flex-start;
+  width: auto;
 `;
 
 export const Img = styled.img`
@@ -84,6 +99,7 @@ export const Img = styled.img`
   border-radius: 100%;
   align-self: center;
   box-shadow: 0px 2pt 6pt ${colors.shadow};
+  margin: 3rem 0rem 0rem 0rem;
 `;
 
 export const LocationTag = styled(LinkText)`
