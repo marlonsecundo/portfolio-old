@@ -3,11 +3,14 @@ import { colors, metrics } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const Container = styled.section`
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
   background: ${colors.background};
+
+  z-index: 1;
 `;
 
 export const TitleContainer = styled(motion.div)`
@@ -49,6 +52,11 @@ export const Description = styled.p`
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
+`;
+
+export const AndMore = styled(Description)`
+  color: ${colors.secondary};
+  margin-bottom: 0rem;
 `;
 
 export const ContactContainer = styled.nav`

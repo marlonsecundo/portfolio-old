@@ -1,28 +1,18 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 
 import Header from 'src/scenes/header';
 import Footer from 'src/scenes/footer';
 
 import { Main } from './styles';
 
-const BaseLayout: React.FC = ({ children }) => {
-  const mainRef = useRef<HTMLElement>(null);
+const BaseLayout: React.FC = ({ children }) => (
+  <>
+    <Header />
 
-  const [loaded, setLoaded] = useState(false);
+    <Main>{children}</Main>
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  return (
-    <>
-      {loaded ? <Header mainRef={mainRef} /> : <></>}
-
-      <Main ref={mainRef}>{children}</Main>
-
-      <Footer />
-    </>
-  );
-};
+    <Footer />
+  </>
+);
 
 export default BaseLayout;

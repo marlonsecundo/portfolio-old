@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 
 export const StyledContainer = styled.section`
   position: fixed;
-  z-index: -5;
+  z-index: 0;
   height: 100%;
   width: 100%;
   background-color: ${colors.background};
   top: 0;
+  pointer-events: all;
 `;
 
 export const LeftContainer = styled.div`
@@ -48,8 +49,10 @@ export const LinkText = styled(motion.a).attrs(() => ({
 `;
 
 export const TransparentContainer = styled.div`
-  min-height: 100%;
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
   z-index: -100;
   pointer-events: none;
 `;

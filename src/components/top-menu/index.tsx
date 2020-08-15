@@ -12,11 +12,7 @@ const variants = {
   withoutBackground: { opacity: 0 },
 };
 
-interface Props {
-  mainRef: RefObject<HTMLElement>;
-}
-
-const TopMenu: React.FC<Props> = ({}) => {
+const TopMenu: React.FC = () => {
   const { scrollYProgress } = useViewportScroll();
   const [index, setIndex] = useState(0);
   const timerRef = useRef(-1);

@@ -11,7 +11,6 @@ const HomePage: React.FC = () => (
   <BaseLayout>
     <Initial />
     <Skills />
-    <SpaceBlock />
     <Works />
     <About />
   </BaseLayout>

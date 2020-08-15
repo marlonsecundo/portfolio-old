@@ -18,6 +18,7 @@ import {
   CodeContainer,
   ContactContainer,
   ContactTitle,
+  AndMore,
 } from './styles';
 
 const Initial: React.FC = () => {
@@ -55,7 +56,7 @@ const Initial: React.FC = () => {
         </Description>
         <Description> </Description>
 
-        <Description>and more!</Description>
+        <AndMore>and more!</AndMore>
       </TitleContainer>
 
       <ContactContainer>

@@ -3,5 +3,5 @@ import { motion } from 'framer-motion';
 
 export const Main = styled(motion.main)`
   width: 100%;
-  display: block;
+  flex-direction: column;
 `;

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   width: 100%;
-  margin: 13rem 0rem;
+  margin: 5rem 0rem 0rem 0rem;
   padding: 2rem;
   align-items: center;
 
@@ -26,6 +26,7 @@ export const Img = styled.img.attrs((p) => ({
 export const Link = styled(motion.a).attrs(() => ({
   target: '_blank',
   rel: 'noreferrer',
+  whileHover: { scale: 1.1 },
 }))`
   width: 5%;
 `;
@@ -35,8 +36,10 @@ export const LinkWide = styled(Link)`
 `;
 
 export const ImgsContainer = styled.div`
+  background: ${colors.card};
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  margin: 10rem 0 0 0;
+  margin: 6rem 0 6rem 0;
+  padding: 4rem;
 `;

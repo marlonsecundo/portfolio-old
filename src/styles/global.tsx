@@ -34,7 +34,6 @@ export const Background = styled.div`
 const GlobalStyles = createGlobalStyle`
 html {
   font-size: 100%;
-  height: 100%;
   box-sizing: border-box;
 
 
@@ -45,7 +44,6 @@ html {
 
 #root
 {
-  height: 100%;
 }
 
 * {
