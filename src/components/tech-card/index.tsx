@@ -18,12 +18,14 @@ import {
   BarText,
 } from './styles';
 
-const images: any[] = [];
+// const images: any[] = [];
 
-const promisses = techsData.map(async (tech) => {
-  const img = await import(`src/assets/images/techs/${tech.srcImg}`);
-  images.push(img.default);
-});
+// const promisses = techsData.map(async (tech) => {
+//   const img = await import(`src/assets/images/techs/${tech.srcImg}`);
+//   images.push(img.default);
+// });
+
+import images from './images';
 
 interface Props {
   tech: Technologies;
@@ -39,7 +41,8 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [color, setColor] = useState(colors.secondary);
 
   const updateContent = useCallback(async (index: Technologies) => {
-    await Promise.all(promisses);
+    // await Promise.all(promisses);
+
     const srcImg = images[0];
 
     setImg(srcImg);
