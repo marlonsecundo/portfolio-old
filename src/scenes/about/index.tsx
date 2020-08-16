@@ -1,6 +1,6 @@
 import React from 'react';
 
-import links from 'src/assets/data/links.json';
+import links from 'src/assets/data/links';
 import meImg from 'src/assets/images/me.png';
 import {
   StyledContainer,

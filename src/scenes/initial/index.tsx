@@ -7,8 +7,7 @@ import lattesLogo from 'src/assets/images/contact/lattes.png';
 import githubLogo from 'src/assets/images/contact/github.png';
 
 import ContactItem from 'src/components/contact-item';
-import links from 'src/assets/data/links.json';
-import { Background } from 'src/styles/global';
+import links from 'src/assets/data/links';
 import {
   Container,
   TitleContainer,

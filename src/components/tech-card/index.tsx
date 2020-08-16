@@ -3,8 +3,7 @@
 import React, { useEffect, useCallback, useState } from 'react';
 
 import { Technologies } from 'src/types';
-import TechsData from 'src/assets/data/technologies.json';
-import { AnimatePresence, AnimateSharedLayout, useAnimation } from 'framer-motion';
+import techsData from 'src/assets/data/technologies';
 import { colors } from 'src/styles';
 import {
   Container,
@@ -18,6 +17,13 @@ import {
   BarLength,
   BarText,
 } from './styles';
+
+const images: any[] = [];
+
+const promisses = techsData.map(async (tech) => {
+  const img = await import(`src/assets/images/techs/${tech.srcImg}`);
+  images.push(img.default);
+});
 
 interface Props {
   tech: Technologies;
@@ -33,13 +39,14 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [color, setColor] = useState(colors.secondary);
 
   const updateContent = useCallback(async (index: Technologies) => {
-    const srcImg = await import(`src/assets/images/techs/${TechsData[index].srcImg}`);
+    await Promise.all(promisses);
+    const srcImg = images[0];
 
-    setImg(srcImg.default);
-    setTitle(TechsData[index].title);
-    setDescription(TechsData[index].description);
-    setProgress(TechsData[index].progress);
-    setColor(TechsData[index].color);
+    setImg(srcImg);
+    setTitle(techsData[index].title);
+    setDescription(techsData[index].description);
+    setProgress(techsData[index].progress);
+    setColor(techsData[index].color);
   }, []);
 
   useEffect(() => {
