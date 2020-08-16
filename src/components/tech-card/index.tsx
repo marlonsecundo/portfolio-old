@@ -41,7 +41,7 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const updateContent = useCallback(async (index: Technologies) => {
     await Promise.all(promisses);
 
-    const srcImg = images[0];
+    const srcImg = images[index];
 
     setImg(srcImg);
     setTitle(techsData[index].title);
