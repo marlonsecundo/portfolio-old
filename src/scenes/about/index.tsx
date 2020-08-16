@@ -26,23 +26,23 @@ const About: React.FC = () => (
         <Title fontSize="1em" marginBottom="2.5rem">
           ABOUT
         </Title>
-        <Title fontSize="2em" marginBottom="0rem">
+        <Title fontSize="2em" marginBottom="1rem">
           Nice to meet you!
         </Title>
 
         <Topic>LANGUAGES</Topic>
-        <Text>JS, TS, C#, Java</Text>
-        <Topic>Backend</Topic>
+        <Text>JS, TS, Python, Java</Text>
+        <Topic>BACKEND</Topic>
         <Text>Adonis JS, NodeJS, Express, Mongo, Postgres</Text>
 
-        <Topic>Frontend</Topic>
-        <Text>React, Styled Components, HTML, CSS</Text>
+        <Topic>FRONTEND</Topic>
+        <Text>React, Electron, Styled Components, HTML, CSS</Text>
 
-        <Topic>Mobile</Topic>
+        <Topic>MOBILE</Topic>
         <Text>React</Text>
 
-        <Topic>Desktop</Topic>
-        <Text>Electron</Text>
+        <Topic>Tools</Topic>
+        <Text />
 
         <Img src={meImg} />
 

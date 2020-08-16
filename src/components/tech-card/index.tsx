@@ -32,10 +32,10 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [progress, setProgress] = useState(0);
   const [color, setColor] = useState(colors.secondary);
 
-  const updateContent = useCallback((index: Technologies) => {
-    const srcImg = require(`src/assets/images/techs/${TechsData[index].srcImg}`);
+  const updateContent = useCallback(async (index: Technologies) => {
+    const srcImg = await import(`src/assets/images/techs/${TechsData[index].srcImg}`);
 
-    setImg(srcImg);
+    setImg(srcImg.default);
     setTitle(TechsData[index].title);
     setDescription(TechsData[index].description);
     setProgress(TechsData[index].progress);

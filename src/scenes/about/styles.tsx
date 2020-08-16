@@ -72,20 +72,22 @@ export const Title = styled.h1<Props>`
 
 export const MeText = styled.p`
   color: ${colors.primary};
-  font-family: ${metrics.fontFamily};
+  font-family: ${metrics.aboutFontFamily};
   font-size: ${metrics.textSize};
   line-height: 2rem;
   width: 100%;
   text-align: center;
+  letter-spacing: 0.1rem;
 `;
 
 export const Text = styled(MeText)`
   text-align: left;
-  font: ${metrics.textSize} ${metrics.fontFamily};
+  font: ${metrics.textSize} ${metrics.aboutFontFamily};
+  letter-spacing: 0.1rem;
 `;
 
 export const Topic = styled(Text)`
-  font-weight: lighter;
+  font-weight: bold;
   margin: 1.5rem 0rem 1rem 0rem;
   line-height: 1rem;
   border-bottom: 1px solid;
@@ -99,7 +101,7 @@ export const Img = styled.img`
   border-radius: 100%;
   align-self: center;
   box-shadow: 0px 2pt 6pt ${colors.shadow};
-  margin: 3rem 0rem 0rem 0rem;
+  margin: 3rem 0rem 1rem 0rem;
 `;
 
 export const LocationTag = styled(LinkText)`
@@ -119,3 +121,10 @@ export const Tags = styled.div`
   bottom: 0;
   margin: auto;
 `;
+
+const state = {
+  abcd: 1,
+  bac: 1,
+  ae: 3,
+  ace: 2,
+};
