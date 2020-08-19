@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const Container = styled(motion.section)<Props>`
-  min-height: 45rem;
   width: 32%;
   padding: 3rem;
   padding-bottom: 0rem;
@@ -18,6 +17,7 @@ export const Container = styled(motion.section)<Props>`
   flex-direction: column;
 
   align-items: center;
+  justify-content: space-around;
 
   box-shadow: 0px 2pt 6pt ${colors.shadow};
 

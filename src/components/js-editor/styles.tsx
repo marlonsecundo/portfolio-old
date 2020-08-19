@@ -9,6 +9,5 @@ export const Pre = styled.pre`
 export const Code = styled.code`
   flex: 1;
   font-size: 20px;
-  width: 50%;
   line-height: 2em;
 `;

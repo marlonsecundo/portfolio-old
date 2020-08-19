@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, metrics } from 'src/styles';
+import { colors, metrics, media } from 'src/styles';
 import { Container } from 'src/styles/global';
 
 export const StyledContainer = styled(Container)`
@@ -10,8 +10,9 @@ export const LeftContainer = styled.div`
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 10rem;
   height: 100%;
+
+  padding: 1rem;
 `;
 
 export const TextContainer = styled.section`
@@ -23,8 +24,13 @@ export const Description = styled.p`
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
   line-height: 2rem;
-  width: 40%;
   margin-bottom: 5rem;
+
+  width: 100%;
+
+  ${media.desktop} {
+    width: 40%;
+  }
 `;
 
 export const TechContainer = styled.section`
@@ -37,10 +43,12 @@ export const TechContainer = styled.section`
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   align-items: flex-start;
+
+  flex-direction: column;
 `;
 
 export const Lists = styled.div`
-  width: 50%;
+  flex: 1;
   height: 100%;
   flex-direction: column;
   align-items: center;

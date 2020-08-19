@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, metrics } from 'src/styles';
+import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const StyledContainer = styled.section`
@@ -10,6 +10,8 @@ export const StyledContainer = styled.section`
   background-color: ${colors.background};
   top: 0;
   pointer-events: all;
+
+  max-width: 100vw;
 `;
 
 export const LeftContainer = styled.div`
@@ -18,9 +20,8 @@ export const LeftContainer = styled.div`
   background-color: ${colors.card};
   align-items: left;
   flex-direction: column;
-  padding-top: 10rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  justify-content: center;
+  padding: 0rem 5rem;
 `;
 
 export const RightContainer = styled(motion.nav)`
@@ -82,8 +83,9 @@ export const MeText = styled.p`
 
 export const Text = styled(MeText)`
   text-align: left;
-  font: ${metrics.textSize} ${metrics.aboutFontFamily};
+  font: 1rem ${metrics.aboutFontFamily};
   letter-spacing: 0.1rem;
+  width: 60%;
 `;
 
 export const Topic = styled(Text)`
@@ -97,11 +99,16 @@ export const Topic = styled(Text)`
 
 export const Img = styled.img`
   object-fit: contain;
-  width: 40%;
   border-radius: 100%;
   align-self: center;
   box-shadow: 0px 2pt 6pt ${colors.shadow};
   margin: 3rem 0rem 1rem 0rem;
+
+  width: 40%;
+
+  ${media.laptopL} {
+    width: 70%;
+  }
 `;
 
 export const LocationTag = styled(LinkText)`
@@ -121,10 +128,3 @@ export const Tags = styled.div`
   bottom: 0;
   margin: auto;
 `;
-
-const state = {
-  abcd: 1,
-  bac: 1,
-  ae: 3,
-  ace: 2,
-};

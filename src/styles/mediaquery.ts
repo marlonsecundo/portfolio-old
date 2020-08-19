@@ -2,7 +2,6 @@
 // https://github.com/styled-components/styled-components/blob/master/packages/styled-components/docs/tips-and-tricks.md#media-templates
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { css } from 'styled-components';
 
 /**
 .shadow box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -14,25 +13,15 @@ import { css } from 'styled-components';
 .shadow-outline box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
  */
 
-export const sizes = {
-  mobileS: 320,
-  mobileM: 375,
-  mobileL: 425,
-  tablet: 768,
-  laptop: 1024,
-  laptopL: 1440,
-  desktop: 2560,
-};
+const customMediaQuery = (maxWidth: number) => `@media (min-width: ${maxWidth}px)`;
 
-// iterate through the sizes and create a media template
-export default Object.keys(sizes).reduce((accumulator, label) => {
-  // use em in breakpoints to work properly cross-browser and support users
-  // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
-  const emSize = sizes[label] / 16;
-  accumulator[label] = (...args) => css`
-    @media (max-width: ${emSize}em) {
-      ${css(...args)};
-    }
-  `;
-  return accumulator;
-}, {});
+export default {
+  custom: customMediaQuery,
+  mobileS: customMediaQuery(320),
+  mobileM: customMediaQuery(375),
+  mobileL: customMediaQuery(425),
+  tablet: customMediaQuery(768),
+  laptop: customMediaQuery(1024),
+  laptopL: customMediaQuery(1440),
+  desktop: customMediaQuery(2560),
+};

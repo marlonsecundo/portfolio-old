@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import NeutraText from 'src/assets/fonts/neutra-text-bold.otf';
 import Fantasque from 'src/assets/fonts/fantasque-sans-mono-regular.otf';
 import Financer from 'src/assets/fonts/financier.ttf';
-import { metrics, colors } from '.';
+import { metrics, colors, media } from '.';
 
 export const Title = styled.h1`
   font-size: 4em;
@@ -14,13 +14,17 @@ export const Title = styled.h1`
 
 export const Container = styled.section`
   width: 100%;
-  padding-left: 13%;
-  padding-right: 13%;
   padding-top: 5.5rem;
   flex-direction: column;
   background-color: ${colors.background};
   z-index: 1;
   margin: -0.1rem 0 0 0;
+
+  padding: 5rem 0rem;
+  ${media.desktop} {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
 `;
 
 export const Background = styled.div`

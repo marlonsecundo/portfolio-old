@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, metrics } from 'src/styles';
+import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 import animations from './animations';
 
@@ -12,20 +12,27 @@ interface ContainerProps {
 }
 
 export const Container = styled(motion.section)<ContainerProps>`
-  height: 6em;
-  width: 6em;
-  margin: 2rem;
-  padding: 1em;
+  height: 4rem;
+  width: 4rem;
+  padding: 0.5rem;
   border-radius: 100%;
   animation: ${animations.float} 6s ease-in-out infinite;
   animation-delay: ${(p) => p.index * 100}ms;
   opacity: 0.5;
+  margin: 0 0 1rem 0;
+
+  ${media.desktop} {
+    height: 6em;
+    width: 6em;
+
+    margin: 2rem;
+  }
 `;
 
 export const DivWrapper = styled.div`
   position: sticky;
   top: 0;
-  width: 50%;
+  flex: 1;
   margin-top: -10rem;
 `;
 
@@ -40,10 +47,14 @@ export const BigContainer = styled(motion.section)`
 `;
 
 export const Logo = styled(motion.img)<Props>`
-  width: ${(props) => (props.small ? '100%' : '30%')};
+  width: 100%;
   padding: ${(props) => (props.small ? '0' : '1em')};
 
   object-fit: contain;
+
+  ${media.desktop} {
+    width: ${(props) => (props.small ? '100%' : '30%')};
+  }
 `;
 
 export const TextContainer = styled(motion.div)`

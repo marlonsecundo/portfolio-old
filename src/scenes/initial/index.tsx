@@ -31,12 +31,12 @@ const Initial: React.FC = () => {
 
   return (
     <Container id="initial">
-      <CodeContainer
+      {/* <CodeContainer
         animate={{ x: '0rem', transition: { duration: 1.5 } }}
         initial={{ x: '-5rem' }}
       >
         <JSEditor />
-      </CodeContainer>
+      </CodeContainer> */}
       <TitleContainer
         animate={{ x: '0rem', transition: { duration: 3 } }}
         initial={{ x: '5rem' }}
@@ -59,7 +59,7 @@ const Initial: React.FC = () => {
       </TitleContainer>
 
       <ContactContainer>
-        <ContactTitle>FIND ME!</ContactTitle>
+        {/* <ContactTitle>FIND ME!</ContactTitle> */}
         <ContactItem link={links.linkedin} imgSrc={logoLinkedin} />
         <ContactItem link={links.lattes} imgSrc={lattesLogo} />
 

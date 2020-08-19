@@ -32,7 +32,7 @@ const JSEditor: React.FC = () => {
 
         return jscode.substring(0, prev.length + 1);
       });
-    }, 50);
+    }, 25);
   }, []);
 
   useEffect(() => {

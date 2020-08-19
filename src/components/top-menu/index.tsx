@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef, RefObject } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import { HashLink as Link } from 'react-router-hash-link';
 
-import { useElementScroll, useViewportScroll } from 'framer-motion';
+import { useViewportScroll } from 'framer-motion';
 import { Container, LinkContainer, LinkItem, Background } from './styles';
 
 const variants = {
-  hidden: { y: '-5rem' },
+  hidden: { y: '-7rem' },
   visible: { y: '0rem' },
   withBackground: { opacity: 1 },
   withoutBackground: { opacity: 0 },
@@ -77,7 +77,7 @@ const TopMenu: React.FC = () => {
         </Link>
 
         <Link to="#about">
-          <LinkItem selected={index === 3}>About / Resume</LinkItem>
+          <LinkItem selected={index === 3}>About</LinkItem>
         </Link>
       </LinkContainer>
     </Container>
