@@ -7,7 +7,7 @@ export const StyledContainer = styled(Container)`
 `;
 
 export const StyledTitle = styled(Title)`
-  margin-bottom: 5rem;
+  margin: 0 0rem 5rem 1rem;
 `;
 
 export const CardsContainer = styled.div`

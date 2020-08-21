@@ -10,8 +10,8 @@ const HomePage: React.FC = () => (
   <BaseLayout>
     <Initial />
     <Skills />
-    {/* <Works /> */}
-    {/* <About /> */}
+    <Works />
+    <About />
   </BaseLayout>
 );
 

@@ -33,7 +33,7 @@ export const Link = styled(motion.a).attrs(() => ({
 }))`
   width: 30%;
 
-  margin: 2rem 0;
+  margin: 3rem 0;
   ${media.desktop} {
     width: 5%;
     margin: 0rem;
@@ -51,7 +51,7 @@ export const ImgsContainer = styled.div`
   background: ${colors.card};
   width: 100%;
   align-items: center;
-  margin: 4rem 0 5rem 0;
+  margin: 4rem 0 0rem 0;
   padding: 4rem;
 
   flex-flow: column;

@@ -14,6 +14,7 @@ export const Container = styled(motion.nav)`
   width: 100%;
   position: fixed;
   z-index: 50;
+  max-width: 100vw;
 
   ${media.laptopL} {
     height: 7rem;
@@ -57,6 +58,10 @@ interface Props {
 }
 
 export const LinkItem = styled.li<Props>`
-  color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
   font-family: 'Fantasque Sans';
+  color: ${colors.primary};
+
+  ${media.desktop} {
+    color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
+  }
 `;

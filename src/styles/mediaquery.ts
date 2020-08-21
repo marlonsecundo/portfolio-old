@@ -15,12 +15,19 @@
 
 const customMediaQuery = (maxWidth: number) => `@media (min-width: ${maxWidth}px)`;
 
+export const devicesWidth = {
+  mobileS: 320,
+  mobileM: 375,
+  mobileL: 425,
+  tablet: 768,
+};
+
 export default {
   custom: customMediaQuery,
-  mobileS: customMediaQuery(320),
-  mobileM: customMediaQuery(375),
-  mobileL: customMediaQuery(425),
-  tablet: customMediaQuery(768),
+  mobileS: customMediaQuery(devicesWidth.mobileS),
+  mobileM: customMediaQuery(devicesWidth.mobileM),
+  mobileL: customMediaQuery(devicesWidth.mobileL),
+  tablet: customMediaQuery(devicesWidth.tablet),
   laptop: customMediaQuery(1024),
   laptopL: customMediaQuery(1440),
   desktop: customMediaQuery(2560),

@@ -3,35 +3,42 @@ import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const StyledContainer = styled.section`
-  position: fixed;
   z-index: 0;
   height: 100%;
   width: 100%;
   background-color: ${colors.background};
-  top: 0;
   pointer-events: all;
+
+  flex-flow: column;
 
   max-width: 100vw;
 `;
 
 export const LeftContainer = styled.div`
-  width: 40%;
   height: 100%;
   background-color: ${colors.card};
   align-items: left;
   flex-direction: column;
   justify-content: center;
-  padding: 0rem 5rem;
+  padding: 5rem 5rem;
+
+  ${media.desktop} {
+    width: 40%;
+  }
 `;
 
 export const RightContainer = styled(motion.nav)`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: ${colors.shadow};
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  padding-left: 10rem;
+  padding: 1rem;
+
+  ${media.desktop} {
+    padding-left: 10rem;
+  }
 `;
 
 export const LinkText = styled(motion.a).attrs(() => ({
@@ -44,15 +51,14 @@ export const LinkText = styled(motion.a).attrs(() => ({
 }))`
   color: ${colors.primary};
   font-family: ${metrics.aboutFontFamily};
-  font-size: 3em;
+  font-size: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid ${colors.shadow};
+  text-align: center;
 `;
 
 export const TransparentContainer = styled.div`
   width: 100%;
-  height: 100%;
-  min-height: 100vh;
 
   z-index: -100;
   pointer-events: none;
@@ -82,10 +88,10 @@ export const MeText = styled.p`
 `;
 
 export const Text = styled(MeText)`
-  text-align: left;
+  text-align: justify;
   font: 1rem ${metrics.aboutFontFamily};
   letter-spacing: 0.1rem;
-  width: 60%;
+  width: 100%;
 `;
 
 export const Topic = styled(Text)`
@@ -104,11 +110,7 @@ export const Img = styled.img`
   box-shadow: 0px 2pt 6pt ${colors.shadow};
   margin: 3rem 0rem 1rem 0rem;
 
-  width: 40%;
-
-  ${media.laptopL} {
-    width: 70%;
-  }
+  width: 100%;
 `;
 
 export const LocationTag = styled(LinkText)`

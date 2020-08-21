@@ -52,7 +52,6 @@ export const JSTitle = styled(motion.h1)`
   font-size: 20em;
   font-family: ${metrics.fontFamilyJS};
   color: ${colors.secondary};
-  align-self: flex-start;
   font-size-adjust: none;
 `;
 
@@ -74,7 +73,7 @@ export const AndMore = styled(Description)`
 `;
 
 export const CodeContainer = styled(motion.div)`
-  display: block;
+  display: none;
   width: 50%;
   height: 100%;
   max-height: 70%;
@@ -115,6 +114,7 @@ export const ContactTitle = styled.h3`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  display: none;
 
   ${media.desktop} {
     transform: rotate(90deg);

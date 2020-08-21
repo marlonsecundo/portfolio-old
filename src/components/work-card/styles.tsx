@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, metrics } from 'src/styles';
+import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const Container = styled(motion.section)<Props>`
-  width: 32%;
   padding: 3rem;
   padding-bottom: 0rem;
 
@@ -28,7 +27,7 @@ export const Container = styled(motion.section)<Props>`
 `;
 
 export const WideContainer = styled(motion.section)<Props>`
-  min-height: 30rem;
+  min-height: 30%;
   width: 100%;
   margin-bottom: 2rem;
   padding: 3rem;
@@ -60,6 +59,10 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
   border-bottom-right-radius: 0px;
   padding-bottom: 2rem;
   z-index: 5;
+  width: 70%;
+  ${media.desktop} {
+    width: ${(p) => (p.wide ? '20%' : '70%')};
+  }
 `;
 
 interface TextProps {
