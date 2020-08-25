@@ -111,6 +111,10 @@ export const Img = styled.img`
   margin: 3rem 0rem 1rem 0rem;
 
   width: 100%;
+
+  ${media.tablet} {
+    width: 50%;
+  }
 `;
 
 export const LocationTag = styled(LinkText)`

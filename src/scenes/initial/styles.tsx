@@ -13,8 +13,9 @@ export const Container = styled.section`
 
   z-index: 2;
 
-  ${media.desktop} {
-    flex-flow: column;
+  ${media.laptopL} {
+    flex-flow: row;
+    align-items: center;
   }
 `;
 
@@ -29,30 +30,34 @@ export const TitleContainer = styled(motion.div)`
   justify-content: center;
 
   ${media.laptopL} {
-    margin: 10rem 0 2rem 0;
     font-size: 0.7em;
-  }
-
-  ${media.desktop} {
-    flex-flow: row;
     width: 35%;
-    margin: -10rem 0 0 -14rem;
+    margin: -13rem 0 0 -14rem;
+
+    align-items: flex-start;
   }
 `;
 
 export const Title = styled.h1`
   margin: -0.4em 0 0 0;
-  font-size: 6em;
   padding-bottom: 0.4em;
-  font-family: ${metrics.fontFamilyJS};
   color: ${colors.secondary};
+
+  font: 6em ${metrics.fontFamilyJS};
+
+  ${media.laptopL} {
+    font: 8em ${metrics.fontFamilyJS};
+  }
 `;
 
 export const JSTitle = styled(motion.h1)`
-  font-size: 20em;
-  font-family: ${metrics.fontFamilyJS};
+  font: 20em ${metrics.fontFamilyJS};
   color: ${colors.secondary};
   font-size-adjust: none;
+
+  ${media.laptopL} {
+    font: 28em ${metrics.fontFamilyJS};
+  }
 `;
 
 export const Description = styled.p`
@@ -62,8 +67,10 @@ export const Description = styled.p`
 
   padding: 0 1.5rem;
 
-  ${media.desktop} {
-    font: 1rem ${metrics.fontFamily};
+  ${media.laptopL} {
+    font: 1.1rem ${metrics.fontFamily};
+
+    padding: 0;
   }
 `;
 
@@ -74,15 +81,17 @@ export const AndMore = styled(Description)`
 
 export const CodeContainer = styled(motion.div)`
   display: none;
-  width: 50%;
-  height: 100%;
-  max-height: 70%;
 
-  margin: 5rem 0rem 0rem -14rem;
+  ${media.tablet} {
+    display: block;
+    margin: 2rem 0rem 0 0;
+    width: 80%;
+  }
 
   ${media.laptopL} {
-    flex-direction: column;
-    margin: 0rem;
+    width: 60%;
+    height: 60%;
+    margin: 2rem 0 0 0rem;
   }
 `;
 

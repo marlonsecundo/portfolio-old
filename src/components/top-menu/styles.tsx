@@ -16,12 +16,7 @@ export const Container = styled(motion.nav)`
   z-index: 50;
   max-width: 100vw;
 
-  ${media.laptopL} {
-    height: 7rem;
-  }
-
-  ${media.desktop} {
-    height: 5rem;
+  ${media.tablet} {
   }
 `;
 
@@ -36,20 +31,13 @@ export const LinkContainer = styled.ul`
 
   padding: 0 10%;
 
-  ${media.laptopL} {
-    justify-content: space-between;
-    font-size: 1.5rem;
+  ${media.tablet} {
     padding: 0 15%;
   }
 
-  ${media.desktop} {
-    display: flex;
-    width: 100%;
-    z-index: 1;
-
+  ${media.laptopL} {
     align-items: center;
-
-    padding: 0 33%;
+    padding: 0 30%;
   }
 `;
 

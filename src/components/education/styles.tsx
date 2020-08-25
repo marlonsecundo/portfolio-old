@@ -34,7 +34,7 @@ export const Link = styled(motion.a).attrs(() => ({
   width: 30%;
 
   margin: 3rem 0;
-  ${media.desktop} {
+  ${media.tablet} {
     width: 5%;
     margin: 0rem;
   }
@@ -42,8 +42,8 @@ export const Link = styled(motion.a).attrs(() => ({
 
 export const LinkWide = styled(Link)`
   width: 50%;
-  ${media.desktop} {
-    width: 5%;
+  ${media.tablet} {
+    width: 10%;
   }
 `;
 
@@ -56,7 +56,7 @@ export const ImgsContainer = styled.div`
 
   flex-flow: column;
 
-  ${media.desktop} {
+  ${media.tablet} {
     flex-flow: row;
     justify-content: space-around;
   }

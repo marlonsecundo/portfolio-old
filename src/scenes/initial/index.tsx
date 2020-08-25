@@ -8,9 +8,7 @@ import githubLogo from 'src/assets/images/contact/github.png';
 
 import ContactItem from 'src/components/contact-item';
 import links from 'src/assets/data/links';
-import MediaQuery, { useMediaQuery } from 'react-responsive';
-import { media } from 'src/styles';
-import { devicesWidth } from 'src/styles/mediaquery';
+
 import {
   Container,
   TitleContainer,
@@ -34,14 +32,12 @@ const Initial: React.FC = () => {
 
   return (
     <Container id="initial">
-      {/* <MediaQuery minDeviceWidth={devicesWidth.tablet}> */}
       <CodeContainer
         animate={{ x: '0rem', transition: { duration: 1.5 } }}
         initial={{ x: '-5rem' }}
       >
         <JSEditor />
       </CodeContainer>
-      {/* </MediaQuery> */}
 
       <TitleContainer
         animate={{ x: '0rem', transition: { duration: 3 } }}

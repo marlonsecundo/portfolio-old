@@ -24,10 +24,17 @@ export const Container = styled(motion.section)<Props>`
   margin-bottom: 2rem;
 
   overflow: hidden;
+
+  ${media.tablet} {
+    width: 50%;
+  }
+
+  ${media.laptop} {
+    width: 33%;
+  }
 `;
 
 export const WideContainer = styled(motion.section)<Props>`
-  min-height: 30%;
   width: 100%;
   margin-bottom: 2rem;
   padding: 3rem;
@@ -60,7 +67,8 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
   padding-bottom: 2rem;
   z-index: 5;
   width: 70%;
-  ${media.desktop} {
+
+  ${media.tablet} {
     width: ${(p) => (p.wide ? '20%' : '70%')};
   }
 `;

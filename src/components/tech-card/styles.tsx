@@ -21,7 +21,7 @@ export const Container = styled(motion.section)<ContainerProps>`
   opacity: 0.5;
   margin: 0 0 1rem 0;
 
-  ${media.desktop} {
+  ${media.tablet} {
     height: 6em;
     width: 6em;
 
@@ -52,8 +52,8 @@ export const Logo = styled(motion.img)<Props>`
 
   object-fit: contain;
 
-  ${media.desktop} {
-    width: ${(props) => (props.small ? '100%' : '30%')};
+  ${media.tablet} {
+    width: ${(props) => (props.small ? '100%' : '40%')};
   }
 `;
 
