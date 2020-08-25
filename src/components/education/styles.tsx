@@ -9,8 +9,8 @@ export const Container = styled.div`
 
   flex-direction: column;
 
-  ${media.desktop} {
-    padding: 0rem;
+  ${media.laptopL} {
+    margin: 5rem 0 10rem 0;
   }
 `;
 

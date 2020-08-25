@@ -21,9 +21,8 @@ export const Container = styled.section`
   margin: -0.1rem 0 0 0;
 
   padding: 5rem 0rem;
-  ${media.desktop} {
-    padding-left: 13%;
-    padding-right: 13%;
+  ${media.laptopL} {
+    padding: 0 5%;
   }
 `;
 

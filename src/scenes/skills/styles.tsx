@@ -28,7 +28,7 @@ export const Description = styled.p`
 
   width: 100%;
 
-  ${media.desktop} {
+  ${media.laptopL} {
     width: 40%;
   }
 `;
@@ -44,7 +44,11 @@ export const TechContainer = styled.section`
   border-bottom-right-radius: 0px;
   align-items: flex-start;
 
-  flex-direction: column;
+  flex-flow: column;
+
+  ${media.laptopL} {
+    flex-flow: row;
+  }
 `;
 
 export const Lists = styled.div`

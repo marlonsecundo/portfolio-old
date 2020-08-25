@@ -22,9 +22,6 @@ export const Container = styled(motion.section)<ContainerProps>`
   margin: 0 0 1rem 0;
 
   ${media.tablet} {
-    height: 6em;
-    width: 6em;
-
     margin: 2rem;
   }
 `;

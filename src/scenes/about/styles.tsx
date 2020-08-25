@@ -12,6 +12,11 @@ export const StyledContainer = styled.section`
   flex-flow: column;
 
   max-width: 100vw;
+
+  ${media.laptopL} {
+    flex-flow: row;
+    position: fixed;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -21,10 +26,6 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5rem 5rem;
-
-  ${media.desktop} {
-    width: 40%;
-  }
 `;
 
 export const RightContainer = styled(motion.nav)`
@@ -62,6 +63,10 @@ export const TransparentContainer = styled.div`
 
   z-index: -100;
   pointer-events: none;
+
+  ${media.laptopL} {
+    min-height: 100vh;
+  }
 `;
 
 interface Props {
@@ -114,6 +119,10 @@ export const Img = styled.img`
 
   ${media.tablet} {
     width: 50%;
+  }
+
+  ${media.laptopL} {
+    width: 100%;
   }
 `;
 
