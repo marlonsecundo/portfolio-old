@@ -24,6 +24,11 @@ export const Container = styled(motion.section)<ContainerProps>`
   ${media.tablet} {
     margin: 2rem;
   }
+
+  ${media.desktop} {
+    height: 6rem;
+    width: 6rem;
+  }
 `;
 
 export const DivWrapper = styled.div`

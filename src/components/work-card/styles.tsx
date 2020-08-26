@@ -59,18 +59,15 @@ interface WorkImageProps {
 
 export const WorkImage = styled(motion.img)<WorkImageProps>`
   object-fit: contain;
-  width: ${(p) => (p.wide ? '20%' : '70%')};
   border-radius: 20px;
 
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   padding-bottom: 2rem;
   z-index: 5;
-  width: 70%;
+  width: 60%;
 
-  ${media.tablet} {
-    width: ${(p) => (p.wide ? '20%' : '70%')};
-  }
+  width: ${(p) => (p.wide ? '20%' : '60%')};
 `;
 
 interface TextProps {

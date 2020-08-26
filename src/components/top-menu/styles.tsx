@@ -14,7 +14,6 @@ export const Container = styled(motion.nav)`
   width: 100%;
   position: fixed;
   z-index: 50;
-  max-width: 100vw;
 
   ${media.tablet} {
   }

@@ -17,6 +17,8 @@ export const StyledContainer = styled.section`
     flex-flow: row;
     position: fixed;
   }
+
+  position: relative;
 `;
 
 export const LeftContainer = styled.div`
@@ -26,6 +28,25 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5rem 5rem;
+
+  ${media.laptop} {
+    flex-flow: row;
+  }
+
+  ${media.laptopL} {
+    flex-flow: column;
+  }
+`;
+
+export const BottomContainer = styled.div`
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TopContainer = styled.div`
+  flex-flow: column;
+  flex: 1;
 `;
 
 export const RightContainer = styled(motion.nav)`
@@ -38,7 +59,8 @@ export const RightContainer = styled(motion.nav)`
   padding: 1rem;
 
   ${media.desktop} {
-    padding-left: 10rem;
+    align-items: flex-start;
+    padding: 0 0 0 10rem;
   }
 `;
 
@@ -56,6 +78,10 @@ export const LinkText = styled(motion.a).attrs(() => ({
   margin-bottom: 2rem;
   border-bottom: 1px solid ${colors.shadow};
   text-align: center;
+
+  ${media.desktop} {
+    font-size: 3rem;
+  }
 `;
 
 export const TransparentContainer = styled.div`
@@ -115,31 +141,39 @@ export const Img = styled.img`
   box-shadow: 0px 2pt 6pt ${colors.shadow};
   margin: 3rem 0rem 1rem 0rem;
 
-  width: 100%;
+  width: 70%;
+
+  ${media.mobileL} {
+  }
 
   ${media.tablet} {
-    width: 50%;
+    width: 30%;
   }
 
   ${media.laptopL} {
-    width: 100%;
+    width: 70%;
+  }
+
+  ${media.desktop} {
+    width: 90%;
   }
 `;
 
 export const LocationTag = styled(LinkText)`
-  font-size: 1.5em;
   margin: 1rem 0px;
+  font-size: 1.5rem;
 `;
 
 export const YearTag = styled.p`
   color: ${colors.primary};
-  font-family: ${metrics.aboutFontFamily};
-  font-size: 1.5em;
   margin: 1rem 0px;
 `;
 
 export const Tags = styled.div`
   position: absolute;
   bottom: 0;
-  margin: auto;
+  left: 50%;
+  font: 1.5rem ${metrics.aboutFontFamily};
+
+  transform: translate(-50%, -50%);
 `;

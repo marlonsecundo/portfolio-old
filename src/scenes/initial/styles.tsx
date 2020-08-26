@@ -6,12 +6,15 @@ export const Container = styled.section`
   height: 100%;
   min-height: 100vh;
   width: 100%;
+  max-width: 100vw;
   justify-content: center;
   align-items: center;
   background: ${colors.background};
   flex-flow: column-reverse;
 
   z-index: 2;
+
+  overflow-x: hidden; //horizontal
 
   ${media.laptopL} {
     flex-flow: row;
@@ -93,6 +96,10 @@ export const CodeContainer = styled(motion.div)`
     height: 60%;
     margin: 2rem 0 0 0rem;
   }
+
+  ${media.desktop} {
+    width: 45%;
+  }
 `;
 
 export const ContactContainer = styled.nav`
@@ -110,7 +117,10 @@ export const ContactContainer = styled.nav`
   ${media.desktop} {
     position: fixed;
     right: 0;
+    bottom: auto;
     flex-flow: column;
+
+    margin: 0 0.5rem 0 0;
   }
 `;
 
@@ -126,6 +136,7 @@ export const ContactTitle = styled.h3`
   display: none;
 
   ${media.desktop} {
+    display: flex;
     transform: rotate(90deg);
   }
 `;

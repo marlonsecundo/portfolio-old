@@ -24,6 +24,10 @@ export const Container = styled.section`
   ${media.laptopL} {
     padding: 0 5%;
   }
+
+  ${media.desktop} {
+    padding: 0 10%;
+  }
 `;
 
 export const Background = styled.div`
