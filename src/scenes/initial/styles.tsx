@@ -6,7 +6,7 @@ export const Container = styled.section`
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   background: ${colors.background};
