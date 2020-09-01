@@ -3,8 +3,8 @@ import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const Container = styled.section`
-  height: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   width: 100%;
   max-width: 100%;
   justify-content: center;
@@ -14,7 +14,7 @@ export const Container = styled.section`
 
   z-index: 2;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     flex-flow: row;
     align-items: center;
   }
@@ -30,7 +30,7 @@ export const TitleContainer = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     font-size: 0.7em;
     width: 35%;
     margin: -13rem 0 0 -14rem;
@@ -46,7 +46,7 @@ export const Title = styled.h1`
 
   font: 6em ${metrics.fontFamilyJS};
 
-  ${media.laptopL} {
+  ${media.laptop} {
     font: 8em ${metrics.fontFamilyJS};
   }
 `;
@@ -56,7 +56,7 @@ export const JSTitle = styled(motion.h1)`
   color: ${colors.secondary};
   font-size-adjust: none;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     font: 28em ${metrics.fontFamilyJS};
   }
 `;
@@ -68,7 +68,7 @@ export const Description = styled.p`
 
   padding: 0 1.5rem;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     font: 1.1rem ${metrics.fontFamily};
 
     padding: 0;
@@ -89,7 +89,7 @@ export const CodeContainer = styled(motion.div)`
     width: 80%;
   }
 
-  ${media.laptopL} {
+  ${media.laptop} {
     width: 60%;
     height: 60%;
     margin: 2rem 0 0 0rem;

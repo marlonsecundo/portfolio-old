@@ -28,7 +28,7 @@ export const Description = styled.p`
 
   width: 100%;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     width: 40%;
   }
 `;
@@ -46,7 +46,7 @@ export const TechContainer = styled.section`
 
   flex-flow: column;
 
-  ${media.laptopL} {
+  ${media.laptop} {
     flex-flow: row;
   }
 `;

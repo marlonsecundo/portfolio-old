@@ -54,6 +54,10 @@ export const Logo = styled(motion.img)<Props>`
 
   object-fit: contain;
 
+  ${media.mobileL} {
+    width: ${(props) => (props.small ? '100%' : '30%')};
+  }
+
   ${media.tablet} {
     width: ${(props) => (props.small ? '100%' : '30%')};
   }

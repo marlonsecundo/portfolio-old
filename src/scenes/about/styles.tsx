@@ -58,6 +58,8 @@ export const RightContainer = styled(motion.nav)`
   flex-direction: column;
   padding: 1rem;
 
+  overflow: hidden;
+
   ${media.desktop} {
     align-items: flex-start;
     padding: 0 0 0 10rem;

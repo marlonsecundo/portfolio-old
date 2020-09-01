@@ -34,6 +34,12 @@ export const Link = styled(motion.a).attrs(() => ({
   width: 30%;
 
   margin: 3rem 0;
+
+  ${media.mobileL} {
+    width: 20%;
+    margin: 3rem;
+  }
+
   ${media.tablet} {
     width: 5%;
     margin: 0rem;
