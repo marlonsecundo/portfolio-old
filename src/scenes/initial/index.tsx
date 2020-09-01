@@ -47,6 +47,7 @@ const Initial: React.FC = () => {
           whileHover={{
             x: [-0, 70],
           }}
+          whileTap={{ scale: 1.1 }}
         >
           JS
         </JSTitle>
