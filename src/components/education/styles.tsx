@@ -30,6 +30,7 @@ export const Link = styled(motion.a).attrs(() => ({
   target: '_blank',
   rel: 'noreferrer',
   whileHover: { scale: 1.1 },
+  whileTap: { scale: 1.1 },
 }))`
   width: 30%;
 

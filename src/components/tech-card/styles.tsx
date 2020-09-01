@@ -36,6 +36,8 @@ export const DivWrapper = styled.div`
   top: 0;
   flex: 1;
   margin-top: -10rem;
+
+  pointer-events: none;
 `;
 
 export const BigContainer = styled(motion.section)`

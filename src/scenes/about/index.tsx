@@ -39,13 +39,13 @@ const About: React.FC = () => (
           <Text>Adonis JS, NodeJS, Express, Mongo, Postgres</Text>
 
           <Topic>FRONTEND</Topic>
-          <Text>React, Electron, Styled Components, HTML, CSS</Text>
+          <Text>React JS, Electron, Styled Components, HTML, CSS</Text>
 
           <Topic>MOBILE</Topic>
-          <Text>React</Text>
+          <Text>React Native</Text>
 
           <Topic>Tools</Topic>
-          <Text>ESLint, NPM, Yarn, Git, </Text>
+          <Text>ESLint, NPM, Yarn, Git </Text>
         </TopContainer>
 
         <BottomContainer>

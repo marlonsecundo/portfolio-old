@@ -46,9 +46,6 @@ interface Props {
 
 export const LinkItem = styled.li<Props>`
   font-family: 'Fantasque Sans';
-  color: ${colors.primary};
 
-  ${media.desktop} {
-    color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
-  }
+  color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
 `;

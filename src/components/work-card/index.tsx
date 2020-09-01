@@ -38,7 +38,12 @@ const WorkCard: React.FC<Props> = ({
       <TagText textColor={textColor}>{tagText}</TagText>
       <Title textColor={textColor}>{title}</Title>
       <Description textColor={textColor}>{children}</Description>
-      <WorkImage whileHover={{ scale: 1.1 }} wide={wide} src={srcImg} />
+      <WorkImage
+        whileTap={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }}
+        wide={wide}
+        src={srcImg}
+      />
     </>
   );
 

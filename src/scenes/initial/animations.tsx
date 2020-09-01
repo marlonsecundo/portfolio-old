@@ -6,9 +6,11 @@ const useInitialAnimations = () => {
     query: `(min-device-width: ${devicesWidth.laptopL}px)`,
   });
 
-  const animation = isDesktopOrLaptop ? { x: '0rem', transition: { duration: 1.5 } } : {};
-  const initialTitle = isDesktopOrLaptop ? { x: '5rem' } : {};
-  const initialCode = isDesktopOrLaptop ? { x: '-5rem' } : {};
+  const animation = isDesktopOrLaptop
+    ? { x: '0rem', transition: { duration: 1.5 } }
+    : { opacity: 1 };
+  const initialTitle = isDesktopOrLaptop ? { x: '5rem' } : { opacity: 0 };
+  const initialCode = isDesktopOrLaptop ? { x: '-5rem' } : { opacity: 0 };
 
   return { animation, initialTitle, initialCode };
 };

@@ -56,8 +56,8 @@ export const JSTitle = styled(motion.h1)`
   color: ${colors.secondary};
   font-size-adjust: none;
 
-  ${media.laptop} {
-    font: 28em ${metrics.fontFamilyJS};
+  ${media.laptopL} {
+    font: 25em ${metrics.fontFamilyJS};
   }
 `;
 

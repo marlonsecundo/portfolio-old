@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import { useViewportScroll } from 'framer-motion';
+import { devicesWidth } from 'src/styles/mediaquery';
+import { useMediaQuery } from 'react-responsive';
 import { Container, LinkContainer, LinkItem, Background } from './styles';
 
 const variants = {
@@ -19,17 +21,33 @@ const TopMenu: React.FC = () => {
   const [visible, setVisible] = useState(true);
   const [background, setBackground] = useState(false);
 
+  const isDesktopOrLaptop = useMediaQuery({
+    query: `(min-device-width: ${devicesWidth.laptop}px)`,
+  });
+
   useEffect(() => {
     function updateOnScroll(v: any) {
-      if (v >= 0.9) {
+      if (isDesktopOrLaptop) {
+        if (v >= 0.9) {
+          setIndex(3);
+        } else if (v >= 0.6) {
+          setIndex(2);
+        } else if (v >= 0.15) {
+          setIndex(1);
+        } else {
+          setIndex(0);
+        }
+      } else if (v >= 0.8) {
         setIndex(3);
-      } else if (v >= 0.6) {
+      } else if (v >= 0.45) {
         setIndex(2);
-      } else if (v >= 0.15) {
+      } else if (v >= 0.07) {
         setIndex(1);
       } else {
         setIndex(0);
       }
+
+      console.log(v);
 
       if (timerRef.current !== -1) {
         clearTimeout(timerRef.current);
@@ -50,7 +68,7 @@ const TopMenu: React.FC = () => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [isDesktopOrLaptop]);
 
   return (
     <Container

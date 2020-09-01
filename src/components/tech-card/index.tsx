@@ -61,6 +61,10 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
       onMouseEnter={() => {
         onMouserEnter(tech);
       }}
+      onClick={() => {
+        onMouserEnter(tech);
+      }}
+      onTap={() => onMouserEnter(tech)}
     >
       <Logo small={compacted} src={img} />
     </Container>
