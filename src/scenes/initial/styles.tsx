@@ -14,8 +14,6 @@ export const Container = styled.section`
 
   z-index: 2;
 
-  overflow-x: hidden; //horizontal
-
   ${media.laptopL} {
     flex-flow: row;
     align-items: center;

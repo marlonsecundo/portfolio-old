@@ -49,12 +49,16 @@ export const BigContainer = styled(motion.section)`
 `;
 
 export const Logo = styled(motion.img)<Props>`
-  width: 100%;
+  width: 50%;
   padding: ${(props) => (props.small ? '0' : '1em')};
 
   object-fit: contain;
 
   ${media.tablet} {
+    width: ${(props) => (props.small ? '100%' : '30%')};
+  }
+
+  ${media.laptopL} {
     width: ${(props) => (props.small ? '100%' : '40%')};
   }
 `;
@@ -77,6 +81,11 @@ export const Description = styled(motion.p)`
   color: ${colors.primary};
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
+
+  display: none;
+  ${media.tablet} {
+    display: flex;
+  }
 `;
 
 export const ProgressBar = styled.div`

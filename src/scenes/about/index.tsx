@@ -45,7 +45,7 @@ const About: React.FC = () => (
           <Text>React</Text>
 
           <Topic>Tools</Topic>
-          <Text />
+          <Text>ESLint, NPM, Yarn, Git, </Text>
         </TopContainer>
 
         <BottomContainer>

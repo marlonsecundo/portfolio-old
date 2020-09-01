@@ -160,6 +160,10 @@ export const Img = styled.img`
 export const LocationTag = styled(LinkText)`
   margin: 1rem 0px;
   font-size: 1.5rem;
+
+  ${media.desktop} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const YearTag = styled.p`

@@ -47,7 +47,6 @@ html {
 
   overflow: scroll;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 #root

@@ -9,6 +9,9 @@ import githubLogo from 'src/assets/images/contact/github.png';
 import ContactItem from 'src/components/contact-item';
 import links from 'src/assets/data/links';
 
+import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { media } from 'src/styles';
+import { devicesWidth } from 'src/styles/mediaquery';
 import {
   Container,
   TitleContainer,
@@ -20,9 +23,12 @@ import {
   ContactTitle,
   AndMore,
 } from './styles';
+import useInitialAnimations from './animations';
 
 const Initial: React.FC = () => {
   const [underscore, setUnderscore] = useState('_');
+
+  const { animation, initialCode, initialTitle } = useInitialAnimations();
 
   useEffect(() => {
     setInterval(() => {
@@ -32,17 +38,11 @@ const Initial: React.FC = () => {
 
   return (
     <Container id="initial">
-      <CodeContainer
-        animate={{ x: '0rem', transition: { duration: 1.5 } }}
-        initial={{ x: '-5rem' }}
-      >
+      <CodeContainer animate={animation} initial={initialCode}>
         <JSEditor />
       </CodeContainer>
 
-      <TitleContainer
-        animate={{ x: '0rem', transition: { duration: 3 } }}
-        initial={{ x: '5rem' }}
-      >
+      <TitleContainer animate={animation} initial={initialTitle}>
         <JSTitle
           whileHover={{
             x: [-0, 70],
