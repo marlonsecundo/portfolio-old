@@ -47,8 +47,6 @@ const TopMenu: React.FC = () => {
         setIndex(0);
       }
 
-      console.log(v);
-
       if (timerRef.current !== -1) {
         clearTimeout(timerRef.current);
         timerRef.current = -1;

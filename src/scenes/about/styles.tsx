@@ -147,15 +147,7 @@ export const Img = styled.img`
   }
 
   ${media.tablet} {
-    width: 30%;
-  }
-
-  ${media.laptopL} {
-    width: 70%;
-  }
-
-  ${media.desktop} {
-    width: 90%;
+    width: 35%;
   }
 `;
 

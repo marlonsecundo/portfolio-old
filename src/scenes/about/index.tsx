@@ -35,17 +35,21 @@ const About: React.FC = () => (
 
           <Topic>LANGUAGES</Topic>
           <Text>JS, TS, Python, Java</Text>
-          <Topic>BACKEND</Topic>
-          <Text>Adonis JS, NodeJS, Express, Mongo, Postgres</Text>
 
-          <Topic>FRONTEND</Topic>
-          <Text>React JS, Electron, Styled Components, HTML, CSS</Text>
+          <Topic>BACKEND</Topic>
+          <Text>Adonis JS, NodeJS, Express, Mongo, Postgres, API REST</Text>
+
+          <Topic>WEB FRONTEND</Topic>
+          <Text>React JS, Electron, HTML, CSS</Text>
 
           <Topic>MOBILE</Topic>
           <Text>React Native</Text>
 
+          <Topic>LIBRARIES</Topic>
+          <Text>React Hooks, Redux, Redux Saga, React Router, Styled Components</Text>
+
           <Topic>Tools</Topic>
-          <Text>ESLint, NPM, Yarn, Git </Text>
+          <Text>VScode, Prettier, Insomnia, ESLint, NPM, Yarn, Git</Text>
         </TopContainer>
 
         <BottomContainer>
