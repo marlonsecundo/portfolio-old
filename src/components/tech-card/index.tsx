@@ -18,12 +18,22 @@ import {
   BarText,
 } from './styles';
 
-const images: any[] = [];
+// eslint-disable-next-line no-restricted-syntax
 
-const promisses = techsData.map(async (tech) => {
-  const img = await import(`src/assets/images/techs/${tech.srcImg}`);
-  images.push(img.default);
-});
+async function getImages() {
+  const images: any[] = [];
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const tech of techsData) {
+    // eslint-disable-next-line no-await-in-loop
+    const img = await import(`src/assets/images/techs/${tech.srcImg}`);
+    images.push(img.default);
+  }
+
+  return images;
+}
+
+const promisse = getImages();
 
 interface Props {
   tech: Technologies;
@@ -39,7 +49,7 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
   const [color, setColor] = useState(colors.secondary);
 
   const updateContent = useCallback(async (index: Technologies) => {
-    await Promise.all(promisses);
+    const images = await promisse;
 
     const srcImg = images[index];
 

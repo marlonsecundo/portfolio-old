@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import TechCard from 'src/components/tech-card';
 import { Technologies } from 'src/types';
-import { Title, Background } from 'src/styles/global';
+import { Title } from 'src/styles/global';
 import Education from 'src/components/education';
 import {
   TextContainer,
