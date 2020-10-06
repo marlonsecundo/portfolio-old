@@ -48,6 +48,11 @@ const Skills: React.FC = () => {
           <TechListTitle>Experience with</TechListTitle>
           <TechList>
             <TechCard
+              tech={Technologies.NODE_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
               tech={Technologies.TYPESCRIPT}
               compacted
               onMouserEnter={onTechMouseEnter}
@@ -58,12 +63,17 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
-              tech={Technologies.NODE_JS}
+              tech={Technologies.PYTHON}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
               tech={Technologies.REACT_JS}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.FLUTTER}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
@@ -138,11 +148,6 @@ const Skills: React.FC = () => {
             />
             <TechCard
               tech={Technologies.GATSBY}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
-              tech={Technologies.PYTHON}
               compacted
               onMouserEnter={onTechMouseEnter}
             />

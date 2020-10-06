@@ -34,7 +34,7 @@ const About: React.FC = () => (
           </Title>
 
           <Topic>LANGUAGES</Topic>
-          <Text>JS, TS, Python, Java</Text>
+          <Text>JS, TS, Python, Java, Dart</Text>
 
           <Topic>BACKEND</Topic>
           <Text>Adonis JS, NodeJS, Express, Mongo, Postgres, API REST</Text>
@@ -43,12 +43,15 @@ const About: React.FC = () => (
           <Text>React JS, Electron, HTML, CSS</Text>
 
           <Topic>MOBILE</Topic>
-          <Text>React Native</Text>
+          <Text>React Native, Flutter</Text>
 
           <Topic>LIBRARIES</Topic>
-          <Text>React Hooks, Redux, Redux Saga, React Router, Styled Components</Text>
+          <Text>
+            React Hooks, Redux, Mobx, Redux Saga, React Router, Styled Components, Framer
+            Motion
+          </Text>
 
-          <Topic>Tools</Topic>
+          <Topic>TOOLS</Topic>
           <Text>VScode, Prettier, Insomnia, ESLint, NPM, Yarn, Git</Text>
         </TopContainer>
 

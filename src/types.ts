@@ -19,4 +19,5 @@ export enum Technologies {
   STYLED_COMPONENTS = 17,
   HTML = 18,
   CSS = 19,
+  FLUTTER = 20,
 }
