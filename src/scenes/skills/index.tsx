@@ -4,6 +4,7 @@ import TechCard from 'src/components/tech-card';
 import { Technologies } from 'src/types';
 import { Title } from 'src/styles/global';
 import Education from 'src/components/education';
+import Also from 'src/components/also';
 import {
   TextContainer,
   Description,
@@ -155,6 +156,8 @@ const Skills: React.FC = () => {
         </Lists>
         <TechCard tech={index} />
       </TechContainer>
+
+      <Also />
 
       <Education />
     </StyledContainer>

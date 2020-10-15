@@ -1,4 +1,4 @@
-#### References
+#### Design Inspiration
 
 - https://kuon.space/#top
 - http://www.eugeneso.com/#about
@@ -10,3 +10,4 @@
 - https://www.femmefatale.paris/en
 - https://tobiasahlin.com/
 - https://jacekjeznach.com/about/
+- https://ildaneta.dev/skills

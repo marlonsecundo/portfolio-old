@@ -15,7 +15,7 @@ export const CardsContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-content: center;
   margin-bottom: 3rem;
 `;

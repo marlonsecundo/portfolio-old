@@ -26,6 +26,10 @@ export const Container = styled(motion.section)<Props>`
 
   overflow: hidden;
 
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 3rem;
+
   ${media.tablet} {
     width: 50%;
   }
