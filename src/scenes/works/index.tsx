@@ -54,7 +54,6 @@ const Works: React.FC = () => (
         title="ANOTAÍ"
         srcImg={anotaiImage}
         tagText="Mobile, Backend"
-        wide
       >
         Application created for order fulfillment and management in restaurants
       </WorkCard>
