@@ -8,7 +8,7 @@ import { Container, Title, ImgsContainer, Img, LinkWide, Link } from './styles';
 
 const Education: React.FC = () => (
   <Container>
-    <Title>Education</Title>
+    <Title>EDUCATION</Title>
     <ImgsContainer>
       <Link href="https://portal.ifrn.edu.br/">
         <Img src={ifrn} alt="IFRN Logo" />

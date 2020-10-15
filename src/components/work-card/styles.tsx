@@ -9,6 +9,7 @@ interface Props {
 export const Container = styled(motion.section)<Props>`
   padding: 3rem;
   padding-bottom: 0rem;
+  min-height: 10rem;
 
   background: ${(p) => p.cardColor};
 
@@ -16,7 +17,7 @@ export const Container = styled(motion.section)<Props>`
   flex-direction: column;
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   box-shadow: 0px 2pt 6pt ${colors.shadow};
 
@@ -55,6 +56,7 @@ export const WideContainer = styled(motion.section)<Props>`
 
 interface WorkImageProps {
   wide?: boolean;
+  paddingBottom?: string;
 }
 
 export const WorkImage = styled(motion.img)<WorkImageProps>`
@@ -63,7 +65,7 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
 
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  padding-bottom: 2rem;
+  padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : '2rem')};
   z-index: 5;
   width: 60%;
 
@@ -115,10 +117,12 @@ export const Gradient = styled.div<GradientProps>`
   position: absolute;
 
   width: 100%;
-  height: 30%;
+  height: 50%;
   bottom: 0;
 
   z-index: 30;
+
+  pointer-events: none;
 
   /* background: red; */
 `;

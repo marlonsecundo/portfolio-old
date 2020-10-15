@@ -46,6 +46,7 @@ html {
 
 
   overflow: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

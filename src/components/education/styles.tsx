@@ -15,8 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h3`
-  font: 2rem ${metrics.fontFamily};
-  color: ${colors.primary};
+  font: 2rem ${metrics.fontFamilyJS};
+  color: ${colors.secondary};
 `;
 
 export const Img = styled.img.attrs((p) => ({

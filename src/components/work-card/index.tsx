@@ -19,6 +19,7 @@ interface Props {
   wide?: boolean;
   backgroundImg?: string;
   tagText: string;
+  paddingImageBottom?: string;
 }
 
 const WorkCard: React.FC<Props> = ({
@@ -30,6 +31,7 @@ const WorkCard: React.FC<Props> = ({
   wide,
   backgroundImg,
   tagText,
+  paddingImageBottom,
 }) => {
   const content = (
     <>
@@ -43,6 +45,7 @@ const WorkCard: React.FC<Props> = ({
         whileHover={{ scale: 1.1 }}
         wide={wide}
         src={srcImg}
+        paddingBottom={paddingImageBottom}
       />
     </>
   );
