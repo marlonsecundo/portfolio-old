@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
-import { colors, metrics } from 'src/styles';
+import { colors, media, metrics } from 'src/styles';
 import styled from 'styled-components';
 
 export const Title = styled.h3`
   font: 2rem ${metrics.fontFamilyJS};
   color: ${colors.secondary};
+  text-align: center;
 `;
 export const Container = styled.section`
   flex-flow: column;
@@ -13,10 +14,14 @@ export const Container = styled.section`
 
 export const ListContainer = styled.ul`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   list-style-type: none;
   height: 100%;
   align-content: space-between;
+
+  ${media.tablet} {
+    flex-flow: row wrap;
+  }
 `;
 
 export const Item = styled.li`
@@ -26,8 +31,12 @@ export const Item = styled.li`
   font: 1.5rem ${metrics.fontFamilyJS};
   color: ${colors.highlight};
   margin: 7rem 0 0 0;
-  width: 33%;
+  width: 100%;
   display: flex;
+
+  ${media.tablet} {
+    width: 33%;
+  }
 `;
 
 export const Link = styled(motion.a).attrs(() => ({
