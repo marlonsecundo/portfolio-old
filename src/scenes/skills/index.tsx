@@ -36,10 +36,13 @@ const Skills: React.FC = () => {
         <TextContainer>
           <Title>Skills</Title>
           <Description>
-            In {new Date().getFullYear() - 2014} years of learning and working on
-            programming in different languages and projects, in the last few years I have
-            been moving towards the goal of becoming a senior developer. I am currently
-            focused on JS technologies.
+            In {new Date().getFullYear() - 2014} years of learning many languages and
+            working in projects and teams, in the last year I have been moving towards the
+            goal of becoming a senior developer.
+          </Description>
+          <Description>
+            I currently working as Flutter Dev Mobile in SMART RETAIL, and majoring in
+            I.T. at IMD - UFRN.
           </Description>
         </TextContainer>
       </LeftContainer>
@@ -144,11 +147,6 @@ const Skills: React.FC = () => {
             />
             <TechCard
               tech={Technologies.GRAPHQL}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
-              tech={Technologies.GATSBY}
               compacted
               onMouserEnter={onTechMouseEnter}
             />

@@ -5,8 +5,7 @@ import Initial from 'src/scenes/initial';
 import Skills from 'src/scenes/skills';
 import Works from 'src/scenes/works';
 import About from 'src/scenes/about';
-import backImage from 'src/assets/images/46497.png';
-import { TransparentContainer } from 'src/scenes/about/styles';
+import backImage from 'src/assets/images/background.png';
 import { BackImage, ImageContainer } from './styles';
 
 const HomePage: React.FC = () => (

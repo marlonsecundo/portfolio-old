@@ -26,7 +26,7 @@ export const Description = styled.p`
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
   line-height: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 
   width: 100%;
 
@@ -47,6 +47,7 @@ export const TechContainer = styled.section`
   align-items: flex-start;
 
   flex-flow: column;
+  margin-top: 3rem;
 
   ${media.laptop} {
     flex-flow: row;
