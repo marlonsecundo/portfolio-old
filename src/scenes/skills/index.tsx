@@ -38,7 +38,7 @@ const Skills: React.FC = () => {
           <Description>
             In {new Date().getFullYear() - 2014} years of learning and working on
             programming in different languages and projects, in the last few years I have
-            been moving towards the goal of becoming a pleno developer. I am currently
+            been moving towards the goal of becoming a senior developer. I am currently
             focused on JS technologies.
           </Description>
         </TextContainer>

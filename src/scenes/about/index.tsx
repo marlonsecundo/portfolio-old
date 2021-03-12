@@ -23,6 +23,7 @@ import {
 const About: React.FC = () => (
   <>
     <TransparentContainer id="about" />
+
     <StyledContainer>
       <LeftContainer>
         <TopContainer>

@@ -3,7 +3,7 @@ import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 
 export const StyledContainer = styled.section`
-  z-index: 0;
+  z-index: 1;
   height: 100%;
   width: 100%;
   background-color: ${colors.background};

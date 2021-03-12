@@ -6,10 +6,11 @@ export const Title = styled.h3`
   font: 2rem ${metrics.fontFamilyJS};
   color: ${colors.secondary};
   text-align: center;
+  margin-bottom: 5rem;
 `;
 export const Container = styled.section`
   flex-flow: column;
-  margin: 10rem 0;
+  margin: 5rem 0 0 0;
 `;
 
 export const ListContainer = styled.ul`
@@ -18,6 +19,7 @@ export const ListContainer = styled.ul`
   list-style-type: none;
   height: 100%;
   align-content: space-between;
+  background: ${colors.card};
 
   ${media.tablet} {
     flex-flow: row wrap;
@@ -30,7 +32,7 @@ export const Item = styled.li`
   text-align: center;
   font: 1.5rem ${metrics.fontFamilyJS};
   color: ${colors.highlight};
-  margin: 7rem 0 0 0;
+  margin: 3rem 0 3.5rem 0;
   width: 100%;
   display: flex;
 
@@ -39,15 +41,39 @@ export const Item = styled.li`
   }
 `;
 
+export const HoverContainer = styled(motion.div).attrs(() => ({
+  whileHover: {
+    opacity: 1,
+  },
+}))`
+  background-color: ${colors.background};
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+`;
+
 export const Link = styled(motion.a).attrs(() => ({
   target: '_blank',
   rel: 'noreferrer',
   whileHover: {
-    borderBottom: `1px solid ${colors.highlight}`,
     transition: { duration: 2, easing: 'easeInOut' },
   },
 }))`
   text-decoration: none;
   color: ${colors.highlight};
-  border-bottom: 1px solid ${colors.background};
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Text = styled.p`
+  color: ${colors.highlight};
+  z-index: 1;
+  text-align: center;
+  margin: 1rem;
+  pointer-events: none;
 `;

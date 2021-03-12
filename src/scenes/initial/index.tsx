@@ -9,9 +9,6 @@ import githubLogo from 'src/assets/images/contact/github.png';
 import ContactItem from 'src/components/contact-item';
 import links from 'src/assets/data/links';
 
-import MediaQuery, { useMediaQuery } from 'react-responsive';
-import { media } from 'src/styles';
-import { devicesWidth } from 'src/styles/mediaquery';
 import {
   Container,
   TitleContainer,

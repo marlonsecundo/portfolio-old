@@ -4,6 +4,7 @@ import { Container } from 'src/styles/global';
 
 export const StyledContainer = styled(Container)`
   flex-direction: column;
+  background-color: transparent;
 `;
 
 export const LeftContainer = styled.div`
@@ -13,6 +14,7 @@ export const LeftContainer = styled.div`
   height: 100%;
 
   padding: 1rem;
+  z-index: 3;
 `;
 
 export const TextContainer = styled.section`

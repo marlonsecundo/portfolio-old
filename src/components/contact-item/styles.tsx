@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from 'src/styles';
 
 export const Container = styled.div`
-  width: 2rem;
+  width: 1rem;
   margin: 0 1rem;
 
   ${media.desktop} {

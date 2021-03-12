@@ -1,39 +1,51 @@
 import React from 'react';
 
-import { Container, Title, Item, ListContainer, Link } from './styles';
+import {
+  Container,
+  Title,
+  Item,
+  ListContainer,
+  Link,
+  HoverContainer,
+  Text,
+} from './styles';
+
+interface Props {
+  link: string;
+  text: string;
+}
+
+const LinkItem: React.FC<Props> = ({ link, text }) => (
+  <Item>
+    <Link href={link}>
+      <HoverContainer />
+      <Text> {text}</Text>
+    </Link>
+  </Item>
+);
 
 const Also: React.FC = () => (
   <Container>
     <Title>ALSO...</Title>
     <ListContainer>
-      <Item>
-        <Link href="https://www.atlassian.com/agile/scrum">SCRUM</Link>
-      </Item>
-      <Item>
-        <Link href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">
-          GIT FLOW
-        </Link>
-      </Item>
-      <Item>
-        <Link href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design">
-          S.O.L.I.D
-        </Link>
-      </Item>
-      <Item>
-        <Link href="https://www.itexico.com/blog/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life">
-          DRY
-        </Link>
-      </Item>
-      <Item>
-        <Link href="https://www.itexico.com/blog/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life">
-          KISS
-        </Link>
-      </Item>
-      <Item>
-        <Link href="https://www.itexico.com/blog/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life">
-          YAGNI
-        </Link>
-      </Item>
+      <LinkItem link="https://www.atlassian.com/agile/scrum" text="SCRUM" />
+      <LinkItem
+        link="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
+        text="GIT FLOW"
+      />
+
+      <LinkItem
+        link="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
+        text="S.O.L.I.D"
+      />
+      <LinkItem
+        link="https://www.itexico.com/blog/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life"
+        text="DRY/KISS/YAGNI"
+      />
+      <LinkItem
+        link="https://azure.microsoft.com/en-us/overview/what-is-devops/"
+        text="DEVOPS"
+      />
     </ListContainer>
   </Container>
 );

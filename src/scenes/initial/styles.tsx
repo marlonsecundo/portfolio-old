@@ -9,7 +9,6 @@ export const Container = styled.section`
   max-width: 100%;
   justify-content: center;
   align-items: center;
-  background: ${colors.background};
   flex-flow: column-reverse;
 
   z-index: 2;

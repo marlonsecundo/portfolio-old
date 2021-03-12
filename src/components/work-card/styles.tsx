@@ -6,10 +6,13 @@ interface Props {
   cardColor: string;
 }
 
-export const Container = styled(motion.section)<Props>`
+export const Container = styled(motion.a).attrs(() => ({
+  target: '_blank',
+  rel: 'noreferrer',
+}))<Props>`
   padding: 3rem;
   padding-bottom: 0rem;
-  min-height: 10rem;
+  min-height: 30rem;
 
   background: ${(p) => p.cardColor};
 
@@ -17,29 +20,29 @@ export const Container = styled(motion.section)<Props>`
   flex-direction: column;
 
   align-items: center;
-  justify-content: space-between;
 
   box-shadow: 0px 2pt 6pt ${colors.shadow};
 
   position: relative;
-  margin-bottom: 2rem;
 
   overflow: hidden;
 
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 3rem;
+  margin: 1.2rem;
 
   ${media.tablet} {
     width: 50%;
   }
 
   ${media.laptop} {
-    width: 33%;
+    width: 30%;
   }
 `;
 
-export const WideContainer = styled(motion.section)<Props>`
+export const WideContainer = styled(motion.a).attrs(() => ({
+  target: '_blank',
+  rel: 'noreferrer',
+}))<Props>`
+  display: flex;
   width: 100%;
   margin-bottom: 2rem;
   padding: 3rem;
@@ -56,24 +59,24 @@ export const WideContainer = styled(motion.section)<Props>`
   overflow: hidden;
 
   position: relative;
+  min-height: 20%;
 `;
 
 interface WorkImageProps {
-  wide?: boolean;
   paddingBottom?: string;
+  srcWidth: string;
 }
 
 export const WorkImage = styled(motion.img)<WorkImageProps>`
-  object-fit: contain;
   border-radius: 20px;
+  margin-top: auto;
 
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : '2rem')};
   z-index: 5;
-  width: 60%;
 
-  width: ${(p) => (p.wide ? '20%' : '60%')};
+  width: ${(p) => p.srcWidth};
 `;
 
 interface TextProps {
@@ -95,7 +98,7 @@ export const Description = styled.p<TextProps>`
   text-align: center;
   width: 100%;
 
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 `;
 
 interface GradientProps {
@@ -118,8 +121,6 @@ export const Gradient = styled.div<GradientProps>`
   margin-top: -3rem;
   border-radius: 20px;
 
-  position: absolute;
-
   width: 100%;
   height: 50%;
   bottom: 0;
@@ -129,23 +130,4 @@ export const Gradient = styled.div<GradientProps>`
   pointer-events: none;
 
   /* background: red; */
-`;
-
-interface TagColors {
-  textColor: string;
-}
-
-export const TagText = styled.p<TagColors>`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-family: ${metrics.fontFamily};
-  padding: 1rem;
-  margin-top: -3rem;
-  border-radius: 5px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  color: ${(p) => p.textColor};
-
-  font-size: 1.1em;
 `;
