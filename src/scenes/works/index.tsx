@@ -80,7 +80,7 @@ const Works: React.FC = () => (
         backgroundImg={github}
         wide
         link="https://github.com/marlonsecundo"
-        srcImgWidth="20%"
+        srcImgWidth="100%"
       >
         More projects on Github!
       </WorkCard>

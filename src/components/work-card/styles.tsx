@@ -27,14 +27,19 @@ export const Container = styled(motion.a).attrs(() => ({
 
   overflow: hidden;
 
-  margin: 1.2rem;
-
   ${media.tablet} {
-    width: 50%;
+    width: 40%;
+    margin: 0.5rem;
   }
 
   ${media.laptop} {
     width: 30%;
+    margin: 0.7rem;
+  }
+
+  ${media.desktop} {
+    width: 30%;
+    margin: 1.2rem;
   }
 `;
 
@@ -59,24 +64,42 @@ export const WideContainer = styled(motion.a).attrs(() => ({
   overflow: hidden;
 
   position: relative;
-  min-height: 20%;
+
+  ${media.tablet} {
+    margin: 0.5rem;
+  }
+
+  ${media.laptop} {
+    margin: 1.2rem;
+  }
+
+  overflow: hidden;
 `;
 
 interface WorkImageProps {
   paddingBottom?: string;
   srcWidth: string;
+  wide?: boolean;
 }
 
 export const WorkImage = styled(motion.img)<WorkImageProps>`
   border-radius: 20px;
-  margin-top: auto;
 
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : '2rem')};
   z-index: 5;
 
   width: ${(p) => p.srcWidth};
+
+  ${media.tablet} {
+    ${(p) => (p.wide ? 'width: 30%' : '')};
+    padding-bottom: 1rem;
+  }
+
+  ${media.laptopL} {
+    margin-top: auto;
+    padding-bottom: 4rem;
+  }
 `;
 
 interface TextProps {
@@ -88,6 +111,7 @@ export const Title = styled.h2<TextProps>`
   font-size: ${metrics.cardTitleSize};
   color: ${(p) => p.textColor};
   margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const Description = styled.p<TextProps>`
@@ -97,7 +121,6 @@ export const Description = styled.p<TextProps>`
   line-height: 2rem;
   text-align: center;
   width: 100%;
-
   margin-bottom: 5rem;
 `;
 

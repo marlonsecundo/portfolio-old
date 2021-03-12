@@ -46,6 +46,7 @@ const WorkCard: React.FC<Props> = ({
         src={srcImg}
         srcWidth={srcImgWidth}
         paddingBottom={paddingImageBottom}
+        wide={wide}
       />
     </>
   );
