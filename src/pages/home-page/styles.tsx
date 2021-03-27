@@ -15,10 +15,18 @@ export const BackImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: fixed;
-  opacity: 0.1;
+
   pointer-events: none;
   animation: ${rotate} 600s linear infinite;
+`;
+
+export const BackImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: fixed;
+  background-color: ${colors.background};
+  opacity: 0.1;
 `;
 
 export const ImageContainer = styled.div`

@@ -4,7 +4,6 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/typescript';
 
 import 'highlight.js/styles/arta.css';
-import { AnimateSharedLayout } from 'framer-motion';
 import { Pre, Code } from './styles';
 import { jscode } from './codes';
 

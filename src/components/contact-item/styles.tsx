@@ -5,8 +5,8 @@ export const Container = styled.div`
   width: 1rem;
   margin: 0 1rem;
 
-  ${media.desktop} {
-    margin: 0 0 1rem 0;
+  ${media.laptop} {
+    margin: 0 0rem 1rem 0;
   }
 `;
 

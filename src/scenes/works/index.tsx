@@ -33,6 +33,7 @@ const Works: React.FC = () => (
         srcImg={aedesImage}
         paddingImageBottom="5rem"
         srcImgWidth="70%"
+        link="https://portal.imd.ufrn.br/portal/noticias/6084/aeronave-de-defesa-social-marca-primeiro-pedido-de-patente-do-smart-metropolis"
       >
         The AEDES project - Aircraft for Social Defense - increase with the objective of
         patrolling the UFRN campus, bringing security to students and university

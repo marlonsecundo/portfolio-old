@@ -12,7 +12,7 @@ export const Container = styled(motion.a).attrs(() => ({
 }))<Props>`
   padding: 3rem;
   padding-bottom: 0rem;
-  min-height: 30rem;
+  height: 40rem;
 
   background: ${(p) => p.cardColor};
 
@@ -21,25 +21,27 @@ export const Container = styled(motion.a).attrs(() => ({
 
   align-items: center;
 
-  box-shadow: 0px 2pt 6pt ${colors.shadow};
+  /* box-shadow: 0px 2pt 6pt ${colors.shadow}; */
 
   position: relative;
 
   overflow: hidden;
 
   ${media.tablet} {
-    width: 40%;
-    margin: 0.5rem;
+    width: 50%;
   }
 
   ${media.laptop} {
+    width: 40%;
+  }
+
+  ${media.laptopL} {
     width: 30%;
-    margin: 0.7rem;
   }
 
   ${media.desktop} {
     width: 30%;
-    margin: 1.2rem;
+    height: 45rem;
   }
 `;
 
@@ -65,14 +67,6 @@ export const WideContainer = styled(motion.a).attrs(() => ({
 
   position: relative;
 
-  ${media.tablet} {
-    margin: 0.5rem;
-  }
-
-  ${media.laptop} {
-    margin: 1.2rem;
-  }
-
   overflow: hidden;
 `;
 
@@ -92,7 +86,7 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
   width: ${(p) => p.srcWidth};
 
   ${media.tablet} {
-    ${(p) => (p.wide ? 'width: 30%' : '')};
+    ${(p) => (p.wide ? 'width: 20%' : '')};
     padding-bottom: 1rem;
   }
 

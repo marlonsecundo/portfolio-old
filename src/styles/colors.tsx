@@ -6,4 +6,5 @@ export default {
   highlight: 'rgba(204, 41, 54,1)',
   card: 'rgba(255, 255, 255,0.01)',
   shadow: '#0a0a0a',
+  withOpacity: (hexColor: string, hexOpacity: string) => hexColor + hexOpacity,
 };

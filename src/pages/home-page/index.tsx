@@ -6,12 +6,14 @@ import Skills from 'src/scenes/skills';
 import Works from 'src/scenes/works';
 import About from 'src/scenes/about';
 import backImage from 'src/assets/images/background.png';
-import { BackImage, ImageContainer } from './styles';
+import { BackImage, BackImageContainer, ImageContainer } from './styles';
 
 const HomePage: React.FC = () => (
   <BaseLayout>
     <ImageContainer>
-      <BackImage src={backImage} />
+      <BackImageContainer>
+        <BackImage src={backImage} />
+      </BackImageContainer>
       <Initial />
       <Skills />
       <Works />

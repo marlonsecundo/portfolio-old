@@ -14,6 +14,7 @@ export const Container = styled.section`
   z-index: 2;
 
   ${media.laptop} {
+    padding: 5rem 0 0 0;
     flex-flow: row;
     align-items: center;
   }
@@ -28,13 +29,17 @@ export const TitleContainer = styled(motion.div)`
 
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
 
   ${media.laptop} {
     font-size: 0.7em;
-    width: 35%;
+    width: 40%;
     margin: -13rem 0 0 -14rem;
+    padding: 3rem;
 
     align-items: flex-start;
+
+    background-color: ${colors.withOpacity(colors.background, '99')};
   }
 `;
 
@@ -44,10 +49,6 @@ export const Title = styled.h1`
   color: ${colors.secondary};
 
   font: 6em ${metrics.fontFamilyJS};
-
-  ${media.laptop} {
-    font: 8em ${metrics.fontFamilyJS};
-  }
 `;
 
 export const JSTitle = styled(motion.h1)`
@@ -55,7 +56,7 @@ export const JSTitle = styled(motion.h1)`
   color: ${colors.secondary};
   font-size-adjust: none;
 
-  ${media.laptopL} {
+  ${media.desktop} {
     font: 25em ${metrics.fontFamilyJS};
   }
 `;
@@ -89,13 +90,13 @@ export const CodeContainer = styled(motion.div)`
   }
 
   ${media.laptop} {
-    width: 60%;
+    width: 40%;
     height: 60%;
     margin: 2rem 0 0 0rem;
   }
 
   ${media.desktop} {
-    width: 45%;
+    width: 40%;
   }
 `;
 
@@ -111,7 +112,7 @@ export const ContactContainer = styled.nav`
 
   margin: 0 0 1rem 0;
 
-  ${media.desktop} {
+  ${media.laptop} {
     position: fixed;
     right: 0;
     bottom: auto;
@@ -132,7 +133,7 @@ export const ContactTitle = styled.h3`
   margin-bottom: 2rem;
   display: none;
 
-  ${media.desktop} {
+  ${media.laptop} {
     display: flex;
     transform: rotate(90deg);
   }

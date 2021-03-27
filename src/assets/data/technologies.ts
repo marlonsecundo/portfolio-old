@@ -164,7 +164,7 @@ export default [
     description:
       'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
     srcImg: 'flutter-logo.svg',
-    progress: 47,
+    progress: 62,
     color: '#45d1fd',
   },
 ];

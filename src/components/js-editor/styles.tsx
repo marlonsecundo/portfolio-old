@@ -12,4 +12,6 @@ export const Code = styled(motion.code)`
   font-size: 20px;
   line-height: 2em;
   padding: 0 0 3rem 0rem;
+
+  border-radius: 10px;
 `;
