@@ -34,8 +34,8 @@ const Skills: React.FC = () => {
             goal of becoming a senior developer.
           </Description>
           <Description>
-            I currently working as Mobile React Developer in Laboratório de Inovação
-            tecnológica em Saúde (LAIS/HUOL/UFRN), and majoring in I.T. at IMD - UFRN.
+            I currently working as Mobile Developer in Laboratório de Inovação tecnológica
+            em Saúde (LAIS/HUOL/UFRN), and majoring in I.T. at IMD - UFRN.
           </Description>
         </TextContainer>
       </LeftContainer>
