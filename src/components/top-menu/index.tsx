@@ -28,9 +28,9 @@ const TopMenu: React.FC = () => {
   useEffect(() => {
     function updateOnScroll(v: any) {
       if (isDesktopOrLaptop) {
-        if (v >= 0.9) {
+        if (v >= 0.8) {
           setIndex(3);
-        } else if (v >= 0.6) {
+        } else if (v >= 0.45) {
           setIndex(2);
         } else if (v >= 0.15) {
           setIndex(1);
@@ -39,7 +39,7 @@ const TopMenu: React.FC = () => {
         }
       } else if (v >= 0.8) {
         setIndex(3);
-      } else if (v >= 0.45) {
+      } else if (v >= 0.35) {
         setIndex(2);
       } else if (v >= 0.07) {
         setIndex(1);
@@ -68,6 +68,12 @@ const TopMenu: React.FC = () => {
     };
   }, [isDesktopOrLaptop]);
 
+  const selectedDot = (
+    <>
+      <br />.
+    </>
+  );
+
   return (
     <Container
       animate={visible ? 'visible' : 'hidden'}
@@ -81,19 +87,31 @@ const TopMenu: React.FC = () => {
       />
       <LinkContainer>
         <Link to="#initial">
-          <LinkItem selected={index === 0}>Home</LinkItem>
+          <LinkItem selected={index === 0}>
+            Home
+            {index === 0 && selectedDot}
+          </LinkItem>
         </Link>
 
         <Link to="#skills">
-          <LinkItem selected={index === 1}>Skills</LinkItem>
+          <LinkItem selected={index === 1}>
+            Skills
+            {index === 1 && selectedDot}
+          </LinkItem>
         </Link>
 
         <Link to="#works">
-          <LinkItem selected={index === 2}>Works</LinkItem>
+          <LinkItem selected={index === 2}>
+            Works
+            {index === 2 && selectedDot}
+          </LinkItem>
         </Link>
 
         <Link to="#about">
-          <LinkItem selected={index === 3}>About</LinkItem>
+          <LinkItem selected={index === 3}>
+            About
+            {index === 3 && selectedDot}
+          </LinkItem>
         </Link>
       </LinkContainer>
     </Container>

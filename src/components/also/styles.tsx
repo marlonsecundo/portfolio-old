@@ -37,7 +37,7 @@ export const Item = styled.li`
   display: flex;
 
   ${media.tablet} {
-    width: 33%;
+    width: 25%;
   }
 `;
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import TechCard from 'src/components/tech-card';
 import { Technologies } from 'src/types';
@@ -17,14 +17,7 @@ import {
 } from './styles';
 
 const Skills: React.FC = () => {
-  const [dots, setDots] = useState('');
   const [index, setIndex] = useState(2);
-
-  useEffect(() => {
-    setInterval(() => {
-      setDots((prev) => (prev === '...' ? '' : `${prev}.`));
-    }, 1000);
-  }, []);
 
   const onTechMouseEnter = (tech: Technologies) => {
     setIndex(tech);
@@ -41,8 +34,8 @@ const Skills: React.FC = () => {
             goal of becoming a senior developer.
           </Description>
           <Description>
-            I currently working as Flutter Dev Mobile in SMART RETAIL, and majoring in
-            I.T. at IMD - UFRN.
+            I currently working as Mobile React Developer in Laboratório de Inovação
+            tecnológica em Saúde (LAIS/HUOL/UFRN), and majoring in I.T. at IMD - UFRN.
           </Description>
         </TextContainer>
       </LeftContainer>
@@ -97,6 +90,21 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
+              tech={Technologies.ZEROMQ}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.REDUX}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
+              tech={Technologies.SAGA}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
               tech={Technologies.MONGODB}
               compacted
               onMouserEnter={onTechMouseEnter}
@@ -112,41 +120,12 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
-              tech={Technologies.ESLINT}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
-              tech={Technologies.YARN}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
-              tech={Technologies.NPM}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
               tech={Technologies.HTML}
               compacted
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
               tech={Technologies.CSS}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-          </TechList>
-
-          <TechListTitle>{`Learning${dots}`}</TechListTitle>
-          <TechList>
-            <TechCard
-              tech={Technologies.DOCKER}
-              compacted
-              onMouserEnter={onTechMouseEnter}
-            />
-            <TechCard
-              tech={Technologies.GRAPHQL}
               compacted
               onMouserEnter={onTechMouseEnter}
             />

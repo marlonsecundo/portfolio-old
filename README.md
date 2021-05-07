@@ -11,3 +11,4 @@
 - https://tobiasahlin.com/
 - https://jacekjeznach.com/about/
 - https://ildaneta.dev/skills
+- https://chippd.github.io/

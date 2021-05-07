@@ -38,10 +38,7 @@ const Also: React.FC = () => (
         link="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
         text="S.O.L.I.D"
       />
-      <LinkItem
-        link="https://www.itexico.com/blog/software-development-kiss-yagni-dry-3-principles-to-simplify-your-life"
-        text="DRY/KISS/YAGNI"
-      />
+
       <LinkItem
         link="https://azure.microsoft.com/en-us/overview/what-is-devops/"
         text="DEVOPS"

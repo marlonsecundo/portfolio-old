@@ -44,8 +44,9 @@ interface Props {
   selected: boolean;
 }
 
-export const LinkItem = styled.li<Props>`
+export const LinkItem = styled(motion.li)<Props>`
   font-family: 'Fantasque Sans';
 
   color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
+  text-align: center;
 `;

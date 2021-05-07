@@ -167,4 +167,28 @@ export default [
     progress: 62,
     color: '#45d1fd',
   },
+  {
+    title: 'ZeroMQ',
+    description:
+      'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. It provides a message queue, but unlike message-oriented middleware, a ZeroMQ system can run without a dedicated message broker.',
+    srcImg: 'zeromq.png',
+    progress: 62,
+    color: '#ff0000',
+  },
+  {
+    title: 'Redux',
+    description:
+      'Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.',
+    srcImg: 'redux.png',
+    progress: 62,
+    color: '#784cb6',
+  },
+  {
+    title: 'Redux Saga',
+    description:
+      'Redux Saga is a library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, easy to test, and better at handling failures.',
+    srcImg: 'saga.png',
+    progress: 62,
+    color: '#82d774',
+  },
 ];

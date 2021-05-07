@@ -2,6 +2,7 @@
 /* eslint-disable global-require */
 import React, { useEffect, useCallback, useState } from 'react';
 
+// eslint-disable-next-line no-unused-vars
 import { Technologies } from 'src/types';
 import techsData from 'src/assets/data/technologies';
 import { colors } from 'src/styles';
@@ -13,9 +14,6 @@ import {
   Description,
   BigContainer,
   DivWrapper,
-  ProgressBar,
-  BarLength,
-  BarText,
 } from './styles';
 
 // eslint-disable-next-line no-restricted-syntax
@@ -38,14 +36,19 @@ const promisse = getImages();
 interface Props {
   tech: Technologies;
   compacted?: boolean;
+  small?: boolean;
   onMouserEnter?: (t: Technologies) => void;
 }
 
-const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }) => {
+const TechCard: React.FC<Props> = ({
+  tech,
+  compacted,
+  onMouserEnter = () => {},
+  small,
+}) => {
   const [img, setImg] = useState('');
   const [description, setDescription] = useState('');
   const [title, setTitle] = useState('');
-  const [progress, setProgress] = useState(0);
   const [color, setColor] = useState(colors.secondary);
 
   const updateContent = useCallback(async (index: Technologies) => {
@@ -56,7 +59,6 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
     setImg(srcImg);
     setTitle(techsData[index].title);
     setDescription(techsData[index].description);
-    setProgress(techsData[index].progress);
     setColor(techsData[index].color);
   }, []);
 
@@ -66,6 +68,7 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
 
   return compacted ? (
     <Container
+      small={small}
       whileHover={{ opacity: 1 }}
       index={tech}
       onMouseEnter={() => {
@@ -76,22 +79,17 @@ const TechCard: React.FC<Props> = ({ tech, compacted, onMouserEnter = () => {} }
       }}
       onTap={() => onMouserEnter(tech)}
     >
-      <Logo small={compacted} src={img} />
+      <Logo alt={description} title={title} compacted={compacted} src={img} />
     </Container>
   ) : (
     <DivWrapper>
       <BigContainer transition={{ duration: 0.1 }} layout>
-        <Logo small={compacted} src={img} />
+        <Logo alt={description} title={title} compacted={compacted} src={img} />
 
         <TextContainer>
           <Title animate={{ color }}>{title}</Title>
           <Description>{description}</Description>
         </TextContainer>
-
-        <ProgressBar>
-          <BarLength animate={{ width: `${progress}%`, backgroundColor: color }} />
-          <BarText animate={{ color }}>{progress}%</BarText>
-        </ProgressBar>
       </BigContainer>
     </DivWrapper>
   );

@@ -29,7 +29,9 @@
     "react/jsx-filename-extension": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "no-unused-vars": "off",
+    "indent": "off"
   },
   "settings": {
     "import/resolver": {

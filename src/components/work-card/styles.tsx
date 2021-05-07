@@ -10,11 +10,9 @@ export const Container = styled(motion.a).attrs(() => ({
   target: '_blank',
   rel: 'noreferrer',
 }))<Props>`
-  padding: 3rem;
-  padding-bottom: 0rem;
-  height: 40rem;
-
   background: ${(p) => p.cardColor};
+
+  min-height: 30rem;
 
   border-top-right-radius: 0px;
   flex-direction: column;
@@ -26,6 +24,8 @@ export const Container = styled(motion.a).attrs(() => ({
   position: relative;
 
   overflow: hidden;
+
+  width: 100%;
 
   ${media.tablet} {
     width: 50%;
@@ -42,38 +42,13 @@ export const Container = styled(motion.a).attrs(() => ({
   ${media.desktop} {
     width: 30%;
     height: 45rem;
+    margin: 1rem;
   }
-`;
-
-export const WideContainer = styled(motion.a).attrs(() => ({
-  target: '_blank',
-  rel: 'noreferrer',
-}))<Props>`
-  display: flex;
-  width: 100%;
-  margin-bottom: 2rem;
-  padding: 3rem;
-  padding-bottom: 0rem;
-
-  background: ${(p) => p.cardColor};
-  border-radius: 10px;
-  flex-direction: column;
-
-  align-items: center;
-
-  box-shadow: 0px 2pt 6pt ${colors.shadow};
-
-  overflow: hidden;
-
-  position: relative;
-
-  overflow: hidden;
 `;
 
 interface WorkImageProps {
   paddingBottom?: string;
   srcWidth: string;
-  wide?: boolean;
 }
 
 export const WorkImage = styled(motion.img)<WorkImageProps>`
@@ -85,8 +60,9 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
 
   width: ${(p) => p.srcWidth};
 
+  padding-bottom: ${(p) => p.paddingBottom};
+
   ${media.tablet} {
-    ${(p) => (p.wide ? 'width: 20%' : '')};
     padding-bottom: 1rem;
   }
 
@@ -100,14 +76,6 @@ interface TextProps {
   textColor: string;
 }
 
-export const Title = styled.h2<TextProps>`
-  font-family: ${metrics.fontFamilyJS};
-  font-size: ${metrics.cardTitleSize};
-  color: ${(p) => p.textColor};
-  margin-bottom: 2rem;
-  text-align: center;
-`;
-
 export const Description = styled.p<TextProps>`
   color: ${(p) => p.textColor};
   font-family: ${metrics.fontFamily};
@@ -116,19 +84,12 @@ export const Description = styled.p<TextProps>`
   text-align: center;
   width: 100%;
   margin-bottom: 5rem;
+  margin-top: 8rem;
 `;
 
 interface GradientProps {
   color1: string;
 }
-
-export const BackgroundImg = styled.img`
-  position: absolute;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`;
 
 export const Gradient = styled.div<GradientProps>`
   background: linear-gradient(0deg, ${(p) => p.color1} 17%, rgba(255, 255, 255, 0) 75%);
@@ -142,9 +103,43 @@ export const Gradient = styled.div<GradientProps>`
   height: 50%;
   bottom: 0;
 
-  z-index: 30;
+  z-index: 6;
 
   pointer-events: none;
+`;
 
-  /* background: red; */
+export const TitleContainer = styled(motion.div)`
+  width: 100%;
+
+  background: ${colors.third};
+  overflow: hidden;
+
+  z-index: 7;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  box-shadow: 0px 2pt 6pt ${colors.shadow};
+`;
+
+export const Title = styled(motion.h2)<TextProps>`
+  font-family: ${metrics.fontFamilyJS};
+  font-size: ${metrics.cardTitleSize};
+  color: ${(p) => p.textColor};
+  text-align: center;
+
+  width: 100%;
+
+  z-index: 8;
+  position: absolute;
+  margin-top: 3rem;
+`;
+
+export const Year = styled(motion.div)`
+  position: absolute;
+  right: 0;
+  background-color: ${colors.withOpacity(colors.background, '4D')};
+  padding: 0.5rem 1rem;
+  top: 0;
+  border-bottom-left-radius: 20px;
 `;

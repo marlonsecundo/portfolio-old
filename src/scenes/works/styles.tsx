@@ -4,7 +4,6 @@ import { colors, media } from 'src/styles';
 
 export const StyledContainer = styled(Container)`
   box-shadow: 0 10px 10px 0px ${colors.shadow};
-  z-index: 2;
 
   ${media.desktop} {
     padding: 0 7%;

@@ -20,4 +20,7 @@ export enum Technologies {
   HTML = 18,
   CSS = 19,
   FLUTTER = 20,
+  ZEROMQ = 21,
+  REDUX,
+  SAGA,
 }
