@@ -23,4 +23,5 @@ export enum Technologies {
   ZEROMQ = 21,
   REDUX,
   SAGA,
+  SUPABASE,
 }

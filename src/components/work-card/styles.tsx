@@ -82,7 +82,7 @@ export const Description = styled.p<TextProps>`
   font-size: ${metrics.textSize};
   line-height: 2rem;
   text-align: center;
-  width: 100%;
+  width: 90%;
   margin-bottom: 5rem;
   margin-top: 8rem;
 `;

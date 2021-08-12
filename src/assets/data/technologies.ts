@@ -191,4 +191,11 @@ export default [
     progress: 62,
     color: '#82d774',
   },
+  {
+    title: 'Supabase',
+    description:
+      'Supabase is an open source Firebase alternative. Built with PostgreSQL database that provides an instant RESTful API. In addition to that, it provides realtime capabilities via websockets. ',
+    srcImg: 'supabase-logo.png',
+    color: '#3ecf8e',
+  },
 ];

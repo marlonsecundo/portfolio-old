@@ -38,7 +38,7 @@ const About: React.FC = () => (
           <Text>JS, TS, Python, Java, Dart</Text>
 
           <Topic>BACKEND</Topic>
-          <Text>Adonis JS, NodeJS, Express, Mongo, Postgres, API REST</Text>
+          <Text>Adonis JS, NodeJS, Express, Mongo, Postgres, API REST, Supabase</Text>
 
           <Topic>WEB FRONTEND</Topic>
           <Text>React JS, Electron, HTML, CSS</Text>

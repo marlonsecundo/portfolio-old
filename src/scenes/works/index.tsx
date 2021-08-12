@@ -8,6 +8,7 @@ import smartRetailImage from 'src/assets/images/works/smart-retail.png';
 import github from 'src/assets/images/works/github.svg';
 import octocat from 'src/assets/images/works/octocat.png';
 import ela from 'src/assets/images/works/ela.png';
+import theoImage from 'src/assets/images/works/theo.png';
 
 import { colors } from 'src/styles';
 import { Technologies } from 'src/types';
@@ -113,6 +114,23 @@ const Works: React.FC = () => (
       >
         SmartRetail - Platform for Acquisition, Transformation and Analysis of Retail
         Sales Data
+      </WorkCard>
+
+      <WorkCard
+        textColor={colors.background}
+        cardColor="#FFFFFF"
+        title="THEO"
+        srcImg={theoImage}
+        paddingImageBottom="5rem"
+        srcImgWidth="50%"
+        link="https://github.com/elionaimelo/theo"
+        technologies={[Technologies.FLUTTER, Technologies.SUPABASE]}
+        expText="In this project, I worked in mobile development, building the architecture and layers of the app, I was also responsible to model the backend system and integrate it with the app."
+        bulletPoints="MOBILE, SCRUM, CLEAN CODE, SUPABASE"
+        year="2021"
+      >
+        Theo is an MVP open-source project of an app, social network style, that allows
+        the user to tell, share, interact about stories.
       </WorkCard>
 
       <WorkCard

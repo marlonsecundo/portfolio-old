@@ -105,6 +105,11 @@ const Skills: React.FC = () => {
               onMouserEnter={onTechMouseEnter}
             />
             <TechCard
+              tech={Technologies.SUPABASE}
+              compacted
+              onMouserEnter={onTechMouseEnter}
+            />
+            <TechCard
               tech={Technologies.MONGODB}
               compacted
               onMouserEnter={onTechMouseEnter}
