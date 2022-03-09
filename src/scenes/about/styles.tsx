@@ -154,7 +154,7 @@ export const Img = styled.img`
 export const LocationTag = styled(LinkText)`
   margin: 1rem 0px;
   font-size: 1.5rem;
-
+  color: ${colors.secondary};
   ${media.desktop} {
     font-size: 1.5rem;
   }

@@ -20,7 +20,7 @@ export const devicesWidth = {
   mobileM: 375,
   mobileL: 425,
   tablet: 768,
-  laptop: 1024,
+  laptop: 1200,
   laptopL: 1440,
   desktop: 1600,
   desktopL: 2560,

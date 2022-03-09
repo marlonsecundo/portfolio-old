@@ -48,8 +48,8 @@ const About: React.FC = () => (
 
           <Topic>LIBRARIES</Topic>
           <Text>
-            React Hooks, Redux, Mobx, Redux Saga, React Router, Styled Components, Framer
-            Motion
+            Flutter Modular, React Hooks, Redux, Mobx, Redux Saga, React Router, Styled
+            Components, Framer Motion
           </Text>
 
           <Topic>TOOLS</Topic>

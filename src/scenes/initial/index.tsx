@@ -8,10 +8,11 @@ import githubLogo from 'src/assets/images/contact/github.png';
 
 import ContactItem from 'src/components/contact-item';
 import links from 'src/assets/data/links';
+import meImg from 'src/assets/images/me.png';
 
 import {
   Container,
-  TitleContainer,
+  ProfileContainer,
   Title,
   JSTitle,
   Description,
@@ -19,6 +20,8 @@ import {
   ContactContainer,
   ContactTitle,
   AndMore,
+  Img,
+  TitleContainer,
 } from './styles';
 import useInitialAnimations from './animations';
 
@@ -39,24 +42,30 @@ const Initial: React.FC = () => {
         <JSEditor />
       </CodeContainer>
 
-      <TitleContainer animate={animation} initial={initialTitle}>
-        <JSTitle
+      <ProfileContainer animate={animation} initial={initialTitle}>
+        {/* <JSTitle
           whileHover={{
             x: [-0, 70],
           }}
           whileTap={{ scale: 1.1 }}
         >
           JS
-        </JSTitle>
-        <Title>{` Developer${underscore}`}</Title>
+        </JSTitle> */}
+
+        <TitleContainer>
+          <Img src={meImg} />
+
+          <Title>{` Developer${underscore}`}</Title>
+        </TitleContainer>
+
         <Description>Hi! I am Marlon Secundo,</Description>
         <Description>
-          a fullstack developer with experience in JS technologies
+          a developer with experience in frontend, mobile, desktop
         </Description>
         <Description> </Description>
 
         <AndMore>and more!</AndMore>
-      </TitleContainer>
+      </ProfileContainer>
       <ContactContainer>
         <ContactTitle>FIND ME!</ContactTitle>
         <ContactItem link={links.linkedin} imgSrc={logoLinkedin} />

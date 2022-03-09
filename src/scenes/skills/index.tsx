@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 
 import TechCard from 'src/components/tech-card';
 import { Technologies } from 'src/types';
-import { Title } from 'src/styles/global';
+import { Description, Title } from 'src/styles/global';
 import Education from 'src/components/education';
 import Also from 'src/components/also';
 import {
   TextContainer,
-  Description,
   TechContainer,
   TechList,
   TechListTitle,
@@ -29,13 +28,14 @@ const Skills: React.FC = () => {
         <TextContainer>
           <Title>Skills</Title>
           <Description>
-            In {new Date().getFullYear() - 2014} years of learning many languages and
-            working in projects and teams, in the last year I have been moving towards the
-            goal of becoming a senior developer.
+            In {new Date().getFullYear() - 2015} years of learning many languages and
+            coding in projects with teams, in the last year I have been moving towards the
+            goal of becoming a senior developer, always learning new stuff and working in
+            cool projects.
           </Description>
           <Description>
-            I currently working as Mobile Developer in Laboratório de Inovação tecnológica
-            em Saúde (LAIS/HUOL/UFRN), and majoring in I.T. at IMD - UFRN.
+            I currently working as Flutter Mobile Developer in Instituto Metrópole
+            Digital.
           </Description>
         </TextContainer>
       </LeftContainer>

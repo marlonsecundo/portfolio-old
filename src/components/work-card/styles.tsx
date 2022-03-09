@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
+import { ColumnContainer } from 'src/ui-components/layout';
 
 interface Props {
   cardColor: string;
@@ -11,8 +12,6 @@ export const Container = styled(motion.a).attrs(() => ({
   rel: 'noreferrer',
 }))<Props>`
   background: ${(p) => p.cardColor};
-
-  min-height: 30rem;
 
   border-top-right-radius: 0px;
   flex-direction: column;
@@ -27,22 +26,15 @@ export const Container = styled(motion.a).attrs(() => ({
 
   width: 100%;
 
+  min-height: 38rem;
+
   ${media.tablet} {
     width: 50%;
   }
 
-  ${media.laptop} {
-    width: 40%;
-  }
-
   ${media.laptopL} {
     width: 30%;
-  }
-
-  ${media.desktop} {
-    width: 30%;
-    height: 45rem;
-    margin: 1rem;
+    margin: 0.5rem;
   }
 `;
 
@@ -59,16 +51,15 @@ export const WorkImage = styled(motion.img)<WorkImageProps>`
   z-index: 5;
 
   width: ${(p) => p.srcWidth};
-
-  padding-bottom: ${(p) => p.paddingBottom};
+  object-fit: contain;
 
   ${media.tablet} {
-    padding-bottom: 1rem;
+    padding-bottom: ${(p) => p.paddingBottom ?? '1rem'};
   }
 
   ${media.laptopL} {
     margin-top: auto;
-    padding-bottom: 4rem;
+    padding-bottom: ${(p) => p.paddingBottom ?? '4rem'};
   }
 `;
 
@@ -142,4 +133,12 @@ export const Year = styled(motion.div)`
   padding: 0.5rem 1rem;
   top: 0;
   border-bottom-left-radius: 20px;
+`;
+
+export const FirstContent = styled.section`
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
 `;

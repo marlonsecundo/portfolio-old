@@ -21,20 +21,6 @@ export const TextContainer = styled.section`
   flex-direction: column;
 `;
 
-export const Description = styled.p`
-  color: ${colors.primary};
-  font-family: ${metrics.fontFamily};
-  font-size: ${metrics.textSize};
-  line-height: 2rem;
-  margin-bottom: 1rem;
-
-  width: 100%;
-
-  ${media.laptop} {
-    width: 40%;
-  }
-`;
-
 export const TechContainer = styled.section`
   width: 100%;
   height: 100%;
@@ -64,7 +50,7 @@ export const Lists = styled.div`
 export const TechList = styled.ul`
   list-style: none;
   display: flex;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2rem;
