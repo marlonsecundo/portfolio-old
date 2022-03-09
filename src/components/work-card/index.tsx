@@ -20,6 +20,7 @@ import {
   Gradient,
   TitleContainer,
   Year,
+  FirstContent,
 } from './styles';
 
 interface Props {
@@ -68,17 +69,36 @@ const WorkCard: React.FC<Props> = ({
       }
     : {};
 
+  const yearComp = year ? (
+    <Year>
+      <BodyText color={textColor}>{year}</BodyText>
+    </Year>
+  ) : (
+    <></>
+  );
+
+  // eslint-disable-next-line operator-linebreak
+  const toolsAndTechComp =
+    techs.length > 0 ? (
+      <ColumnContainer
+        initial={bodyTextVariants.lostFocus}
+        animate={animControls}
+        variants={bodyTextVariants}
+      >
+        <BodyText>TOOLS AND TECHS</BodyText>
+        <RowContainer flexWrap="wrap" justifyContent="space-between">
+          {techs}
+        </RowContainer>
+      </ColumnContainer>
+    ) : (
+      <></>
+    );
+
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Container href={link} cardColor={cardColor} {...hoverEvents}>
       <Gradient color1={cardColor} />
-      {year ? (
-        <Year>
-          <BodyText color={textColor}>{year}</BodyText>
-        </Year>
-      ) : (
-        <></>
-      )}
+      {yearComp}
 
       <TitleContainer
         animate={animControls}
@@ -86,7 +106,7 @@ const WorkCard: React.FC<Props> = ({
         variants={containerVariants}
         initial={containerVariants.lostFocus}
       >
-        <Spacer padding="3rem" margin="15% 0 0 0">
+        <Spacer padding="2rem 3rem" margin="15% 0 0 0">
           <BodyText
             animate={animControls}
             variants={bodyTextVariants}
@@ -116,47 +136,29 @@ const WorkCard: React.FC<Props> = ({
           </ColumnContainer>
         </Spacer>
 
-        <Spacer padding="3rem">
-          <ColumnContainer
-            initial={bodyTextVariants.lostFocus}
-            animate={animControls}
-            variants={bodyTextVariants}
-          >
-            <BodyText>TOOLS AND TECHS</BodyText>
-            <RowContainer flexWrap="wrap" justifyContent="space-between">
-              {techs}
-            </RowContainer>
-          </ColumnContainer>
-        </Spacer>
+        <Spacer padding="2rem 3rem">{toolsAndTechComp}</Spacer>
       </TitleContainer>
 
-      <PositionedContainer width="100%" height="100%">
-        <Spacer margin="0rem 1rem" height="100%">
-          <ColumnContainer
-            justifyContent="space-between"
-            alignItems="center"
-            height="100%"
+      <PositionedContainer margin="0rem 1rem" width="100%" height="100%">
+        <FirstContent>
+          <Title
+            animate={animControls}
+            variants={titleVariants}
+            textColor={textColor}
+            initial={titleVariants.lostFocus}
           >
-            <Spacer />
-            <Title
-              animate={animControls}
-              variants={titleVariants}
-              textColor={textColor}
-              initial={titleVariants.lostFocus}
-            >
-              {title}
-            </Title>
+            {title}
+          </Title>
 
-            <Description textColor={textColor}>{children}</Description>
-            <WorkImage
-              whileTap={{ scale: 1.1 }}
-              whileHover={{ scale: 1.1 }}
-              src={srcImg}
-              srcWidth={srcImgWidth}
-              paddingBottom={paddingImageBottom}
-            />
-          </ColumnContainer>
-        </Spacer>
+          <Description textColor={textColor}>{children}</Description>
+          <WorkImage
+            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
+            src={srcImg}
+            srcWidth={srcImgWidth}
+            paddingBottom={paddingImageBottom}
+          />
+        </FirstContent>
       </PositionedContainer>
     </Container>
   );

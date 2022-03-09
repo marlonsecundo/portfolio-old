@@ -26,7 +26,8 @@ const LinkItem: React.FC<Props> = ({ link, text }) => (
 
 const Also: React.FC = () => (
   <Container>
-    <Title>ALSO...</Title>
+    <Title>also...</Title>
+
     <ListContainer>
       <LinkItem link="https://www.atlassian.com/agile/scrum" text="SCRUM" />
       <LinkItem
@@ -37,11 +38,6 @@ const Also: React.FC = () => (
       <LinkItem
         link="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
         text="S.O.L.I.D"
-      />
-
-      <LinkItem
-        link="https://azure.microsoft.com/en-us/overview/what-is-devops/"
-        text="DEVOPS"
       />
     </ListContainer>
   </Container>

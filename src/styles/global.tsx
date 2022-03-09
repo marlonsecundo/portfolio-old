@@ -12,6 +12,20 @@ export const Title = styled.h1`
   margin-bottom: 1rem;
 `;
 
+export const Description = styled.p`
+  color: ${colors.primary};
+  font-family: ${metrics.fontFamily};
+  font-size: ${metrics.textSize};
+  line-height: 2rem;
+  margin-bottom: 1rem;
+
+  width: 100%;
+
+  ${media.laptop} {
+    width: 40%;
+  }
+`;
+
 export const Container = styled.section`
   width: 100%;
   padding-top: 5.5rem;

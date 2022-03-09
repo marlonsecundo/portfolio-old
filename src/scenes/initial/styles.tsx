@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
+import { floatImg } from './animations';
 
 export const Container = styled.section`
   min-height: 100vh;
@@ -20,7 +21,7 @@ export const Container = styled.section`
   }
 `;
 
-export const TitleContainer = styled(motion.div)`
+export const ProfileContainer = styled(motion.section)`
   flex-flow: column;
 
   width: 100%;
@@ -43,8 +44,40 @@ export const TitleContainer = styled(motion.div)`
   }
 `;
 
+export const TitleContainer = styled.div`
+  flex-flow: column;
+
+  justify-content: center;
+  align-items: center;
+
+  ${media.laptopL} {
+    align-items: flex-start;
+  }
+`;
+
+export const Img = styled.img`
+  object-fit: contain;
+  align-self: center;
+  border-radius: 100%;
+  box-shadow: 0px 2pt 6pt ${colors.shadow};
+  margin: 0rem 0rem 2rem 0rem;
+
+  width: 60%;
+
+  animation: ${floatImg('0rem')} 6s ease-in-out infinite;
+
+  ${media.tablet} {
+    width: 40%;
+  }
+
+  ${media.laptopL} {
+    animation: ${floatImg('-1rem')} 6s ease-in-out infinite;
+    width: 65%;
+  }
+`;
+
 export const Title = styled.h1`
-  margin: -0.4em 0 0 0;
+  margin: 0 0 0 0;
   padding-bottom: 0.4em;
   color: ${colors.secondary};
 

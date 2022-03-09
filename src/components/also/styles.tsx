@@ -6,11 +6,12 @@ export const Title = styled.h3`
   font: 2rem ${metrics.fontFamilyJS};
   color: ${colors.secondary};
   text-align: center;
-  margin-bottom: 5rem;
+  padding: 0rem 0 2rem 0;
 `;
 export const Container = styled.section`
   flex-flow: column;
-  margin: 5rem 0 0 0;
+  padding: 2rem 0 0 0;
+  background: ${colors.card};
 `;
 
 export const ListContainer = styled.ul`
@@ -18,8 +19,7 @@ export const ListContainer = styled.ul`
   flex-flow: column wrap;
   list-style-type: none;
   height: 100%;
-  align-content: space-between;
-  background: ${colors.card};
+  justify-content: space-between;
 
   ${media.tablet} {
     flex-flow: row wrap;
@@ -32,7 +32,7 @@ export const Item = styled.li`
   text-align: center;
   font: 1.5rem ${metrics.fontFamilyJS};
   color: ${colors.highlight};
-  margin: 3rem 0 3.5rem 0;
+  margin: 2rem 0;
   width: 100%;
   display: flex;
 
