@@ -183,7 +183,7 @@ const Works: React.FC = () => (
         employees.
       </WorkCard>
     </CardsContainer>
-
+    {/* 
     <Subtitle>Backend</Subtitle>
 
     <CardsContainer>
@@ -218,7 +218,7 @@ const Works: React.FC = () => (
       >
         More projects on Github!
       </WorkCard>
-    </CardsContainer>
+    </CardsContainer> */}
   </StyledContainer>
 );
 
