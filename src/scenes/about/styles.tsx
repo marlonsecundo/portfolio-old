@@ -116,6 +116,10 @@ export const MeText = styled.p`
   width: 100%;
   text-align: center;
   letter-spacing: 0.1rem;
+
+  ${media.laptopL} {
+    font-size: 1.3em;
+  }
 `;
 
 export const Text = styled(MeText)`
@@ -123,6 +127,9 @@ export const Text = styled(MeText)`
   font: 1rem ${metrics.aboutFontFamily};
   letter-spacing: 0.1rem;
   width: 100%;
+  ${media.laptopL} {
+    font-size: 1.3em;
+  }
 `;
 
 export const Topic = styled(Text)`
@@ -132,6 +139,10 @@ export const Topic = styled(Text)`
   border-bottom: 1px solid;
   align-self: flex-start;
   width: auto;
+
+  ${media.laptopL} {
+    font-size: 1.3em;
+  }
 `;
 
 export const Img = styled.img`
@@ -155,14 +166,19 @@ export const LocationTag = styled(LinkText)`
   margin: 1rem 0px;
   font-size: 1.5rem;
   color: ${colors.secondary};
-  ${media.desktop} {
-    font-size: 1.5rem;
+
+  ${media.laptopL} {
+    font-size: 1.3em;
   }
 `;
 
 export const YearTag = styled.p`
   color: ${colors.primary};
   margin: 1rem 0px;
+
+  ${media.laptopL} {
+    font-size: 1.3em;
+  }
 `;
 
 export const Tags = styled.div`

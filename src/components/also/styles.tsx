@@ -39,6 +39,12 @@ export const Item = styled.li`
   ${media.tablet} {
     width: 25%;
   }
+
+  ${media.desktop} {
+    width: 25%;
+
+    font-size: 2rem;
+  }
 `;
 
 export const HoverContainer = styled(motion.div).attrs(() => ({

@@ -41,7 +41,7 @@ export const TechContainer = styled.section`
 `;
 
 export const Lists = styled.div`
-  flex: 1;
+  flex: 1.5;
   height: 100%;
   flex-direction: column;
   align-items: center;
@@ -61,7 +61,7 @@ export const TechListTitle = styled.h2`
   color: ${colors.secondary};
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.subtitleSize};
-  font-weight: normal;
+  font-weight: bold;
 `;
 
 export const CardContainer = styled.div``;

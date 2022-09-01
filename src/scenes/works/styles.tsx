@@ -36,6 +36,12 @@ export const CardsContainer = styled.div`
   flex-flow: row wrap;
   align-content: center;
   margin-bottom: 3rem;
+
+  ${media.desktop} {
+    margin-left: 8rem;
+    padding-right: 8rem;
+    justify-content: space-between;
+  }
 `;
 
 export const InlineLink = styled.a`

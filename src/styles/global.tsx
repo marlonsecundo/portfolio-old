@@ -24,6 +24,12 @@ export const Description = styled.p`
   ${media.laptop} {
     width: 40%;
   }
+
+  ${media.laptopL} {
+    width: 40%;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+  }
 `;
 
 export const Container = styled.section`
@@ -54,6 +60,8 @@ export const Background = styled.div`
 `;
 
 const GlobalStyles = createGlobalStyle`
+
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -109,6 +117,13 @@ a {
   src: url(${Fantasque}) format('woff2');
 
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('http://fonts.cdnfonts.com/css/montserrat');
+}
+
+
 @font-face {
   font-family: 'Financier';
   src: url(${Financer}) format('woff2');

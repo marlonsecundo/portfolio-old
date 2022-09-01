@@ -21,6 +21,7 @@ import {
   TitleContainer,
   Year,
   FirstContent,
+  ExpText,
 } from './styles';
 
 interface Props {
@@ -85,7 +86,7 @@ const WorkCard: React.FC<Props> = ({
         animate={animControls}
         variants={bodyTextVariants}
       >
-        <BodyText>TOOLS AND TECHS</BodyText>
+        <BodyText color={colors.secondary}>TOOLS AND TECHS</BodyText>
         <RowContainer flexWrap="wrap" justifyContent="space-between">
           {techs}
         </RowContainer>
@@ -107,13 +108,13 @@ const WorkCard: React.FC<Props> = ({
         initial={containerVariants.lostFocus}
       >
         <Spacer padding="2rem 3rem" margin="15% 0 0 0">
-          <BodyText
+          <ExpText
             animate={animControls}
             variants={bodyTextVariants}
             initial={bodyTextVariants.lostFocus}
           >
             {expText}
-          </BodyText>
+          </ExpText>
         </Spacer>
 
         <Spacer padding="0rem 3rem">

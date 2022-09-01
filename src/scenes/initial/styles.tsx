@@ -102,7 +102,7 @@ export const Description = styled.p`
   padding: 0 1.5rem;
 
   ${media.laptop} {
-    font: 1.1rem ${metrics.fontFamily};
+    font: 1.3rem ${metrics.fontFamily};
 
     padding: 0;
   }

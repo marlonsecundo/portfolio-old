@@ -1,5 +1,5 @@
 export default {
-  fontFamily: 'Fantasque Sans',
+  fontFamily: 'Montserrat, sans-serif',
   fontFamilyJS: 'Neutra Text',
   aboutFontFamily: 'Financier',
 

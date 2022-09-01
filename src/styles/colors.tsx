@@ -3,7 +3,7 @@ export default {
   primary: '#FFFFFF',
   secondary: '#f0da50',
   third: '#252526',
-  highlight: 'rgba(204, 41, 54,1)',
+  highlight: '#a1c084',
   card: 'rgba(255, 255, 255,0.01)',
   shadow: '#0a0a0a',
   withOpacity: (hexColor: string, hexOpacity: string) => hexColor + hexOpacity,

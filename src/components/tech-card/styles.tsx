@@ -97,4 +97,9 @@ export const Description = styled(motion.p)`
   ${media.tablet} {
     display: flex;
   }
+
+  ${media.laptopL} {
+    font-size: 1.3em;
+    line-height: 2em;
+  }
 `;

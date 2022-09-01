@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { colors, metrics } from 'src/styles';
+import { colors, media, metrics } from 'src/styles';
 import styled from 'styled-components';
 
 interface BodyTextProps {
@@ -9,8 +9,13 @@ interface BodyTextProps {
 export const BodyText = styled(motion.p)<BodyTextProps>`
   font-family: ${metrics.fontFamily};
   font-size: ${metrics.textSize};
-  font-weight: 100;
   color: ${(p) => p.color ?? colors.primary};
   text-align: start;
-  line-height: 2;
+  line-height: 2rem;
+  text-align: justify;
+
+  ${media.laptopL} {
+    font-size: 1.3em;
+    line-height: 2.3rem;
+  }
 `;

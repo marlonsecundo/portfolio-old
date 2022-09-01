@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
 import { ColumnContainer } from 'src/ui-components/layout';
+import { BodyText } from 'src/ui-components/typografy';
 
 interface Props {
   cardColor: string;
@@ -35,6 +36,13 @@ export const Container = styled(motion.a).attrs(() => ({
   ${media.laptopL} {
     width: 30%;
     margin: 0.5rem;
+    max-height: 45rem;
+  }
+
+  ${media.desktop} {
+    min-height: 50rem;
+    margin: 0rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -76,6 +84,13 @@ export const Description = styled.p<TextProps>`
   width: 90%;
   margin-bottom: 5rem;
   margin-top: 8rem;
+
+  ${media.laptopL} {
+    width: 80%;
+
+    font-size: 1.3em;
+    line-height: 2.3rem;
+  }
 `;
 
 interface GradientProps {
@@ -141,4 +156,12 @@ export const FirstContent = styled.section`
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+`;
+
+export const ExpText = styled(BodyText)`
+  align-self: center;
+
+  ${media.desktop} {
+    padding: 0 1.5rem;
+  }
 `;

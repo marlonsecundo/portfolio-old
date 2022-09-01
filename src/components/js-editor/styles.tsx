@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { media } from 'src/styles';
 
 export const Pre = styled(motion.pre)`
   width: 100%;
@@ -14,4 +15,8 @@ export const Code = styled(motion.code)`
   padding: 0 0 3rem 0rem;
 
   border-radius: 10px;
+
+  ${media.laptop} {
+    font-size: 25px;
+  }
 `;

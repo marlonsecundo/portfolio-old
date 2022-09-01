@@ -49,4 +49,9 @@ export const LinkItem = styled(motion.li)<Props>`
 
   color: ${(props) => (props.selected ? colors.secondary : colors.primary)};
   text-align: center;
+
+  ${media.laptopL} {
+    margin: 1rem;
+    font-size: 1.3rem;
+  }
 `;
