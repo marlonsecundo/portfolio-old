@@ -40,7 +40,7 @@ export const Container = styled(motion.a).attrs(() => ({
   }
 
   ${media.desktop} {
-    min-height: 55rem;
+    min-height: 50rem;
     margin: 0rem;
     margin-bottom: 1rem;
     width: 32%;

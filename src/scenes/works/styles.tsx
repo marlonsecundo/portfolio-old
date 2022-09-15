@@ -48,3 +48,31 @@ export const InlineLink = styled.a`
   display: inline;
   color: ${colors.secondary};
 `;
+
+export const PlayStoreApp = styled.a`
+  margin-left: 4rem;
+  flex-direction: column;
+  align-items: center;
+
+  align-self: flex-start;
+
+  margin-bottom: 4rem;
+`;
+
+export const PlayStoreIcon = styled.img`
+  padding: 0;
+  margin-left: 1rem;
+  width: 2rem;
+`;
+
+export const AppImage = styled.img`
+  width: 8rem;
+  border-radius: 100%;
+
+  margin-bottom: 0.7rem;
+`;
+
+export const AppName = styled.p`
+  font-family: ${metrics.fontFamily};
+  color: ${colors.primary};
+`;

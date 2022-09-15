@@ -12,13 +12,20 @@ import theoImage from 'src/assets/images/works/theo.png';
 import franqueasyImage from 'src/assets/images/works/franqueasy.png';
 import autonomousImage from 'src/assets/images/works/autonomus.png';
 import sascarImage from 'src/assets/images/works/sascar.png';
+import googlePlaySvg from 'src/assets/images/works/google-play.svg';
+import chattyImage from 'src/assets/images/works/chatty.png';
+import transformarnImage from 'src/assets/images/works/transformarn.png';
 
 import { colors } from 'src/styles';
 import { Technologies } from 'src/types';
 import { Description, Title } from 'src/styles/global';
 import {
+  AppImage,
+  AppName,
   CardsContainer,
   InlineLink,
+  PlayStoreApp,
+  PlayStoreIcon,
   StyledContainer,
   Subtitle,
   TitleContainer,
@@ -39,6 +46,16 @@ const Works: React.FC = () => (
       </Description>
     </TitleContainer>
 
+    <Subtitle>
+      Google Play
+      <PlayStoreIcon src={googlePlaySvg}></PlayStoreIcon>
+    </Subtitle>
+
+    <PlayStoreApp href="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty">
+      <AppImage src={chattyImage}></AppImage>
+      <AppName>Chatty</AppName>
+    </PlayStoreApp>
+
     <Subtitle>Mobile</Subtitle>
 
     <CardsContainer>
@@ -56,7 +73,7 @@ const Works: React.FC = () => (
           Technologies.SAGA,
           Technologies.STYLED_COMPONENTS,
         ]}
-        expText="I worked as a backend developer building the REST API, also as frontend
+        expText="I worked building the REST API, also as frontend
         developing the application in react native, both from scratch."
         bulletPoints="BACKEND, MOBILE"
         year="2018"
@@ -72,7 +89,7 @@ const Works: React.FC = () => (
         srcImgWidth="60%"
         link="https://site.multiprova.ufrn.br/"
         technologies={[Technologies.REACT_JS, Technologies.JAVA]}
-        expText="I worked as a mobile developer, I was responsible for implementing the native service of real-time processing of the camera input, in order to analyze the templates and send the answers."
+        expText="I was responsible for implementing the native service of real-time processing of the camera input, in order to analyze the templates and send the answers."
         bulletPoints="MOBILE, JAVA, NATIVE CODE"
         year="2019"
       >
@@ -87,7 +104,7 @@ const Works: React.FC = () => (
         paddingImageBottom="5rem"
         srcImgWidth="65%"
         technologies={[]}
-        expText="As a mobile developer, in addition to the development and delivery of features, I worked in the team management, release and production stage, as well as in the process of design and evaluation of issues."
+        expText="In addition to the development and delivery of features, I worked in the team management, release and production stage, as well as in the process of design and evaluation of issues."
         bulletPoints="MOBILE, SCRUM, DEVOPS, PLANNING POKER, DAILY MEETINGS, DOCS"
         year="2021"
       >
@@ -103,7 +120,7 @@ const Works: React.FC = () => (
         // link="https://sascar.com.br/"
         srcImgWidth="60%"
         technologies={[]}
-        expText="As a mobile developer, I worked developing one of the company's main products which consisted of fleet management and vehicle and cargo monitoring, as well as driver journey management."
+        expText="I worked developing one of the company's main products which consisted of fleet management and vehicle and cargo monitoring, as well as driver journey management."
         bulletPoints="MOBILE, SCRUM, PLANNING POKER, DAILY MEETINGS, CODE REVIEW, S.O.L.I.D"
         year="2022"
       >
@@ -174,7 +191,7 @@ const Works: React.FC = () => (
           Technologies.REDUX,
           Technologies.STYLED_COMPONENTS,
         ]}
-        expText="I worked mainly as a frontend developer, in turn building a drone control base station desktop application. I was also responsible for implementing the message exchange system."
+        expText="I worked building a drone control base station desktop application. I was also responsible for implementing the message exchange system."
         bulletPoints="DESKTOP, BACKEND, SCRUM"
         year="2020"
       >
@@ -183,27 +200,47 @@ const Works: React.FC = () => (
         employees.
       </WorkCard>
     </CardsContainer>
-    {/* 
-    <Subtitle>Backend</Subtitle>
 
+    <Subtitle>Backend</Subtitle>
     <CardsContainer>
       <WorkCard
-        textColor={colors.primary}
-        cardColor="#182e50"
-        title="FRANQUEASY"
-        srcImg={franqueasyImage}
+        textColor={colors.background}
+        cardColor="white"
+        title="TRANSFORMA RN"
+        srcImg={transformarnImage}
         paddingImageBottom="10rem"
-        srcImgWidth="20%"
-        link="https://franqueasy.com.br/"
-        technologies={[]}
-        expText="I worked as a backend developer, developing the login and request and data processing functionalities."
-        bulletPoints="BACKEND"
-        year="2020"
+        srcImgWidth="40%"
+        link="https://transformarn.imd.ufrn.br/"
+        technologies={[Technologies.EXPRESS, Technologies.POSTGRES]}
+        expText=""
+        bulletPoints="BACKEND, EXPRESS, POSTGRES, EJS, AUTH"
+        year="2022"
       >
-        Franqueasy paves the way for the expansion of your business through innovative
-        methods and tools that with technology simplify processes, reducing time and
-        improving cost-effectiveness.
+        The first step towards transformation is the consciousness that needs to
+        constantly evolve.
       </WorkCard>
+
+      <WorkCard
+        textColor={colors.primary}
+        cardColor="black"
+        title="CHATTY"
+        srcImg={chattyImage}
+        paddingImageBottom="10rem"
+        srcImgWidth="40%"
+        link="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty"
+        technologies={[
+          Technologies.TYPESCRIPT,
+          Technologies.ADONIS_JS,
+          Technologies.DOCKER,
+        ]}
+        expText="I developed the server app, currently running on heroku. The source code its on github."
+        bulletPoints="BACKEND"
+        year="2022"
+      >
+        Social app with posts, profile and likes. Users need to have a google account to
+        access the application.
+      </WorkCard>
+
       <WorkCard
         textColor={colors.primary}
         cardColor="#222327"
@@ -218,7 +255,7 @@ const Works: React.FC = () => (
       >
         More projects on Github!
       </WorkCard>
-    </CardsContainer> */}
+    </CardsContainer>
   </StyledContainer>
 );
 
