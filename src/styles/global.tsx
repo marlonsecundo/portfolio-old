@@ -3,6 +3,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 import NeutraText from 'src/assets/fonts/neutra-text-bold.otf';
 import Fantasque from 'src/assets/fonts/fantasque-sans-mono-regular.otf';
 import Financer from 'src/assets/fonts/financier.ttf';
+
+import Roboto from 'src/assets/fonts/roboto-regular.ttf';
+
 import { metrics, colors, media } from '.';
 
 export const Title = styled.h1`
@@ -130,6 +133,12 @@ a {
 
 }
 
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(${Roboto}) format('woff2');
+
+}
 
 `;
 

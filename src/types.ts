@@ -24,4 +24,6 @@ export enum Technologies {
   REDUX,
   SAGA,
   SUPABASE,
+  FIREBASE,
+  EJS,
 }

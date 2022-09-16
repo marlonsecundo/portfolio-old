@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 interface BodyTextProps {
   color?: string;
+  textTransform?: string;
 }
 
 export const BodyText = styled(motion.p)<BodyTextProps>`
@@ -13,6 +14,8 @@ export const BodyText = styled(motion.p)<BodyTextProps>`
   text-align: start;
   line-height: 2rem;
   text-align: justify;
+
+  text-transform: ${(p) => p.textTransform ?? 'none'};
 
   ${media.laptopL} {
     font-size: 1.3em;

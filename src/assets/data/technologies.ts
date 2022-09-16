@@ -198,4 +198,16 @@ export default [
     srcImg: 'supabase-logo.png',
     color: '#3ecf8e',
   },
+  {
+    title: 'Firebase',
+    description: '',
+    srcImg: 'firebase-logo.png',
+    color: '#ffd137',
+  },
+  {
+    title: 'EJS',
+    description: '',
+    srcImg: 'ejs-logo.png',
+    color: '#ffd137',
+  },
 ];

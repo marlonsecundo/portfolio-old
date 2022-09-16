@@ -131,6 +131,7 @@ const WorkCard: React.FC<Props> = ({
               animate={animControls}
               variants={bodyTextVariants}
               initial={bodyTextVariants.lostFocus}
+              textTransform="lowercase"
             >
               {bulletPoints}
             </BodyText>

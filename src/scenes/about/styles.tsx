@@ -141,7 +141,7 @@ export const Topic = styled(Text)`
   width: auto;
 
   ${media.laptopL} {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 `;
 
@@ -158,7 +158,7 @@ export const Img = styled.img`
   }
 
   ${media.tablet} {
-    width: 35%;
+    width: 30%;
   }
 `;
 

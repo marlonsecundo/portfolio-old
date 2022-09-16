@@ -47,7 +47,7 @@ const Works: React.FC = () => (
     </TitleContainer>
 
     <Subtitle>
-      Google Play
+      On Google Play
       <PlayStoreIcon src={googlePlaySvg}></PlayStoreIcon>
     </Subtitle>
 
@@ -125,6 +125,27 @@ const Works: React.FC = () => (
         year="2022"
       >
         SASMINE is an application for mining operations.
+      </WorkCard>
+
+      <WorkCard
+        textColor={colors.primary}
+        cardColor="black"
+        title="CHATTY"
+        srcImg={chattyImage}
+        paddingImageBottom="10rem"
+        srcImgWidth="40%"
+        link="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty"
+        technologies={[
+          Technologies.TYPESCRIPT,
+          Technologies.REACT_JS,
+          Technologies.FIREBASE,
+        ]}
+        expText="I developed the entire application, and its published in google play"
+        bulletPoints="MOBILE, REACT NATIVE, EXPO, CONTEXT API, HOOKS, SOCIAL AUTH "
+        year="2022"
+      >
+        Social app with posts, profile and likes. Users need to have a google account to
+        access the application.
       </WorkCard>
     </CardsContainer>
 
@@ -211,9 +232,9 @@ const Works: React.FC = () => (
         paddingImageBottom="10rem"
         srcImgWidth="40%"
         link="https://transformarn.imd.ufrn.br/"
-        technologies={[Technologies.EXPRESS, Technologies.POSTGRES]}
+        technologies={[Technologies.EXPRESS, Technologies.POSTGRES, Technologies.EJS]}
         expText=""
-        bulletPoints="BACKEND, EXPRESS, POSTGRES, EJS, AUTH"
+        bulletPoints="BACKEND, EXPRESS, POSTGRES, EJS"
         year="2022"
       >
         The first step towards transformation is the consciousness that needs to
@@ -223,7 +244,7 @@ const Works: React.FC = () => (
       <WorkCard
         textColor={colors.primary}
         cardColor="black"
-        title="CHATTY"
+        title="CHATTY SERVER"
         srcImg={chattyImage}
         paddingImageBottom="10rem"
         srcImgWidth="40%"
@@ -232,9 +253,11 @@ const Works: React.FC = () => (
           Technologies.TYPESCRIPT,
           Technologies.ADONIS_JS,
           Technologies.DOCKER,
+          Technologies.FIREBASE,
+          Technologies.POSTGRES,
         ]}
         expText="I developed the server app, currently running on heroku. The source code its on github."
-        bulletPoints="BACKEND"
+        bulletPoints="BACKEND, SOCIAL AUTH, DOCKER"
         year="2022"
       >
         Social app with posts, profile and likes. Users need to have a google account to
