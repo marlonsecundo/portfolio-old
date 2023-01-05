@@ -71,12 +71,20 @@ const Works: React.FC = () => (
         <Subtitle>Software Registrations</Subtitle>
 
         <SeparatorColumn>
-          <AppItem target="_blank" rel="noopener noreferrer" href="/comunica.pdf">
+          <AppItem
+            target="_blank"
+            rel="noopener noreferrer"
+            href={window.location.pathname + 'comunica.pdf'}
+          >
             <AppImage src={brasilImage}></AppImage>
             <AppName>Comunica</AppName>
           </AppItem>
 
-          <AppItem target="_blank" rel="noopener noreferrer" href="/adapt.pdf">
+          <AppItem
+            target="_blank"
+            rel="noopener noreferrer"
+            href={window.location.pathname + 'adapt.pdf'}
+          >
             <AppImage src={brasilImage}></AppImage>
             <AppName>Adapt</AppName>
           </AppItem>
