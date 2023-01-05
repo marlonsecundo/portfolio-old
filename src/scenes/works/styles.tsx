@@ -49,7 +49,7 @@ export const InlineLink = styled.a`
   color: ${colors.secondary};
 `;
 
-export const PlayStoreApp = styled.a`
+export const AppItem = styled.a`
   margin-left: 4rem;
   flex-direction: column;
   align-items: center;
@@ -75,4 +75,17 @@ export const AppImage = styled.img`
 export const AppName = styled.p`
   font-family: ${metrics.fontFamily};
   color: ${colors.primary};
+`;
+
+export const AppsContianer = styled.div`
+  flex-direction: column;
+`;
+
+export const RegistrationsContainer = styled.div`
+  flex-direction: column;
+`;
+
+export const SeparatorColumn = styled.div`
+  justify-content: space-between;
+  margin-right: 4rem;
 `;

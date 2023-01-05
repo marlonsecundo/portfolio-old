@@ -15,6 +15,7 @@ import sascarImage from 'src/assets/images/works/sascar.png';
 import googlePlaySvg from 'src/assets/images/works/google-play.svg';
 import chattyImage from 'src/assets/images/works/chatty.png';
 import transformarnImage from 'src/assets/images/works/transformarn.png';
+import brasilImage from 'src/assets/images/works/brasil.png';
 
 import { colors } from 'src/styles';
 import { Technologies } from 'src/types';
@@ -22,10 +23,13 @@ import { Description, Title } from 'src/styles/global';
 import {
   AppImage,
   AppName,
+  AppsContianer,
   CardsContainer,
   InlineLink,
-  PlayStoreApp,
+  AppItem,
   PlayStoreIcon,
+  RegistrationsContainer,
+  SeparatorColumn,
   StyledContainer,
   Subtitle,
   TitleContainer,
@@ -46,15 +50,39 @@ const Works: React.FC = () => (
       </Description>
     </TitleContainer>
 
-    <Subtitle>
-      On Google Play
-      <PlayStoreIcon src={googlePlaySvg}></PlayStoreIcon>
-    </Subtitle>
+    <SeparatorColumn>
+      <AppsContianer>
+        <Subtitle>
+          On Google Play
+          <PlayStoreIcon src={googlePlaySvg}></PlayStoreIcon>
+        </Subtitle>
 
-    <PlayStoreApp href="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty">
-      <AppImage src={chattyImage}></AppImage>
-      <AppName>Chatty</AppName>
-    </PlayStoreApp>
+        <AppItem
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty"
+        >
+          <AppImage src={chattyImage}></AppImage>
+          <AppName>Chatty</AppName>
+        </AppItem>
+      </AppsContianer>
+
+      <RegistrationsContainer>
+        <Subtitle>Software Registrations</Subtitle>
+
+        <SeparatorColumn>
+          <AppItem target="_blank" rel="noopener noreferrer" href="/comunica.pdf">
+            <AppImage src={brasilImage}></AppImage>
+            <AppName>Comunica</AppName>
+          </AppItem>
+
+          <AppItem target="_blank" rel="noopener noreferrer" href="/adapt.pdf">
+            <AppImage src={brasilImage}></AppImage>
+            <AppName>Adapt</AppName>
+          </AppItem>
+        </SeparatorColumn>
+      </RegistrationsContainer>
+    </SeparatorColumn>
 
     <Subtitle>Mobile</Subtitle>
 
