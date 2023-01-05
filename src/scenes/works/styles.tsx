@@ -25,7 +25,10 @@ export const Subtitle = styled.h3`
   font-family: ${metrics.fontFamilyJS};
   color: ${colors.secondary};
   margin-bottom: 1rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
+
+  ${media.mobileL} {
+  }
 `;
 
 export const CardsContainer = styled.div`
@@ -50,13 +53,16 @@ export const InlineLink = styled.a`
 `;
 
 export const AppItem = styled.a`
-  margin-left: 4rem;
   flex-direction: column;
   align-items: center;
 
-  align-self: flex-start;
-
   margin-bottom: 4rem;
+
+  ${media.tablet} {
+    margin-left: 4rem;
+
+    align-self: flex-start;
+  }
 `;
 
 export const PlayStoreIcon = styled.img`
@@ -79,6 +85,11 @@ export const AppName = styled.p`
 
 export const AppsContianer = styled.div`
   flex-direction: column;
+
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
 `;
 
 export const RegistrationsContainer = styled.div`
@@ -86,6 +97,13 @@ export const RegistrationsContainer = styled.div`
 `;
 
 export const SeparatorColumn = styled.div`
-  justify-content: space-between;
-  margin-right: 4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ${media.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 4rem;
+  }
 `;
