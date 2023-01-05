@@ -27,15 +27,15 @@ const Skills: React.FC = () => {
       <LeftContainer>
         <TextContainer>
           <Title>Skills</Title>
+
           <Description>
-            In {new Date().getFullYear() - 2015} years of learning many languages and
-            coding in projects with teams, in the last year I have been moving towards the
-            goal of becoming a senior developer, always learning new stuff and working in
-            cool projects.
+            Over the past {new Date().getFullYear() - 2015} years of learning many
+            languages and coding in dev teams, in the last year I have been moving towards
+            the goal of becoming a senior developer, always learning new stuff and
+            challenging myself on different kinds of projects.
           </Description>
           <Description>
-            I currently working as Flutter Mobile Developer in Instituto Metrópole
-            Digital.
+            I currently working as Fullstack Developer in Instituto Metrópole Digital.
           </Description>
         </TextContainer>
       </LeftContainer>

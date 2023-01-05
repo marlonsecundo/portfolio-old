@@ -16,7 +16,7 @@ const Education: React.FC = () => (
       <LinkWide href="https://ufrn.br/">
         <Img src={ufrn} alt="UFRN Logo" />
       </LinkWide>
-      <LinkWide href="https://imd.ufrn.br/portal/">
+      <LinkWide href="https://imd.ufrn.br/portal/ensino/graduacao">
         <Img src={imd} alt="IMD Logo" />
       </LinkWide>
 

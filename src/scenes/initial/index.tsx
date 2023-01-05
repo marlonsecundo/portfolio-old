@@ -59,12 +59,10 @@ const Initial: React.FC = () => {
         </TitleContainer>
 
         <Description>Hi! I am Marlon Secundo,</Description>
-        <Description>
-          a developer with experience in frontend, mobile, desktop
-        </Description>
+        <Description>I am a Dev Bachelor in I.T.</Description>
         <Description> </Description>
 
-        <AndMore>and more!</AndMore>
+        <AndMore>and a little more.</AndMore>
       </ProfileContainer>
       <ContactContainer>
         <ContactTitle>FIND ME!</ContactTitle>
