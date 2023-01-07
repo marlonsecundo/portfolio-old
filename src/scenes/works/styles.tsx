@@ -28,6 +28,7 @@ export const Subtitle = styled.h3`
   margin-left: 1rem;
 
   ${media.mobileL} {
+    margin-left: 4rem;
   }
 `;
 
