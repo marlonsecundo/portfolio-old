@@ -52,6 +52,6 @@ export const LinkItem = styled(motion.li)<Props>`
 
   ${media.laptopL} {
     margin: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 `;
