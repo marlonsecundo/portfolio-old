@@ -22,6 +22,7 @@ import {
   Year,
   FirstContent,
   ExpText,
+  CardBodyText,
 } from './styles';
 
 interface Props {
@@ -72,7 +73,9 @@ const WorkCard: React.FC<Props> = ({
 
   const yearComp = year ? (
     <Year>
-      <BodyText color={textColor}>{year}</BodyText>
+      <BodyText style={{ fontSize: '1em' }} color={textColor}>
+        {year}
+      </BodyText>
     </Year>
   ) : (
     <></>
@@ -86,7 +89,7 @@ const WorkCard: React.FC<Props> = ({
         animate={animControls}
         variants={bodyTextVariants}
       >
-        <BodyText color={colors.secondary}>TOOLS AND TECHS</BodyText>
+        <CardBodyText color={colors.secondary}>TOOLS AND TECHS</CardBodyText>
         <RowContainer flexWrap="wrap" justifyContent="space-between">
           {techs}
         </RowContainer>
@@ -107,7 +110,7 @@ const WorkCard: React.FC<Props> = ({
         variants={containerVariants}
         initial={containerVariants.lostFocus}
       >
-        <Spacer padding="2rem 3rem" margin="15% 0 0 0">
+        <Spacer padding="2rem 1rem" margin="15% 0 0 0">
           <ExpText
             animate={animControls}
             variants={bodyTextVariants}
@@ -117,28 +120,28 @@ const WorkCard: React.FC<Props> = ({
           </ExpText>
         </Spacer>
 
-        <Spacer padding="0rem 3rem">
+        <Spacer padding="0rem 1rem">
           <ColumnContainer>
-            <BodyText
+            <CardBodyText
               animate={animControls}
               variants={bodyTextVariants}
               initial={bodyTextVariants.lostFocus}
               color={colors.secondary}
             >
               BULLET POINTS
-            </BodyText>
-            <BodyText
+            </CardBodyText>
+            <CardBodyText
               animate={animControls}
               variants={bodyTextVariants}
               initial={bodyTextVariants.lostFocus}
               textTransform="lowercase"
             >
               {bulletPoints}
-            </BodyText>
+            </CardBodyText>
           </ColumnContainer>
         </Spacer>
 
-        <Spacer padding="2rem 3rem">{toolsAndTechComp}</Spacer>
+        <Spacer padding="2rem 1rem">{toolsAndTechComp}</Spacer>
       </TitleContainer>
 
       <PositionedContainer margin="0rem 1rem" width="100%" height="100%">
@@ -156,7 +159,7 @@ const WorkCard: React.FC<Props> = ({
           <WorkImage
             whileTap={{ scale: 1.1 }}
             whileHover={{ scale: 1.1 }}
-            src={srcImg}
+            src={require('../../../' + srcImg)}
             srcWidth={srcImgWidth}
             paddingBottom={paddingImageBottom}
           />

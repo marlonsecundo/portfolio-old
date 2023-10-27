@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-interface SpacerProps {
+export interface SpacerProps {
   margin?: string;
   padding?: string;
   width?: string;

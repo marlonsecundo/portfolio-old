@@ -16,12 +16,12 @@ export const TitleContainer = styled.section`
   ${media.desktop} {
     padding: 0 3%;
   }
-  margin: 0 0rem 5rem 1rem;
+  margin: 0 0rem 3rem 1rem;
   flex-flow: column;
 `;
 
 export const Subtitle = styled.h3`
-  font-size: 3em;
+  font-size: 2em;
   font-family: ${metrics.fontFamilyJS};
   color: ${colors.secondary};
   margin-bottom: 1rem;
@@ -32,12 +32,18 @@ export const Subtitle = styled.h3`
   }
 `;
 
+export const OnGoogle = styled(Subtitle)`
+  ${media.mobileL} {
+    margin-left: 0rem;
+  }
+`;
+
 export const CardsContainer = styled.div`
   align-self: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  flex-flow: row wrap;
+  flex-flow: row;
   align-content: center;
   margin-bottom: 3rem;
 
@@ -57,11 +63,7 @@ export const AppItem = styled.a`
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 4rem;
-
   ${media.tablet} {
-    margin-left: 4rem;
-
     align-self: flex-start;
   }
 `;
@@ -95,16 +97,25 @@ export const AppsContianer = styled.div`
 
 export const RegistrationsContainer = styled.div`
   flex-direction: column;
+
+  align-items: flex-end;
 `;
 
 export const SeparatorColumn = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: ${colors.section};
 
   ${media.tablet} {
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 4rem;
+    margin-right: 4.1rem;
+    padding: 2rem 3rem;
+    margin-left: 4rem;
+
+    margin-bottom: 3rem;
+
+    border-radius: 20px;
   }
 `;

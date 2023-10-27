@@ -5,6 +5,10 @@ import { Container } from 'src/styles/global';
 export const StyledContainer = styled(Container)`
   flex-direction: column;
   background-color: transparent;
+
+  background-color: ${colors.section};
+  border-top-right-radius: 500px;
+  border-bottom-left-radius: 100px;
 `;
 
 export const LeftContainer = styled.div`

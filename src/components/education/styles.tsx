@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
 
   ${media.laptopL} {
-    margin: 5rem 0 10rem 0;
+    margin: 5rem 0 5rem 0;
   }
 `;
 
@@ -55,7 +55,6 @@ export const LinkWide = styled(Link)`
 `;
 
 export const ImgsContainer = styled.div`
-  background: ${colors.card};
   width: 100%;
   align-items: center;
   margin: 4rem 0 0rem 0;

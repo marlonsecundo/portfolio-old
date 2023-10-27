@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { colors, media, metrics } from 'src/styles';
 import styled from 'styled-components';
 
-interface BodyTextProps {
+export interface BodyTextProps {
   color?: string;
   textTransform?: string;
 }

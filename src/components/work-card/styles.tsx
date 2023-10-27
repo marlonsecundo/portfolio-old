@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
-import { ColumnContainer } from 'src/ui-components/layout';
+import { ColumnContainer, Spacer } from 'src/ui-components/layout';
 import { BodyText } from 'src/ui-components/typografy';
 
 interface Props {
@@ -30,20 +30,18 @@ export const Container = styled(motion.a).attrs(() => ({
   min-height: 38rem;
 
   ${media.tablet} {
-    width: 50%;
+    min-height: 0;
+    border-radius: 3px;
   }
 
   ${media.laptopL} {
-    width: 30%;
     margin: 0.5rem;
     max-height: 45rem;
   }
 
   ${media.desktop} {
-    min-height: 50rem;
     margin: 0rem;
     margin-bottom: 1rem;
-    width: 32%;
   }
 `;
 
@@ -89,9 +87,11 @@ export const Description = styled.p<TextProps>`
   ${media.laptopL} {
     width: 80%;
 
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 2.3rem;
   }
+
+  /* background-color: red; */
 `;
 
 interface GradientProps {
@@ -127,6 +127,12 @@ export const TitleContainer = styled(motion.div)`
   justify-content: space-between;
 
   box-shadow: 0px 2pt 6pt ${colors.shadow};
+
+  ${media.tablet} {
+    padding-left: 1.5rem;
+
+    padding-right: 1.5rem;
+  }
 `;
 
 export const Title = styled(motion.h2)<TextProps>`
@@ -135,11 +141,16 @@ export const Title = styled(motion.h2)<TextProps>`
   color: ${(p) => p.textColor};
   text-align: center;
 
-  width: 100%;
+  width: 60%;
 
   z-index: 8;
   position: absolute;
   margin-top: 3rem;
+
+  ${media.tablet} {
+    top: 0;
+    margin-top: 1.5rem;
+  }
 `;
 
 export const Year = styled(motion.div)`
@@ -157,12 +168,29 @@ export const FirstContent = styled.section`
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+
+  ${media.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const ExpText = styled(BodyText)`
   align-self: center;
 
+  ${media.tablet} {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
   ${media.desktop} {
-    padding: 0 1.5rem;
+  }
+`;
+
+export const ExpTextContainer = styled(Spacer)``;
+
+export const CardBodyText = styled(BodyText)`
+  ${media.tablet} {
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 `;

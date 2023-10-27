@@ -33,8 +33,8 @@ export const Container = styled(motion.section)<ContainerProps>`
   }
 
   ${media.desktop} {
-    height: ${(p) => (p.small ? '4rem' : '6rem')};
-    width: ${(p) => (p.small ? '4rem' : '6rem')};
+    height: ${(p) => (p.small ? '3rem' : '6rem')};
+    width: ${(p) => (p.small ? '3rem' : '6rem')};
   }
 `;
 
@@ -52,7 +52,7 @@ export const BigContainer = styled(motion.section)`
   align-items: center;
   padding: 2em;
   border-radius: 5px;
-  background-color: ${colors.card};
+  background-color: rgba(255, 255, 255, 0.003);
   margin-top: 10rem;
   flex: 1;
 `;

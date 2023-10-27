@@ -14,6 +14,7 @@ import {
   StyledContainer,
   Lists,
 } from './styles';
+import { Spacer } from 'src/ui-components/layout';
 
 const Skills: React.FC = () => {
   const [index, setIndex] = useState(2);
@@ -24,6 +25,7 @@ const Skills: React.FC = () => {
 
   return (
     <StyledContainer id="skills">
+      <Spacer margin="3rem 0"></Spacer>
       <LeftContainer>
         <TextContainer>
           <Title>Skills</Title>
