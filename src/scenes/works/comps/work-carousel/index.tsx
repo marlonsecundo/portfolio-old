@@ -16,8 +16,8 @@ export interface Props {
 }
 
 const SSwiper = styled(Swiper)`
-  height: 40rem;
-  min-height: 40rem;
+  height: 35rem;
+  min-height: 35rem;
 
   width: 100%;
 
