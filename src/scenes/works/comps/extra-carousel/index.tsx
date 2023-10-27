@@ -29,7 +29,7 @@ const ExtraCarousel: React.FC<Props> = ({ items }) => {
 
     if (isLaptopL) return 4;
 
-    return 5;
+    return 4;
   }, [isTablet, isLaptop, isMobile, isLaptopL]);
   return (
     <Container>

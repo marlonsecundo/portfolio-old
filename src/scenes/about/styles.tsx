@@ -72,7 +72,7 @@ export const LinkText = styled(motion.a).attrs(() => ({
     transition: { duration: 2, easing: 'easeInOut' },
   },
   target: '_blank',
-  rel: 'noreferrer',
+  rel: 'noopener noreferrer',
 }))`
   color: ${colors.primary};
   font-family: ${metrics.aboutFontFamily};

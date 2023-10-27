@@ -7,7 +7,11 @@ const DownloadResume: React.FC = () => {
   return (
     <Container>
       <AltText>in a rush?</AltText>
-      <Button href="/resume.pdf" target="_blank">
+      <Button
+        target="_blank"
+        href={window.location.pathname + '/resume.pdf'}
+        rel="noopener noreferrer"
+      >
         <Icon size={20}></Icon>
         Download Resume
       </Button>

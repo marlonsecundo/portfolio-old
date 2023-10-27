@@ -39,10 +39,15 @@ export const InlineLink = styled.a`
 
 export const CardContainer = styled.div`
   width: 100%;
-  height: 60vh;
-  min-height: 60vh;
+  height: 35rem;
+  min-height: 35rem;
   display: flex;
 
   overflow: hidden;
   position: relative;
+
+  ${media.laptop} {
+    height: 35rem;
+    min-height: 35rem;
+  }
 `;

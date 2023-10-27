@@ -70,7 +70,9 @@ const About: React.FC = () => (
         </LinkText>
         <LinkText href={links.github}>See my projects on Github</LinkText>
 
-        <LinkText href={'/resume.pdf'}>Resume</LinkText>
+        <LinkText target="_blank" href={window.location.pathname + '/resume.pdf'}>
+          Resume
+        </LinkText>
       </RightContainer>
 
       <Tags>
