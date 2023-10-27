@@ -7,7 +7,7 @@ const DownloadResume: React.FC = () => {
   return (
     <Container>
       <AltText>in a rush?</AltText>
-      <Button>
+      <Button href="/resume.pdf" target="_blank">
         <Icon size={20}></Icon>
         Download Resume
       </Button>

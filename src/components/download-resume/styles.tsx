@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin-bottom: 0.5rem;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background-color: ${colors.highlight};
 
   border-radius: 5px;
@@ -22,6 +22,9 @@ export const Button = styled.button`
   align-items: center;
 
   cursor: pointer;
+
+  text-decoration: none;
+  color: ${colors.background};
 `;
 
 export const Icon = styled(FaFilePdf)``;
