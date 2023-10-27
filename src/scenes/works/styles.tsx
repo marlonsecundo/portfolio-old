@@ -32,12 +32,6 @@ export const Subtitle = styled.h3`
   }
 `;
 
-export const OnGoogle = styled(Subtitle)`
-  ${media.mobileL} {
-    margin-left: 0rem;
-  }
-`;
-
 export const CardsContainer = styled.div`
   align-self: center;
   justify-content: center;
@@ -57,65 +51,4 @@ export const CardsContainer = styled.div`
 export const InlineLink = styled.a`
   display: inline;
   color: ${colors.secondary};
-`;
-
-export const AppItem = styled.a`
-  flex-direction: column;
-  align-items: center;
-
-  ${media.tablet} {
-    align-self: flex-start;
-  }
-`;
-
-export const PlayStoreIcon = styled.img`
-  padding: 0;
-  margin-left: 1rem;
-  width: 2rem;
-`;
-
-export const AppImage = styled.img`
-  width: 8rem;
-  border-radius: 100%;
-
-  margin-bottom: 0.7rem;
-`;
-
-export const AppName = styled.p`
-  font-family: ${metrics.fontFamily};
-  color: ${colors.primary};
-`;
-
-export const AppsContianer = styled.div`
-  flex-direction: column;
-
-  align-items: center;
-
-  display: flex;
-  justify-content: center;
-`;
-
-export const RegistrationsContainer = styled.div`
-  flex-direction: column;
-
-  align-items: flex-end;
-`;
-
-export const SeparatorColumn = styled.div`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: ${colors.section};
-
-  ${media.tablet} {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 4.1rem;
-    padding: 2rem 3rem;
-    margin-left: 4rem;
-
-    margin-bottom: 3rem;
-
-    border-radius: 20px;
-  }
 `;

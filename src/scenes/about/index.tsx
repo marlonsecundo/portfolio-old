@@ -70,7 +70,7 @@ const About: React.FC = () => (
         </LinkText>
         <LinkText href={links.github}>See my projects on Github</LinkText>
 
-        <LinkText href={links.lattes}>Lattes CV</LinkText>
+        <LinkText href={links.lattes}>Resume</LinkText>
       </RightContainer>
 
       <Tags>

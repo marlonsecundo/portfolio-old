@@ -14,7 +14,6 @@ import {
   Container,
   ProfileContainer,
   Title,
-  JSTitle,
   Description,
   CodeContainer,
   ContactContainer,
@@ -24,6 +23,7 @@ import {
   TitleContainer,
 } from './styles';
 import useInitialAnimations from './animations';
+import DownloadResume from 'src/components/download-resume';
 
 const Initial: React.FC = () => {
   const [underscore, setUnderscore] = useState('_');
@@ -39,19 +39,11 @@ const Initial: React.FC = () => {
   return (
     <Container id="initial">
       <CodeContainer animate={animation} initial={initialCode}>
+        <DownloadResume></DownloadResume>
         <JSEditor />
       </CodeContainer>
 
       <ProfileContainer animate={animation} initial={initialTitle}>
-        {/* <JSTitle
-          whileHover={{
-            x: [-0, 70],
-          }}
-          whileTap={{ scale: 1.1 }}
-        >
-          JS
-        </JSTitle> */}
-
         <TitleContainer>
           <Img src={meImg} />
 
@@ -67,7 +59,6 @@ const Initial: React.FC = () => {
       <ContactContainer>
         <ContactTitle>FIND ME!</ContactTitle>
         <ContactItem link={links.linkedin} imgSrc={logoLinkedin} />
-        <ContactItem link={links.lattes} imgSrc={lattesLogo} />
 
         <ContactItem link={links.github} imgSrc={githubLogo} />
       </ContactContainer>

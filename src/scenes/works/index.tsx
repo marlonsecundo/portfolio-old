@@ -1,33 +1,12 @@
 import React from 'react';
 
 import WorkCard from 'src/components/work-card';
-import octocat from 'src/assets/images/works/octocat.png';
-import googlePlaySvg from 'src/assets/images/works/google-play.svg';
-import chattyImage from 'src/assets/images/works/chatty.png';
-import transformarnImage from 'src/assets/images/works/transformarn.png';
-import brasilImage from 'src/assets/images/works/brasil.png';
-
-import { colors } from 'src/styles';
-import { Technologies } from 'src/types';
 import { Description, Title } from 'src/styles/global';
-import {
-  AppImage,
-  AppName,
-  AppsContianer,
-  CardsContainer,
-  InlineLink,
-  AppItem,
-  PlayStoreIcon,
-  RegistrationsContainer,
-  SeparatorColumn,
-  StyledContainer,
-  Subtitle,
-  TitleContainer,
-  OnGoogle,
-} from './styles';
+import { InlineLink, StyledContainer, Subtitle, TitleContainer } from './styles';
 import { DevType, Work, works } from 'src/assets/data/works';
 import AutoplayCarousel from 'src/components/autoplay-carousel';
-import { ColumnContainer, RowContainer, Spacer } from 'src/ui-components/layout';
+import { Spacer } from 'src/ui-components/layout';
+import DevApps from './comps/dev-apps';
 
 const workToWorkCard = (w: Work) => (
   <WorkCard
@@ -74,47 +53,7 @@ const Works: React.FC = () => {
         </Description>
       </TitleContainer>
 
-      <SeparatorColumn>
-        <AppsContianer>
-          <OnGoogle>
-            On Google Play
-            <PlayStoreIcon src={googlePlaySvg}></PlayStoreIcon>
-          </OnGoogle>
-
-          <AppItem
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://play.google.com/store/apps/details?id=com.marlonsecundo.chatty"
-          >
-            <AppImage src={chattyImage}></AppImage>
-            <AppName>Chatty</AppName>
-          </AppItem>
-        </AppsContianer>
-
-        <RegistrationsContainer>
-          <OnGoogle>Software Registrations</OnGoogle>
-
-          <RowContainer>
-            <AppItem
-              target="_blank"
-              rel="noopener noreferrer"
-              href={window.location.pathname + 'comunica.pdf'}
-            >
-              <AppImage src={brasilImage}></AppImage>
-              <AppName>Comunica</AppName>
-            </AppItem>
-
-            <AppItem
-              target="_blank"
-              rel="noopener noreferrer"
-              href={window.location.pathname + 'adapt.pdf'}
-            >
-              <AppImage src={brasilImage}></AppImage>
-              <AppName>Adapt</AppName>
-            </AppItem>
-          </RowContainer>
-        </RegistrationsContainer>
-      </SeparatorColumn>
+      <DevApps></DevApps>
 
       <Subtitle>Mobile</Subtitle>
 
