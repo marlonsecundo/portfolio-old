@@ -13,7 +13,7 @@
 .shadow-outline box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
  */
 
-const customMediaQuery = (maxWidth: number) => `@media (min-width: ${maxWidth}px)`;
+const customMediaQuery = (minWidth: number) => `@media (min-width: ${minWidth}px)`;
 
 export const devicesWidth = {
   mobileS: 320,

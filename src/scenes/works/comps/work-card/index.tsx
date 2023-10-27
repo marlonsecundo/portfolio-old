@@ -22,6 +22,8 @@ import {
   FirstContent,
   ExpText,
   CardBodyText,
+  SpacerTitle,
+  TitleContainerPadding,
 } from './styles';
 import TechCard from 'src/components/tech-card';
 
@@ -110,7 +112,9 @@ const WorkCard: React.FC<Props> = ({
         variants={containerVariants}
         initial={containerVariants.lostFocus}
       >
-        <Spacer padding="2rem 1rem" margin="15% 0 0 0">
+        <TitleContainerPadding>
+          <SpacerTitle></SpacerTitle>
+
           <ExpText
             animate={animControls}
             variants={bodyTextVariants}
@@ -118,9 +122,7 @@ const WorkCard: React.FC<Props> = ({
           >
             {expText}
           </ExpText>
-        </Spacer>
 
-        <Spacer padding="0rem 1rem">
           <ColumnContainer>
             <CardBodyText
               animate={animControls}
@@ -139,9 +141,9 @@ const WorkCard: React.FC<Props> = ({
               {bulletPoints}
             </CardBodyText>
           </ColumnContainer>
-        </Spacer>
 
-        <Spacer padding="2rem 1rem">{toolsAndTechComp}</Spacer>
+          {toolsAndTechComp}
+        </TitleContainerPadding>
       </TitleContainer>
 
       <PositionedContainer margin="0rem 1rem" width="100%" height="100%">

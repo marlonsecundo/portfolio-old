@@ -74,10 +74,18 @@ export const PlayStoreIcon = styled.img`
 `;
 
 export const AppImage = styled.img`
-  width: 8rem;
+  width: 6rem;
   border-radius: 100%;
 
   margin-bottom: 0.7rem;
+
+  ${media.mobileL} {
+    width: 7rem;
+  }
+
+  ${media.tablet} {
+    width: 8rem;
+  }
 `;
 
 export const AppName = styled.p`
@@ -88,11 +96,12 @@ export const AppName = styled.p`
 export const RegistrationsContainer = styled.div`
   flex-direction: column;
 
-  align-items: flex-end;
-
+  align-items: center;
   margin-top: 2rem;
 
   ${media.tablet} {
+    align-items: flex-end;
+
     margin-top: 0rem;
   }
 `;

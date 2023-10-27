@@ -24,6 +24,8 @@ export const Container = styled(motion.section)<ContainerProps>`
   align-items: center;
 
   ${media.mobileL} {
+    height: 2.5rem;
+    width: 2.5rem;
     margin: ${(p) => (p.small ? '1rem' : '1rem')};
     padding: 0.5rem;
   }
@@ -33,8 +35,8 @@ export const Container = styled(motion.section)<ContainerProps>`
   }
 
   ${media.desktop} {
-    height: ${(p) => (p.small ? '3rem' : '6rem')};
-    width: ${(p) => (p.small ? '3rem' : '6rem')};
+    height: ${(p) => (p.small ? '2rem' : '6rem')};
+    width: ${(p) => (p.small ? '2rem' : '6rem')};
   }
 `;
 

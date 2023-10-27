@@ -38,9 +38,9 @@ export const InlineLink = styled.a`
 `;
 
 export const CardContainer = styled.div`
-  width: 23rem;
-  height: 55vh;
-  min-height: 55vh;
+  width: 100%;
+  height: 60vh;
+  min-height: 60vh;
   display: flex;
 
   overflow: hidden;

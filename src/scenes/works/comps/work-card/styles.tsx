@@ -29,19 +29,11 @@ export const Container = styled(motion.a).attrs(() => ({
 
   min-height: 38rem;
 
+  height: 100%;
+
   ${media.tablet} {
     min-height: 0;
     border-radius: 3px;
-  }
-
-  ${media.laptopL} {
-    margin: 0.5rem;
-    max-height: 45rem;
-  }
-
-  ${media.desktop} {
-    margin: 0rem;
-    margin-bottom: 1rem;
   }
 `;
 
@@ -118,20 +110,45 @@ export const Gradient = styled.div<GradientProps>`
 export const TitleContainer = styled(motion.div)`
   width: 100%;
 
+  height: 100%;
+
+  background-color: red;
+
   background: ${colors.third};
   overflow: hidden;
 
   z-index: 7;
   flex-direction: column;
 
+  box-shadow: 0px 2pt 6pt ${colors.shadow};
+`;
+
+export const TitleContainerPadding = styled.div`
+  flex-direction: column;
+
   justify-content: space-between;
 
-  box-shadow: 0px 2pt 6pt ${colors.shadow};
+  height: 100%;
+
+  padding: 0 1rem;
+  padding-bottom: 3rem;
+
+  ${media.mobileL} {
+    padding: 0 2rem;
+    padding-bottom: 3rem;
+  }
 
   ${media.tablet} {
-    padding-left: 1.5rem;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+  }
 
-    padding-right: 1.5rem;
+  &::after {
+    content: '';
+  }
+
+  &::before {
+    content: '';
   }
 `;
 
@@ -146,6 +163,17 @@ export const Title = styled(motion.h2)<TextProps>`
   z-index: 8;
   position: absolute;
   margin-top: 3rem;
+
+  ${media.tablet} {
+    top: 0;
+    margin-top: 1.5rem;
+  }
+`;
+
+export const SpacerTitle = styled(Spacer)`
+  margin-top: 3rem;
+
+  height: 1rem;
 
   ${media.tablet} {
     top: 0;

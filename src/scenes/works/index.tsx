@@ -11,14 +11,10 @@ import {
 import { DevType, Work, works } from 'src/assets/data/works';
 import { Spacer } from 'src/ui-components/layout';
 import DevApps from './comps/dev-apps';
-import ExtraItem from './comps/extra-item';
 import WorkCarousel from 'src/scenes/works/comps/work-carousel';
 import WorkCard from './comps/work-card';
-import ExtraCarousel from './comps/extra-carousel';
-import { GiRaiseZombie, GiDinosaurRex, GiDiamondRing } from 'react-icons/gi';
-import { FaCow } from 'react-icons/fa6';
 
-import { LiaBirthdayCakeSolid } from 'react-icons/lia';
+import Extra from './comps/extra';
 const workToWorkCard = (w: Work) => (
   <CardContainer>
     <WorkCard
@@ -32,7 +28,7 @@ const workToWorkCard = (w: Work) => (
       bulletPoints={w.bulletPoints}
       year={w.year}
       enableHoverEffect={w.enableHoverEffect}
-      link={w.link}
+      link={w.link ? w.link : undefined}
     >
       {w.description}
     </WorkCard>
@@ -87,53 +83,7 @@ const Works: React.FC = () => {
 
       <Spacer margin="3rem 0rem"></Spacer>
 
-      <Subtitle>Extras</Subtitle>
-
-      <ExtraCarousel
-        items={[
-          <ExtraItem
-            link="https://alinny-davi.vercel.app"
-            text="Alinny e Davi"
-            icon={<GiDiamondRing color="#F0BCD4" size={30}></GiDiamondRing>}
-            textColor="#F0BCD4"
-          ></ExtraItem>,
-
-          <ExtraItem
-            link="https://github.com/marlonsecundo/dinorun"
-            text="BovControl"
-            icon={<FaCow color="#8FD694" size={30}></FaCow>}
-            textColor="#8FD694"
-          ></ExtraItem>,
-
-          <ExtraItem
-            link="https://marlonsecundo.github.io/niver/"
-            text="Niver"
-            icon={<LiaBirthdayCakeSolid color="#FE5D9F" size={30}></LiaBirthdayCakeSolid>}
-            textColor="#FE5D9F"
-          ></ExtraItem>,
-
-          <ExtraItem
-            link="https://github.com/marlonsecundo/platman"
-            text="platman"
-            textColor="#ad3132"
-            imgSrc="src/assets/images/platman.png"
-          ></ExtraItem>,
-
-          <ExtraItem
-            link="https://github.com/marlonsecundo/zssn-backend"
-            text="zssn"
-            icon={<GiRaiseZombie size={30}></GiRaiseZombie>}
-            textColor="#571d88"
-          ></ExtraItem>,
-
-          <ExtraItem
-            link="https://github.com/marlonsecundo/dinorun"
-            text="dino run"
-            icon={<GiDinosaurRex color="#1789FC" size={30}></GiDinosaurRex>}
-            textColor="#1789FC"
-          ></ExtraItem>,
-        ]}
-      ></ExtraCarousel>
+      <Extra></Extra>
 
       <Spacer margin="4rem 0rem"></Spacer>
     </StyledContainer>
