@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors, metrics, media } from 'src/styles';
 import { motion } from 'framer-motion';
+import { showEduLinks } from './animations';
 
 export const Container = styled.div`
   width: 100%;
@@ -54,7 +55,11 @@ export const LinkWide = styled(Link)`
   }
 `;
 
-export const ImgsContainer = styled.div`
+interface Props {
+  isVisible: boolean;
+}
+
+export const ImgsContainer = styled.div<Props>`
   width: 100%;
   align-items: center;
   margin: 4rem 0 0rem 0;
@@ -66,4 +71,6 @@ export const ImgsContainer = styled.div`
     flex-flow: row;
     justify-content: space-around;
   }
+
+  animation: ${({ isVisible }) => (isVisible ? showEduLinks : 'none')} 1s ease-in;
 `;

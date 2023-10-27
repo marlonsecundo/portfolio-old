@@ -31,7 +31,7 @@ const Extra: React.FC = () => {
           ></ExtraItem>,
 
           <ExtraItem
-            link="https://github.com/marlonsecundo/dinorun"
+            link="https://github.com/marlonsecundo/bovcontrol-challenge"
             text="BovControl"
             icon={<FaCow color="#8FD694" size={30}></FaCow>}
             textColor="#8FD694"
