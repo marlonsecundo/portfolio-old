@@ -10,7 +10,6 @@ import {
 } from 'src/ui-components/layout';
 import { BodyText } from 'src/ui-components/typografy';
 
-import TechCard from '../tech-card';
 import { bodyTextVariants, containerVariants, getTitleVariants } from './animations';
 import {
   Container,
@@ -24,6 +23,7 @@ import {
   ExpText,
   CardBodyText,
 } from './styles';
+import TechCard from 'src/components/tech-card';
 
 interface Props {
   title: string;
@@ -159,7 +159,7 @@ const WorkCard: React.FC<Props> = ({
           <WorkImage
             whileTap={{ scale: 1.1 }}
             whileHover={{ scale: 1.1 }}
-            src={require('../../../' + srcImg)}
+            src={require('../../../../../' + srcImg)}
             srcWidth={srcImgWidth}
             paddingBottom={paddingImageBottom}
           />

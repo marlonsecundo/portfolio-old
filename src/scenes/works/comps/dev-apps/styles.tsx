@@ -12,14 +12,18 @@ export const SeparatorColumn = styled.div<Props>`
   justify-content: center;
   background-color: ${colors.section};
 
+  text-align: center;
+
+  padding: 2rem 0rem;
+
+  margin-bottom: 3rem;
+
   ${media.tablet} {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 4.1rem;
     padding: 2rem 3rem;
     margin-left: 4rem;
-
-    margin-bottom: 3rem;
 
     border-radius: 20px;
   }
@@ -52,7 +56,7 @@ export const AppItem = styled.a`
   flex-direction: column;
   align-items: center;
 
-  ${media.tablet} {
+  ${media.laptop} {
     align-self: flex-start;
   }
 `;
@@ -85,4 +89,10 @@ export const RegistrationsContainer = styled.div`
   flex-direction: column;
 
   align-items: flex-end;
+
+  margin-top: 2rem;
+
+  ${media.tablet} {
+    margin-top: 0rem;
+  }
 `;

@@ -7,8 +7,19 @@ export const StyledContainer = styled(Container)`
   background-color: transparent;
 
   background-color: ${colors.section};
-  border-top-right-radius: 500px;
+
+  border-top-right-radius: 150px;
   border-bottom-left-radius: 100px;
+
+  ${media.tablet} {
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 100px;
+  }
+
+  ${media.laptop} {
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 100px;
+  }
 `;
 
 export const LeftContainer = styled.div`

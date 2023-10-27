@@ -5,5 +5,5 @@ export default {
 
   textSize: '1.1em',
   subtitleSize: '1.3em',
-  cardTitleSize: '2em',
+  cardTitleSize: '1.9em',
 };

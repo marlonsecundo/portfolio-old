@@ -24,11 +24,15 @@ import {
 } from './styles';
 import useInitialAnimations from './animations';
 import DownloadResume from 'src/components/download-resume';
+import { useMediaQuery } from 'react-responsive';
+import { Spacer } from 'src/ui-components/layout';
+import { devicesWidth } from 'src/styles/mediaquery';
 
 const Initial: React.FC = () => {
   const [underscore, setUnderscore] = useState('_');
 
   const { animation, initialCode, initialTitle } = useInitialAnimations();
+  const isTablet = useMediaQuery({ query: `(max-width: ${devicesWidth.tablet}px)` });
 
   useEffect(() => {
     setInterval(() => {
@@ -39,7 +43,7 @@ const Initial: React.FC = () => {
   return (
     <Container id="initial">
       <CodeContainer animate={animation} initial={initialCode}>
-        <DownloadResume></DownloadResume>
+        {!isTablet && <DownloadResume></DownloadResume>}
         <JSEditor />
       </CodeContainer>
 
@@ -55,7 +59,15 @@ const Initial: React.FC = () => {
         <Description> </Description>
 
         <AndMore>and a little more.</AndMore>
+
+        {isTablet && (
+          <>
+            <Spacer margin="1rem 0rem"></Spacer>
+            <DownloadResume></DownloadResume>
+          </>
+        )}
       </ProfileContainer>
+
       <ContactContainer>
         <ContactTitle>FIND ME!</ContactTitle>
         <ContactItem link={links.linkedin} imgSrc={logoLinkedin} />

@@ -32,23 +32,17 @@ export const Subtitle = styled.h3`
   }
 `;
 
-export const CardsContainer = styled.div`
-  align-self: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  flex-flow: row;
-  align-content: center;
-  margin-bottom: 3rem;
-
-  ${media.desktop} {
-    margin-left: 8rem;
-    padding-right: 8rem;
-    justify-content: space-between;
-  }
-`;
-
 export const InlineLink = styled.a`
   display: inline;
   color: ${colors.secondary};
+`;
+
+export const CardContainer = styled.div`
+  width: 23rem;
+  height: 55vh;
+  min-height: 55vh;
+  display: flex;
+
+  overflow: hidden;
+  position: relative;
 `;
