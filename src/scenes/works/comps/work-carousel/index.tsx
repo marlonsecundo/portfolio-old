@@ -61,7 +61,7 @@ const WorkCarousel: React.FC<Props> = ({ items }) => {
       slidesPerView={slidesPerView}
       autoplay={{
         delay: 3000,
-        pauseOnMouseEnter: true,
+        pauseOnMouseEnter: false,
         disableOnInteraction: true,
       }}
     >
