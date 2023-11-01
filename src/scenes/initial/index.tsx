@@ -8,7 +8,7 @@ import githubLogo from 'src/assets/images/contact/github.png';
 
 import ContactItem from 'src/components/contact-item';
 import links from 'src/assets/data/links';
-import meImg from 'src/assets/images/me.png';
+import meImg from 'src/assets/images/profile.jpg';
 
 import {
   Container,

@@ -72,7 +72,8 @@ export const Img = styled.img`
 
   ${media.laptopL} {
     animation: ${floatImg('-1rem')} 6s ease-in-out infinite;
-    width: 65%;
+
+    align-self: flex-start;
   }
 `;
 
