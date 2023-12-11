@@ -16,7 +16,7 @@ const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
 }) => {
   return (
     <section
-      className={"flex flex-col bg-base-100 w-full px-5" + " " + className}
+      className={"bg-base-100 flex flex-col w-full px-5" + " " + className}
     >
       {children}
     </section>

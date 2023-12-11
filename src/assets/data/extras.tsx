@@ -5,12 +5,6 @@ import { LiaBirthdayCakeSolid } from "react-icons/lia";
 
 export const extras = [
   {
-    link: "https://alinny-davi.vercel.app",
-    text: "Alinny e Davi",
-    icon: <GiDiamondRing color="#F0BCD4" size={30}></GiDiamondRing>,
-    textColor: "#F0BCD4",
-  },
-  {
     link: "https://github.com/marlonsecundo/bovcontrol-challenge",
     text: "BovControl",
     icon: <FaCow color="#8FD694" size={30}></FaCow>,

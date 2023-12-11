@@ -7,23 +7,25 @@ interface ExtraCardProps {
 }
 const ExtraCard: React.FC<ExtraCardProps> = ({ extra }) => {
   return (
-    <div className="card bg-base-300 w-fit hover:bg-base-200 shadow-lg">
-      <div className="card-body flex flex-col items-center  h-full ">
-        {extra.icon}
-        {extra.imgSrc && (
-          <Image
-            className="h-7 object-contain"
-            src={{
-              src: "/imgs/extras/" + extra.imgSrc,
-              width: 100,
-              height: 100,
-            }}
-            alt={extra.text}
-          ></Image>
-        )}
-        <p className="whitespace-nowrap h-3">{extra.text}</p>
+    <a href={extra.link} target="_blank">
+      <div className="card bg-base-300 w-fit hover:bg-base-200 shadow-lg">
+        <div className="card-body flex flex-col items-center  h-full ">
+          {extra.icon}
+          {extra.imgSrc && (
+            <Image
+              className="h-7 object-contain"
+              src={{
+                src: "/imgs/extras/" + extra.imgSrc,
+                width: 100,
+                height: 100,
+              }}
+              alt={extra.text}
+            ></Image>
+          )}
+          <p className="whitespace-nowrap h-3">{extra.text}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 

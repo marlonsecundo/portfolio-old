@@ -8,7 +8,7 @@ const Education: React.FC = () => {
       <p className="text-lg text-secondary mt-3">EDUCATION</p>
 
       {educations.map((e) => (
-        <a key={e.link} className="btn btn-square p-3 btn-lg">
+        <a key={e.link} className="btn btn-square p-3 h-20 w-20">
           <Image
             className="w-full h-full object-contain"
             src={e.img}

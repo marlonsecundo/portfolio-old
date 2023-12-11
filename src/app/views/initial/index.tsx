@@ -8,7 +8,17 @@ import ViewWrapper from "@/app/ui/layout/view-wrapper";
 
 const Initial: React.FC = () => {
   return (
-    <ViewWrapper className="h-screen flex justify-center items-center">
+    <ViewWrapper className="h-screen flex justify-center items-center relative bg-opacity-95">
+      <Image
+        className="absolute w-full h-full object-cover -z-10"
+        src={{
+          src: "/imgs/background.png",
+          width: 2560,
+          height: 1600,
+        }}
+        alt="background image"
+      ></Image>
+
       <div className="flex flex-col items-center">
         <Image
           className="rounded-full w-3/5"
@@ -29,18 +39,26 @@ const Initial: React.FC = () => {
         <div className="flex flex-col mt-10">
           <p className="text-primary">in a rush?</p>
 
-          <button className="btn btn-primary">
+          <a href="resume.pdf" target="_blank" className="btn btn-primary">
             <FaFilePdf />
             Download Resume
-          </button>
+          </a>
         </div>
 
-        <div className="absolute bottom-2 flex gap-3">
-          <a className="">
+        <div className="absolute bottom-0 flex gap-0">
+          <a
+            href="https://www.linkedin.com/in/marlon-s-b6065480/"
+            target="_blank"
+            className="btn btn-ghost text-xl"
+          >
             <FaLinkedin />
           </a>
 
-          <a>
+          <a
+            href="https://github.com/marlonsecundo"
+            target="_blank"
+            className="btn btn-ghost text-xl"
+          >
             <FaGithub />
           </a>
         </div>

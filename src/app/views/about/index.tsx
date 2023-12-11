@@ -9,14 +9,24 @@ import profileImg from "@/assets/images/profile.jpg";
 const About: React.FC = () => {
   return (
     <div>
-      <ViewWrapper className="bg-base-200 h-screen">
+      <ViewWrapper className="bg-base-300 h-screen">
         <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
         <h3 className="text-secondary text-xs">ABOUT</h3>
 
-        <h1 className="text-secondary text-2xl mt-4">
-          Nice to <br />
-          meet you!
-        </h1>
+        <div className="flex mt-4 justify-between w-full  overflow-hidden">
+          <h1 className="whitespace-nowrap text-secondary text-2xl ">
+            Nice to <br />
+            meet you!
+          </h1>
+
+          <div className="relative flex-shrink-0 h-full w-1/4">
+            <Image
+              className="absolute right-0 bottom-0 object-contain shadow  h-full mask mask-squircle"
+              src={profileImg}
+              alt="Profile Image"
+            ></Image>
+          </div>
+        </div>
 
         <div className="mt-5"></div>
 
@@ -31,42 +41,57 @@ const About: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex-1"></div>
+        <ViewWrapper.NegativePadding className="flex-1 flex flex-col justify-end">
+          <a
+            href="https://www.linkedin.com/in/marlon-s-b6065480/"
+            target="_blank"
+            className="btn btn-ghost"
+          >
+            Text me on Linkedin
+          </a>
 
-        <div className="flex flex-col items-center">
-          <Image
-            className="w-1/2 shadow rounded-full"
-            src={profileImg}
-            alt="Profile Image"
-          ></Image>
+          <a
+            href="mailto:marlon_secundo@outlook.com"
+            target="_blank"
+            className="btn btn-ghost h-fit p-5 "
+          >
+            Mail me at{" "}
+            <span className="text-sm">marlon_secundo@outlook.com</span>
+          </a>
 
+          <a
+            href="https://github.com/marlonsecundo"
+            target="_blank"
+            className="btn btn-ghost  h-fit p-5 "
+          >
+            See my projects on Github!
+          </a>
+
+          <a
+            href="resume.pdf"
+            target="_blank"
+            className="btn btn-ghost h-fit p-5 "
+          >
+            Resume
+          </a>
+
+          <div className="flex self-center mt-10">
+            <p>{new Date(Date.now()).getFullYear()} /</p>
+            <a className="link ml-1 text-secondary">Natal - RN</a>
+          </div>
+        </ViewWrapper.NegativePadding>
+
+        {/* <div className="flex flex-col items-center">
+          
           <p className="mt-1">Marlon Secundo</p>
           <p className="text-sm">
             {new Date(Date.now()).getFullYear() - 1999} years old
           </p>
-        </div>
+        </div> */}
 
         <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
       </ViewWrapper>
-      <ViewWrapper className="h-screen justify-center items-center gap-5 relative">
-        <a className="btn btn-ghost text-lg">Text me on Linkedin</a>
-
-        <a className="btn btn-ghost text-lg h-fit p-5 ">
-          Mail me at{" "}
-          <span className="text-base">marlon_secundo@outlook.com</span>
-        </a>
-
-        <a className="btn btn-ghost text-lg  h-fit p-5 ">
-          See my projects on Github!
-        </a>
-
-        <a className="btn btn-ghost text-lg h-fit p-5 ">Resume</a>
-
-        <div className="absolute bottom-10 flex">
-          <p>{new Date(Date.now()).getFullYear()} /</p>
-          <a className="link ml-1 text-secondary">Natal - RN</a>
-        </div>
-      </ViewWrapper>
+      <ViewWrapper className="h-screen justify-center items-center gap-5 relative"></ViewWrapper>
     </div>
   );
 };

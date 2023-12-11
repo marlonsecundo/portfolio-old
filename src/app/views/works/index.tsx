@@ -16,11 +16,8 @@ import Carousel from "@/app/ui/carousel";
 
 const Works: React.FC = () => {
   const mobileWorks = works.filter((w) => w.devType === DevType.MOBILE);
-  // .map(workToWorkCard);
   const frontWorks = works.filter((w) => w.devType === DevType.FRONTEND);
-  // .map(workToWorkCard);
   const backendWorks = works.filter((w) => w.devType === DevType.BACKEND);
-  // .map(workToWorkCard);
 
   return (
     <ViewWrapper className="shadow-2xl">
@@ -37,10 +34,9 @@ const Works: React.FC = () => {
 
       <ViewWrapper.NegativePadding>
         <Carousel
-          items={[
-            <ProductionCard production={productions[0]}></ProductionCard>,
-            <ProductionCard production={productions[0]}></ProductionCard>,
-          ]}
+          items={productions.map((p) => (
+            <ProductionCard key={p.title} production={p}></ProductionCard>
+          ))}
         ></Carousel>
       </ViewWrapper.NegativePadding>
 
@@ -91,15 +87,19 @@ const Works: React.FC = () => {
 
       <h1 className="text-lg text-secondary mt-5">Extras</h1>
 
-      <Slider
-        element={
-          <div className="flex h-fit gap-5 last:ml-5">
-            {extras.map((e) => (
-              <ExtraCard key={e.text} extra={e}></ExtraCard>
-            ))}
-          </div>
-        }
-      ></Slider>
+      <ViewWrapper.NegativePadding>
+        <Slider
+          gradientBaseColor="from-base-100"
+          gradientWidth="w-3"
+          element={
+            <div className="flex h-fit gap-5 last:ml-5">
+              {extras.map((e) => (
+                <ExtraCard key={e.text} extra={e}></ExtraCard>
+              ))}
+            </div>
+          }
+        ></Slider>
+      </ViewWrapper.NegativePadding>
 
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
     </ViewWrapper>

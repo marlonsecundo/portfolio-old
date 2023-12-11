@@ -4,4 +4,5 @@ export interface Production {
 
   icon: React.ReactNode;
   imgSrc: string;
+  link: string;
 }
