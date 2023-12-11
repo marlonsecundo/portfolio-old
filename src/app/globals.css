@@ -27,6 +27,10 @@ body {
 }
 
 .slider {
+  animation: moveSlideshow 30s linear infinite reverse;
+}
+
+.slider-reverse {
   animation: moveSlideshow 30s linear infinite;
 }
 

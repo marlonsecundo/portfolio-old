@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@uidotdev/usehooks": "^2.4.1",
     "daisyui": "^4.4.19",
     "next": "14.0.4",
     "react": "^18",

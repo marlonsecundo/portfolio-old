@@ -7,7 +7,7 @@ interface ViewWrapperProps {
 
 interface ViewWrapperComps {
   TopSpace: React.FC;
-  Padding: React.FC<ViewWrapperProps>;
+  NegativePadding: React.FC<ViewWrapperProps>;
 }
 
 const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
@@ -23,8 +23,8 @@ const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
   );
 };
 
-ViewWrapper.Padding = ({ children, className }) => (
-  <div className={"px-5" + " " + className}>{children}</div>
+ViewWrapper.NegativePadding = ({ children, className }) => (
+  <div className={"-mx-5" + " " + className}>{children}</div>
 );
 
 ViewWrapper.TopSpace = () => <div className="mt-10"></div>;

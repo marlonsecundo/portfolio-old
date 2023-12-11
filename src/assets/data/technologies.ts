@@ -62,20 +62,6 @@ export const technologies: Technology[] = [
     srcImg: "docker-logo.png",
     color: "#17b5eb",
   },
-  // {
-  //   title: "GraphQL",
-  //   description:
-  //     "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.",
-  //   srcImg: "graphql-logo.svg",
-  //   color: "#e535ab",
-  // },
-  // {
-  //   title: "Gatsby",
-  //   description:
-  //     "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps",
-  //   srcImg: "gatsby-logo.png",
-  //   color: "#663399",
-  // },
   {
     title: "Python",
     description:
@@ -97,20 +83,6 @@ export const technologies: Technology[] = [
     srcImg: "eslint-logo.png",
     color: "#8080f2",
   },
-  // {
-  //   title: "Yarn",
-  //   description:
-  //     "Yarn is a package manager that doubles down as project manager. Whether you work on one-shot projects or large monorepos, as a hobbyist or an enterprise user, we've got you covered.",
-  //   srcImg: "yarn-logo.png",
-  //   color: "#368fb9",
-  // },
-  // {
-  //   title: "Npm",
-  //   description:
-  //     "npm is the package manager for Node.js. It was created in 2009 as an open source project to help JavaScript developers easily share packaged modules of code.",
-  //   srcImg: "npm-logo.svg",
-  //   color: "#cb3837",
-  // },
   {
     title: "Java",
     description:
@@ -160,13 +132,6 @@ export const technologies: Technology[] = [
     srcImg: "redux.png",
     color: "#784cb6",
   },
-  // {
-  //   title: "Supabase",
-  //   description:
-  //     "Supabase is an open source Firebase alternative. Built with PostgreSQL database that provides an instant RESTful API. In addition to that, it provides realtime capabilities via websockets. ",
-  //   srcImg: "supabase-logo.png",
-  //   color: "#3ecf8e",
-  // },
   {
     title: "Firebase",
     description: "",
