@@ -2,7 +2,6 @@
 
 import { DevType, Work } from "@/app/models/work";
 import React from "react";
-import Image from "next/image";
 
 import { useHover } from "@uidotdev/usehooks";
 import { PhoneBody } from "./ui/phone-body";
@@ -46,7 +45,10 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         <div className="absolute bottom-0 h-2/3 bg-gradient-to-b from-transparent from-10% to-base-200 to-95% w-full"></div>
       </div>
 
-      <HoverBody work={work} visible={isHovering}></HoverBody>
+      <HoverBody
+        work={work}
+        visible={work.enableHoverEffect !== false && isHovering}
+      ></HoverBody>
     </section>
   );
 };

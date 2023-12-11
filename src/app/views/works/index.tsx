@@ -1,14 +1,18 @@
 import ViewTitle from "@/app/ui/layout/view-title";
 import ViewWrapper from "@/app/ui/layout/view-wrapper";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-import chatty from "@/assets/images/chatty.png";
 import softRegiImg from "@/assets/images/brasil.png";
 import Image from "next/image";
-import { FaGooglePlay } from "react-icons/fa";
 import WorkCard from "./ui/work-card";
 import { works } from "@/assets/data/works";
 import { DevType } from "@/app/models/work";
+import ExtraCard from "./ui/extra-card";
+import { extras } from "@/assets/data/extras";
+import ProductionCard from "./ui/production-card";
+import { productions } from "@/assets/data/productions";
+import { Slider } from "@/app/ui/slider";
+import Carousel from "@/app/ui/carousel";
 
 const Works: React.FC = () => {
   const mobileWorks = works.filter((w) => w.devType === DevType.MOBILE);
@@ -32,21 +36,12 @@ const Works: React.FC = () => {
       <h1 className="text-lg text-secondary mt-5">My Productions</h1>
 
       <ViewWrapper.NegativePadding>
-        <div className="card w-full h-40 shadow-xl">
-          <figure className="absolute z-0 h-full w-full object-contain opacity-10 pt-20">
-            <Image src={chatty} alt="Chatty" />
-          </figure>
-
-          <div className="card-body z-10">
-            <h2 className="card-title">
-              <p>Chatty</p>
-              <FaGooglePlay />
-            </h2>
-            <p>
-              Social app with posts, profile, likes and firebase notification.
-            </p>
-          </div>
-        </div>
+        <Carousel
+          items={[
+            <ProductionCard production={productions[0]}></ProductionCard>,
+            <ProductionCard production={productions[0]}></ProductionCard>,
+          ]}
+        ></Carousel>
       </ViewWrapper.NegativePadding>
 
       <h1 className="text-lg text-secondary mt-5">Software Registrations</h1>
@@ -67,20 +62,44 @@ const Works: React.FC = () => {
       <h1 className="text-lg text-secondary mt-5">Mobile</h1>
 
       <ViewWrapper.NegativePadding>
-        <WorkCard work={mobileWorks[0]}></WorkCard>
+        <Carousel
+          items={mobileWorks.map((m) => (
+            <WorkCard key={m.title} work={m}></WorkCard>
+          ))}
+        ></Carousel>
       </ViewWrapper.NegativePadding>
 
       <h1 className="text-lg text-secondary mt-5">Frontend / Desktop</h1>
 
       <ViewWrapper.NegativePadding>
-        <WorkCard work={frontWorks[0]}></WorkCard>
+        <Carousel
+          items={frontWorks.map((f) => (
+            <WorkCard key={f.title} work={f}></WorkCard>
+          ))}
+        ></Carousel>
       </ViewWrapper.NegativePadding>
 
       <h1 className="text-lg text-secondary mt-5">Backend</h1>
 
       <ViewWrapper.NegativePadding>
-        <WorkCard work={backendWorks[0]}></WorkCard>
+        <Carousel
+          items={backendWorks.map((b) => (
+            <WorkCard key={b.title} work={b}></WorkCard>
+          ))}
+        ></Carousel>
       </ViewWrapper.NegativePadding>
+
+      <h1 className="text-lg text-secondary mt-5">Extras</h1>
+
+      <Slider
+        element={
+          <div className="flex h-fit gap-5 last:ml-5">
+            {extras.map((e) => (
+              <ExtraCard key={e.text} extra={e}></ExtraCard>
+            ))}
+          </div>
+        }
+      ></Slider>
 
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
     </ViewWrapper>

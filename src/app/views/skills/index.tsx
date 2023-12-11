@@ -2,8 +2,8 @@ import ViewTitle from "@/app/ui/layout/view-title";
 import ViewWrapper from "@/app/ui/layout/view-wrapper";
 import React from "react";
 import Education from "./ui/education";
-import TechCarousel from "./ui/tech-carousel";
 import { technologies } from "@/assets/data/technologies";
+import { TechSlider } from "./ui/tech-slider";
 
 const Skills: React.FC = () => {
   return (
@@ -28,17 +28,17 @@ const Skills: React.FC = () => {
             Experience with
           </p>
 
-          <TechCarousel
+          <TechSlider
             techs={technologies.slice(0, technologies.length / 2)}
-          ></TechCarousel>
+          ></TechSlider>
 
-          <TechCarousel
+          <TechSlider
             techs={technologies.slice(
               technologies.length / 2,
               technologies.length
             )}
             reverse={true}
-          ></TechCarousel>
+          ></TechSlider>
         </div>
 
         <div className="bg-base-300 flex flex-col gap-3 pb-5 items-center">

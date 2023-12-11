@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/views/skills/ui/tech-carousel/index.js"
+    "src/app/views/skills/ui/tech-slider/index.js"
   ],
   "exclude": ["node_modules"]
 }

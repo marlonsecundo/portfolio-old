@@ -1,14 +1,14 @@
 import React from "react";
 
 import TechCard from "@/app/ui/tech-card";
-import { technologies } from "@/assets/data/technologies";
+import { Slider } from "@/app/ui/slider";
 
 interface TechCarouselProps {
   techs: Technology[];
   reverse?: boolean;
 }
 
-const TechCarousel: React.FC<TechCarouselProps> = ({ techs, reverse }) => {
+export const TechSlider: React.FC<TechCarouselProps> = ({ techs, reverse }) => {
   const infinityItem = (
     <div className="flex items-center gap-5">
       {techs.map((t, i) => (
@@ -22,16 +22,5 @@ const TechCarousel: React.FC<TechCarouselProps> = ({ techs, reverse }) => {
     </div>
   );
 
-  return (
-    <div className="relative h-fit overflow-hidden">
-      <div
-        className={`flex  w-fit` + (reverse ? " slider-reverse " : " slider ")}
-      >
-        {infinityItem}
-        {infinityItem}
-      </div>
-    </div>
-  );
+  return <Slider element={infinityItem} reverse={reverse}></Slider>;
 };
-
-export default TechCarousel;
