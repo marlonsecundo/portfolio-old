@@ -8,7 +8,7 @@ interface ExtraCardProps {
 const ExtraCard: React.FC<ExtraCardProps> = ({ extra }) => {
   return (
     <a href={extra.link} target="_blank">
-      <div className="card bg-base-300 w-fit hover:bg-base-200 shadow-lg">
+      <div className="card bg-base-300 w-44 hover:bg-base-200 shadow-lg">
         <div className="card-body flex flex-col items-center  h-full ">
           {extra.icon}
           {extra.imgSrc && (

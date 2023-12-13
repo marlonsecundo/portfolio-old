@@ -8,7 +8,11 @@ interface ProductionCardProps {
 
 const ProductionCard: React.FC<ProductionCardProps> = ({ production }) => {
   return (
-    <a className="w-full h-full" href={production.link} target="_blank">
+    <a
+      className="w-full h-full sm:w-[350px]"
+      href={production.link}
+      target="_blank"
+    >
       <div className="card w-full h-full shadow-xl ">
         <figure className="absolute z-0 h-full w-full object-contain opacity-10">
           <Image
@@ -27,7 +31,7 @@ const ProductionCard: React.FC<ProductionCardProps> = ({ production }) => {
             <p>{production.title}</p>
             {production.icon}
           </h2>
-          <p>{production.description}</p>
+          <p className="text-base w-2/3">{production.description}</p>
         </div>
       </div>
     </a>

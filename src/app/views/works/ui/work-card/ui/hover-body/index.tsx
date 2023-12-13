@@ -1,6 +1,7 @@
 import { Work } from "@/app/models/work";
 import TechCard from "@/app/ui/tech-card";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface HoverBodyProps {
   work: Work;
@@ -8,24 +9,23 @@ interface HoverBodyProps {
 }
 
 export const HoverBody: React.FC<HoverBodyProps> = ({ work, visible }) => {
-  const visibleClass = visible ? " h-full pt-10 " : " h-0 ";
-
   return (
     <div
-      className={
-        "z-20 absolute top-0 bg-base-300 px-10 flex flex-col overflow-hidden justify-between transition-all	ease-out duration-300 " +
-        visibleClass
-      }
+      className={twMerge(
+        "z-20 max-w-xs top-0 px-10 flex flex-col justify-between transition-all ease-out duration-300 "
+      )}
     >
-      <div>
+      <div className="flex flex-col">
         <h5 className="text-lg opacity-0 select-none mb-5">....</h5>
+
+        <p className="self-center mb-4">~</p>
         <p className="text-justify">{work.expText}</p>
       </div>
 
-      <div>
+      {/* <div>
         <p className="text-secondary mt-2">BULLET POINTS</p>
         <p>{work.bulletPoints}</p>
-      </div>
+      </div> */}
 
       <div>
         <p className="text-secondary mt-2">TECHS</p>

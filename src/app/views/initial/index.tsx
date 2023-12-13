@@ -1,10 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import profileImg from "@/assets/images/me.png";
-import DeveloperText from "./ui/developer-text";
-import { FaFilePdf } from "react-icons/fa6";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import ViewWrapper from "@/app/ui/layout/view-wrapper";
+import ProfileCard from "./ui/profile-card";
+import ResumeButton from "./ui/resume-button";
 
 const Initial: React.FC = () => {
   return (
@@ -20,30 +19,25 @@ const Initial: React.FC = () => {
       ></Image>
 
       <div className="flex flex-col items-center">
-        <Image
-          className="rounded-full w-3/5"
-          alt="Marlon Secundo Profile Picture"
-          src={profileImg}
-        ></Image>
+        <div className="flex">
+          <div className="hidden lg:block mockup-code bg-base-200 translate-y-1/2 h-3/4 pr-52">
+            <pre data-prefix="$">
+              <code>npm i daisyui</code>
+            </pre>
+            <pre data-prefix=">" className="text-warning">
+              <code>installing...</code>
+            </pre>
+            <pre data-prefix=">" className="text-success">
+              <code>Done!</code>
+            </pre>
+          </div>
 
-        <div className="mt-2">
-          <DeveloperText></DeveloperText>
+          <div className="lg:-translate-y-[15%] lg:-translate-x-32">
+            <ProfileCard></ProfileCard>
+          </div>
         </div>
 
-        <p className="mt-3 text-justify">
-          Hi! I am Marlon Secundo, I am a Dev Bachelor in I.T.
-        </p>
-
-        <p className="mt-3 text-secondary">and a little more.</p>
-
-        <div className="flex flex-col mt-10">
-          <p className="text-primary">in a rush?</p>
-
-          <a href="resume.pdf" target="_blank" className="btn btn-primary">
-            <FaFilePdf />
-            Download Resume
-          </a>
-        </div>
+        <ResumeButton></ResumeButton>
 
         <div className="absolute bottom-0 flex gap-0">
           <a

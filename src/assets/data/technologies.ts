@@ -77,13 +77,6 @@ export const technologies: Technology[] = [
     color: "#f05033",
   },
   {
-    title: "Eslint",
-    description:
-      "ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:",
-    srcImg: "eslint-logo.png",
-    color: "#8080f2",
-  },
-  {
     title: "Java",
     description:
       "Java is a programming language and computing platform first released by Sun Microsystems in 1995. There are lots of applications and websites that will not work unless you have Java installed, and more are created every day. Java is fast, secure, and reliable.",

@@ -1,5 +1,5 @@
 import ViewTitle from "@/app/ui/layout/view-title";
-import ViewWrapper from "@/app/ui/layout/view-wrapper";
+import ViewWrapper, { ViewPadding } from "@/app/ui/layout/view-wrapper";
 import React from "react";
 import Education from "./ui/education";
 import { technologies } from "@/assets/data/technologies";
@@ -8,31 +8,31 @@ import { TechSlider } from "./ui/tech-slider";
 const Skills: React.FC = () => {
   return (
     <div className="bg-base-100">
-      <ViewWrapper className="flex bg-base-200 w-full rounded-tr-badge rounded-bl-badge overflow-clip ">
+      <ViewWrapper className="flex bg-base-200 w-full rounded-tr-badge rounded-bl-badge overflow-clip h-screen ">
         <ViewWrapper.TopSpace />
 
-        <ViewTitle text="Skills"></ViewTitle>
+        <div id="skills" className="self-center">
+          <ViewTitle text="~/skills"></ViewTitle>
+        </div>
 
-        <p className="mt-1">
+        <p className="mt-1 text-base max-w-lg self-center text-center">
           Over the past 8 years of learning many languages and coding in dev
           teams, in the last year I have been moving towards the goal of
           becoming a senior developer, always learning new stuff and challenging
-          myself on different kinds of projects. I currently working as
-          Fullstack Developer in Instituto Metrópole Digital.
+          myself on different kinds of projects.
         </p>
 
-        <div className="mt-4"></div>
+        <div className="flex flex-col">
+          <div className="mt-5"></div>
+          <p className="text-lg text-secondary self-center">Experience with</p>
 
-        <ViewWrapper.NegativePadding>
-          <div className="bg-base-300 flex flex-col pb-5 -mx-5">
-            <p className="text-lg text-secondary self-center mt-3">
-              Experience with
-            </p>
-
+          <div className="lg:px-24">
             <TechSlider
               techs={technologies.slice(0, technologies.length / 2)}
             ></TechSlider>
+          </div>
 
+          <div className="lg:px-24">
             <TechSlider
               techs={technologies.slice(
                 technologies.length / 2,
@@ -41,17 +41,7 @@ const Skills: React.FC = () => {
               reverse={true}
             ></TechSlider>
           </div>
-
-          <div className="bg-base-300 flex flex-col gap-3 pb-5 items-center">
-            <p className="text-lg text-secondary self-center mt-3">Also...</p>
-
-            <div className="flex">
-              <a className="btn btn-ghost">SCRUM</a>
-              <a className="btn btn-ghost">GIT FLOW</a>
-              <a className="btn btn-ghost">S.O.L.I.D</a>
-            </div>
-          </div>
-        </ViewWrapper.NegativePadding>
+        </div>
 
         <Education></Education>
       </ViewWrapper>

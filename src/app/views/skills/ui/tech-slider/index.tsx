@@ -22,5 +22,11 @@ export const TechSlider: React.FC<TechCarouselProps> = ({ techs, reverse }) => {
     </div>
   );
 
-  return <Slider element={infinityItem} reverse={reverse}></Slider>;
+  return (
+    <Slider
+      gradientBaseColor="from-base-200"
+      element={infinityItem}
+      reverse={reverse}
+    ></Slider>
+  );
 };

@@ -20,88 +20,67 @@ const Works: React.FC = () => {
   const backendWorks = works.filter((w) => w.devType === DevType.BACKEND);
 
   return (
-    <ViewWrapper className="shadow-2xl">
+    <ViewWrapper className="shadow-2xl h-screen">
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
 
-      <ViewTitle text="Works"></ViewTitle>
-      <p className="mt-1 text-justify">
+      <div id="works" className="self-center">
+        <ViewTitle text="~/works"></ViewTitle>
+      </div>
+
+      <p className="mt-1  text-base max-w-sm text-center self-center">
         During my formation in I.T at IMD I worked on university projects and
         development stages in partnership with companies. Below I show some
         products that I participated in developing/creating.
       </p>
 
-      <h1 className="text-lg text-secondary mt-5">My Productions</h1>
+      <div className="mt-5"></div>
 
-      <ViewWrapper.NegativePadding>
-        <Carousel
-          items={productions.map((p) => (
-            <ProductionCard key={p.title} production={p}></ProductionCard>
-          ))}
-        ></Carousel>
-      </ViewWrapper.NegativePadding>
+      <div className="flex flex-col md:flex-row justify-between h-full ">
+        <div className="flex flex-col">
+          <ul>
+            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
+              Mobile
+            </h1>
 
-      <h1 className="text-lg text-secondary mt-5">Software Registrations</h1>
+            {mobileWorks.map((m) => (
+              <li key={m.title}>{m.title}</li>
+            ))}
 
-      <ViewWrapper.NegativePadding>
-        <div className="flex w-full justify-center gap-5">
-          <button className="btn btn-ghost btn-square w-1/3 h-fit p-2">
-            <Image src={softRegiImg} alt="Comunica"></Image>
-            <p>Comunica</p>
-          </button>
-          <button className="btn btn-ghost btn-square w-1/3 h-fit p-2">
-            <Image src={softRegiImg} alt="Comunica"></Image>
-            <p>Adapt</p>
-          </button>
+            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
+              Frontend
+            </h1>
+
+            {frontWorks.map((f) => (
+              <li key={f.title}>{f.title}</li>
+            ))}
+
+            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
+              Backend
+            </h1>
+
+            {backendWorks.map((b) => (
+              <li key={b.title}>{b.title}</li>
+            ))}
+          </ul>
         </div>
-      </ViewWrapper.NegativePadding>
 
-      <h1 className="text-lg text-secondary mt-5">Mobile</h1>
-
-      <ViewWrapper.NegativePadding>
-        <Carousel
-          items={mobileWorks.map((m) => (
-            <WorkCard key={m.title} work={m}></WorkCard>
-          ))}
-        ></Carousel>
-      </ViewWrapper.NegativePadding>
-
-      <h1 className="text-lg text-secondary mt-5">Frontend / Desktop</h1>
-
-      <ViewWrapper.NegativePadding>
-        <Carousel
-          items={frontWorks.map((f) => (
-            <WorkCard key={f.title} work={f}></WorkCard>
-          ))}
-        ></Carousel>
-      </ViewWrapper.NegativePadding>
-
-      <h1 className="text-lg text-secondary mt-5">Backend</h1>
-
-      <ViewWrapper.NegativePadding>
-        <Carousel
-          items={backendWorks.map((b) => (
-            <WorkCard key={b.title} work={b}></WorkCard>
-          ))}
-        ></Carousel>
-      </ViewWrapper.NegativePadding>
-
-      <h1 className="text-lg text-secondary mt-5">Extras</h1>
-
-      <ViewWrapper.NegativePadding>
-        <Slider
-          gradientBaseColor="from-base-100"
-          gradientWidth="w-3"
-          element={
-            <div className="flex h-fit gap-5 last:ml-5">
-              {extras.map((e) => (
-                <ExtraCard key={e.text} extra={e}></ExtraCard>
-              ))}
-            </div>
-          }
-        ></Slider>
-      </ViewWrapper.NegativePadding>
+        <div className="">
+          <WorkCard work={mobileWorks[0]}></WorkCard>
+        </div>
+      </div>
 
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
+
+      {/* <div className="flex w-full gap-5 justify-center xs:justify-normal">
+        <button className="btn btn-ghost btn-square w-1/3 h-fit p-2 xs:p-4 max-w-[8rem] ">
+          <Image src={softRegiImg} alt="Comunica"></Image>
+          <p>Comunica</p>
+        </button>
+        <button className="btn btn-ghost btn-square w-1/3 h-fit p-2 xs:p-4 max-w-[8rem] ">
+          <Image src={softRegiImg} alt="Comunica"></Image>
+          <p>Adapt</p>
+        </button>
+      </div> */}
     </ViewWrapper>
   );
 };

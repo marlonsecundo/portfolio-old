@@ -15,10 +15,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const scrollLength = width ?? 300;
 
   return (
-    <div className="flex flex-col">
-      <div ref={divRef} className="carousel w-full">
+    <div className="flex flex-col w-full ">
+      <div ref={divRef} className="carousel carousel-center w-full space-x-5 ">
         {items.map((i, index) => (
-          <div className="carousel-item w-full" key={index}>
+          <div
+            className="carousel-item w-full sm:w-auto justify-center"
+            key={index}
+          >
             {i}
           </div>
         ))}

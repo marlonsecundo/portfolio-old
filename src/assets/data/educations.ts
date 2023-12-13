@@ -6,22 +6,17 @@ import rocketseatLogo from "@/assets/images/education/rocketseat.png";
 export const educations = [
   {
     link: "a",
-    alt: "",
+    alt: "IFRN",
     img: ifrnLogo,
   },
   {
-    link: "b",
-    alt: "",
-    img: ufrnLogo,
+    link: "d",
+    alt: "Rocketseat",
+    img: rocketseatLogo,
   },
   {
     link: "c",
-    alt: "",
+    alt: "IMD - UFRN",
     img: imdLogo,
-  },
-  {
-    link: "d",
-    alt: "",
-    img: rocketseatLogo,
   },
 ];
