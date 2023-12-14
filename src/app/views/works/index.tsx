@@ -13,6 +13,7 @@ import ProductionCard from "./ui/production-card";
 import { productions } from "@/assets/data/productions";
 import { Slider } from "@/app/ui/slider";
 import Carousel from "@/app/ui/carousel";
+import TitleDivider from "@/app/ui/divider";
 
 const Works: React.FC = () => {
   const mobileWorks = works.filter((w) => w.devType === DevType.MOBILE);
@@ -27,7 +28,7 @@ const Works: React.FC = () => {
         <ViewTitle text="~/works"></ViewTitle>
       </div>
 
-      <p className="mt-1  text-base max-w-sm text-center self-center">
+      <p className="mt-1  text-base max-w-sm text-center self-center ">
         During my formation in I.T at IMD I worked on university projects and
         development stages in partnership with companies. Below I show some
         products that I participated in developing/creating.
@@ -35,9 +36,11 @@ const Works: React.FC = () => {
 
       <div className="mt-5"></div>
 
-      <div className="flex flex-col md:flex-row justify-between h-full ">
-        <div className="flex flex-col">
-          <ul>
+      <TitleDivider></TitleDivider>
+
+      <div className="flex flex-col xl:flex-row justify-between h-full ">
+        <ul className="flex justify-around xl:flex-col xl:justify-center">
+          <div className="">
             <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
               Mobile
             </h1>
@@ -45,7 +48,9 @@ const Works: React.FC = () => {
             {mobileWorks.map((m) => (
               <li key={m.title}>{m.title}</li>
             ))}
+          </div>
 
+          <div>
             <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
               Frontend
             </h1>
@@ -53,7 +58,9 @@ const Works: React.FC = () => {
             {frontWorks.map((f) => (
               <li key={f.title}>{f.title}</li>
             ))}
+          </div>
 
+          <div>
             <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
               Backend
             </h1>
@@ -61,15 +68,17 @@ const Works: React.FC = () => {
             {backendWorks.map((b) => (
               <li key={b.title}>{b.title}</li>
             ))}
-          </ul>
-        </div>
+          </div>
+        </ul>
 
-        <div className="">
+        <ViewWrapper.NegativePadding className="xl:mx-0 2xl:mx-0 flex justify-center  ">
           <WorkCard work={mobileWorks[0]}></WorkCard>
-        </div>
+        </ViewWrapper.NegativePadding>
       </div>
 
-      <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
+      <div className="hidden md:block">
+        <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
+      </div>
 
       {/* <div className="flex w-full gap-5 justify-center xs:justify-normal">
         <button className="btn btn-ghost btn-square w-1/3 h-fit p-2 xs:p-4 max-w-[8rem] ">

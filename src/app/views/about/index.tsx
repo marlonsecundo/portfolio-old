@@ -10,7 +10,6 @@ const About: React.FC = () => {
     <div>
       <ViewWrapper className="bg-base-300 h-screen">
         <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
-
         <div className="flex flex-col flex-1 lg:flex-row">
           <div className="flex flex-col lg:w-1/3 bg-base-200 p-10 ">
             <h3 className="text-primary text-xs">ABOUT</h3>
@@ -86,8 +85,6 @@ const About: React.FC = () => {
             </div>
           </ViewWrapper.NegativePadding>
         </div>
-
-        <div className="mb-5"></div>
       </ViewWrapper>
     </div>
   );
