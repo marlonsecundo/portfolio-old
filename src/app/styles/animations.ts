@@ -31,8 +31,22 @@ export const keyframes = {
       transform: "translate(-10%,10%)",
     },
   },
+
+  underline: {
+    "0%": {
+      opacity: "0",
+    },
+    "50%": {
+      opacity: "1",
+    },
+    "100%": {
+      opacity: "0",
+    },
+  },
 };
 
 export const animation = {
   grain: "grain 7s steps(10) infinite",
+  underline: "underline 1s ease 0s infinite",
+  pulseFast: "pulse 0.8s ease infinite",
 };

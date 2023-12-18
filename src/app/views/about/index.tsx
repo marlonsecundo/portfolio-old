@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 import profileImg from "@/assets/images/profile.jpg";
+import { NegativePadding } from "@/app/ui/layout/negative-padding";
 
 const About: React.FC = () => {
   return (
@@ -11,10 +12,10 @@ const About: React.FC = () => {
       <ViewWrapper className="bg-base-300 h-screen">
         <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
         <div className="flex flex-col flex-1 lg:flex-row">
-          <div className="flex flex-col lg:w-1/3 bg-base-200 p-10 ">
-            <h3 className="text-primary text-xs">ABOUT</h3>
+          <div className="flex flex-col lg:w-1/3 bg-base-200 p-7 ">
+            <h3 className="text-primary text-sm">~/about</h3>
 
-            <div className="flex mt-4 justify-between w-full  overflow-hidden ">
+            <div className="flex justify-between w-full  overflow-hidden ">
               <h1 className="whitespace-nowrap text-secondary text-2xl py-5 ">
                 Nice to <br />
                 meet you!
@@ -29,8 +30,6 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-5"></div>
-
             <div className="flex flex-col gap-5 pr-5">
               {abouts.map((a) => (
                 <div key={a.title}>
@@ -43,7 +42,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <ViewWrapper.NegativePadding className="flex-1 flex flex-col justify-end items-center lg:justify-center relative">
+          <NegativePadding className="flex-1 flex flex-col justify-center items-center lg:justify-center relative pb-10">
             <a
               href="https://www.linkedin.com/in/marlon-s-b6065480/"
               target="_blank"
@@ -79,11 +78,11 @@ const About: React.FC = () => {
               Resume
             </a>
 
-            <div className="flex self-center  mt-10 lg:text-lg absolute bottom-0">
+            <div className="flex self-center mt-2 lg:text-lg lg:absolute lg:bottom-10">
               <p>{new Date(Date.now()).getFullYear()} /</p>
               <a className="link ml-1 text-secondary">Natal - RN</a>
             </div>
-          </ViewWrapper.NegativePadding>
+          </NegativePadding>
         </div>
       </ViewWrapper>
     </div>

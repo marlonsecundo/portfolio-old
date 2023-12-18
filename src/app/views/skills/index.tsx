@@ -6,13 +6,15 @@ import { technologies } from "@/assets/data/technologies";
 import { TechSlider } from "./ui/tech-slider";
 import TitleDivider from "@/app/ui/divider";
 
+import "@/app/styles/hide-scrollbar.css";
+
 const Skills: React.FC = () => {
   return (
-    <ViewWrapper className="flex bg-base-200 w-full rounded-tr-badge rounded-bl-badge overflow-clip h-screen ">
+    <ViewWrapper className="bg-base-200" innerClassName="">
       <ViewWrapper.TopSpace />
 
       <div id="skills" className="self-center">
-        <ViewTitle text="~/skills"></ViewTitle>
+        <ViewTitle text=".skills"></ViewTitle>
       </div>
 
       <p className="mt-1 text-base max-w-lg self-center text-center mb-5">
@@ -29,23 +31,29 @@ const Skills: React.FC = () => {
         <p className="text-lg text-secondary self-center">Experience with</p>
 
         <div className="lg:px-24">
-          <TechSlider
-            techs={technologies.slice(0, technologies.length / 2)}
-          ></TechSlider>
+          <div className="rounded-lg overflow-clip rounded-b-none">
+            <TechSlider
+              techs={technologies.slice(0, technologies.length / 2)}
+            ></TechSlider>
+          </div>
         </div>
 
         <div className="lg:px-24">
-          <TechSlider
-            techs={technologies.slice(
-              technologies.length / 2,
-              technologies.length
-            )}
-            reverse={true}
-          ></TechSlider>
+          <div className="rounded-lg overflow-clip rounded-t-none">
+            <TechSlider
+              techs={technologies.slice(
+                technologies.length / 2,
+                technologies.length
+              )}
+              reverse={true}
+            ></TechSlider>
+          </div>
         </div>
       </div>
 
       <Education></Education>
+
+      <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
     </ViewWrapper>
   );
 };

@@ -11,7 +11,7 @@ interface ProductionCardProps {
 const ProductionCard: React.FC<ProductionCardProps> = ({ p, vertical }) => {
   return (
     <a href={p.link} target="_blank">
-      <div className="card bg-base-200 bg-opacity-40 h-full">
+      <div className="card bg-base-200 bg-opacity-40 card-bordered border-2 h-full">
         <div
           className={twMerge(
             "card-body flex-row items-center justify-between",

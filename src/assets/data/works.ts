@@ -11,11 +11,12 @@ export const works: Work[] = [
     srcImgWidth: "60%",
     paddingImageBottom: "", // Add paddingImageBottom if available
     technologies: [
-      technologies[6],
-      technologies[1],
+      technologies[12],
       technologies[2],
       technologies[17],
-      technologies[12],
+      technologies[6],
+
+      technologies[1],
     ],
     expText:
       "I worked building the REST API, also as frontend developing the application in react native, both from scratch.",

@@ -2,16 +2,22 @@ import React from "react";
 import DeveloperText from "../developer-text";
 import Image from "next/image";
 import profileImg from "@/assets/images/me.png";
+import { twMerge } from "tailwind-merge";
 
 const ProfileCard: React.FC = () => {
   return (
-    <div className="flex flex-col items-center bg-base-200 p-3 rounded-2xl lg:items-start lg:p-10 lg:pr-72 shadow">
+    <div
+      className={twMerge(
+        "flex flex-col items-center bg-base-200 p-5 rounded-2xl shadow",
+        "lg:items-start lg:p-10 lg:col-span-1 w-fit lg:w-full max-w-xl"
+      )}
+    >
       <Image
         className="max-w-[10rem] md:max-w-[14rem] object-contain mask mask-circle"
         alt="Marlon Secundo Profile Picture"
         src={profileImg}
       ></Image>
-      <div className="mt-2 md:self-start">
+      <div className="mt-2 lg:self-start">
         <DeveloperText></DeveloperText>
       </div>
 

@@ -6,7 +6,7 @@ interface ViewTitleProps {
 
 const ViewTitle: React.FC<ViewTitleProps> = ({ text }) => {
   return (
-    <h1 className="text-4xl md:text-5xl mb-5 text-primary opacity-100">
+    <h1 className="text-4xl md:text-5xl xl:text-7xl mb-5 xl:mb-10 text-primary opacity-100">
       {text}
     </h1>
   );

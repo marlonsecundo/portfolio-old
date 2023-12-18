@@ -1,31 +1,30 @@
+"use client";
+
 import ViewTitle from "@/app/ui/layout/view-title";
 import ViewWrapper from "@/app/ui/layout/view-wrapper";
-import React, { useEffect, useRef } from "react";
+import React, { useMemo, useState } from "react";
 
-import softRegiImg from "@/assets/images/brasil.png";
-import Image from "next/image";
 import WorkCard from "./ui/work-card";
 import { works } from "@/assets/data/works";
 import { DevType } from "@/app/models/work";
-import ExtraCard from "./ui/extra-card";
-import { extras } from "@/assets/data/extras";
-import ProductionCard from "./ui/production-card";
-import { productions } from "@/assets/data/productions";
-import { Slider } from "@/app/ui/slider";
-import Carousel from "@/app/ui/carousel";
 import TitleDivider from "@/app/ui/divider";
+import Menu from "./ui/menu";
+import "@/app/styles/hide-scrollbar.css";
+import { NegativePadding } from "@/app/ui/layout/negative-padding";
 
 const Works: React.FC = () => {
-  const mobileWorks = works.filter((w) => w.devType === DevType.MOBILE);
-  const frontWorks = works.filter((w) => w.devType === DevType.FRONTEND);
-  const backendWorks = works.filter((w) => w.devType === DevType.BACKEND);
+  const [selectedIndex, setSelectedIndex] = useState(works[0].title);
+
+  const currrentWork = useMemo(() => {
+    return works.find((w) => w.title === selectedIndex) ?? works[0];
+  }, [selectedIndex]);
 
   return (
     <ViewWrapper className="shadow-2xl h-screen">
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
 
       <div id="works" className="self-center">
-        <ViewTitle text="~/works"></ViewTitle>
+        <ViewTitle text=".works"></ViewTitle>
       </div>
 
       <p className="mt-1  text-base max-w-sm text-center self-center ">
@@ -38,45 +37,17 @@ const Works: React.FC = () => {
 
       <TitleDivider></TitleDivider>
 
-      <div className="flex flex-col xl:flex-row justify-between h-full ">
-        <ul className="flex justify-around xl:flex-col xl:justify-center">
-          <div className="">
-            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
-              Mobile
-            </h1>
+      <NegativePadding className="xl:mx-0 h-full">
+        <div className="flex flex-col justify-between  h-full lg:mt-0 lg:justify-center lg:gap-10 xl:justify-center lg:flex-row  xl:gap-32  ">
+          <Menu index={selectedIndex} onSelectedItem={setSelectedIndex}></Menu>
 
-            {mobileWorks.map((m) => (
-              <li key={m.title}>{m.title}</li>
-            ))}
-          </div>
+          <NegativePadding className="lg:mx-0 xl:mx-0 2xl:mx-0 flex justify-center ">
+            <WorkCard work={currrentWork}></WorkCard>
+          </NegativePadding>
+        </div>
+      </NegativePadding>
 
-          <div>
-            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
-              Frontend
-            </h1>
-
-            {frontWorks.map((f) => (
-              <li key={f.title}>{f.title}</li>
-            ))}
-          </div>
-
-          <div>
-            <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
-              Backend
-            </h1>
-
-            {backendWorks.map((b) => (
-              <li key={b.title}>{b.title}</li>
-            ))}
-          </div>
-        </ul>
-
-        <ViewWrapper.NegativePadding className="xl:mx-0 2xl:mx-0 flex justify-center  ">
-          <WorkCard work={mobileWorks[0]}></WorkCard>
-        </ViewWrapper.NegativePadding>
-      </div>
-
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
       </div>
 

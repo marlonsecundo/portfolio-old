@@ -1,5 +1,6 @@
 import { Work } from "@/app/models/work";
 import TechCard from "@/app/ui/tech-card";
+import { getContrastColor } from "@/app/utils/get-constrast-color";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -32,11 +33,19 @@ export const HoverBody: React.FC<HoverBodyProps> = ({ work, visible }) => {
       </div> */}
 
       <div>
-        <p className="text-secondary mt-2">TECHS</p>
-        <div className="flex flex-wrap gap-3 justify-between">
+        <p className="text-secondary mb-2">Stack</p>
+
+        <div className="grid grid-cols-3 justify-start gap-2">
           {work.technologies.map((t) => (
-            <div key={t.title} className="w-10 h-10 ">
-              <TechCard tech={t} titleVisible={false}></TechCard>
+            <div
+              key={t.title}
+              style={{
+                backgroundColor: t.color,
+                color: getContrastColor(t.color),
+              }}
+              className="badge rounded-md p-4 w-full"
+            >
+              {t.title}
             </div>
           ))}
         </div>

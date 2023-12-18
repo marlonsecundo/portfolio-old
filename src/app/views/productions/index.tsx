@@ -7,29 +7,29 @@ import ProductionCard from "./ui/production-card";
 import ProductionCardImage from "./ui/production-card-image";
 import TitleDivider from "@/app/ui/divider";
 
-import "./index.css";
+import "@/app/styles/hide-scrollbar.css";
 
 const Productions: React.FC = () => {
   return (
-    <ViewWrapper className="h-screen">
+    <ViewWrapper className="bg-base-200">
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
 
       <div id="apps" className="self-center">
-        <ViewTitle text="~/apps"></ViewTitle>
+        <ViewTitle text=".apps"></ViewTitle>
       </div>
 
-      <p className="text-base self-center mb-5">
-        A compilation of clients and personal projects, of sites, games and
-        mobiles apps that I created.
+      <p className="text-base self-center mb-5 text-center">
+        A compilation of clients and personal projects, of sites, games{" "}
+        <br></br> and mobiles apps that I created.
       </p>
 
       <TitleDivider></TitleDivider>
 
       <div
-        className="grid gap-5 grid-cols-1 overflow-y-scroll hide-scrollbar md:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-5 grid-cols-1  md:grid-cols-2 lg:grid-cols-2 "
         style={{ scrollbarWidth: "none" }}
       >
-        <div className="lg:col-span-2">
+        <div className="">
           <ProductionCard p={productions[0]}></ProductionCard>
         </div>
         <div className="md:row-span-2">
@@ -37,9 +37,9 @@ const Productions: React.FC = () => {
         </div>
 
         <div className="">
-          <ProductionCard vertical={true} p={productions[1]}></ProductionCard>
+          <ProductionCard vertical={false} p={productions[1]}></ProductionCard>
         </div>
-        <div className="lg:col-span-1 lg:row-span-1">
+        <div className="lg:col-span-1 lg:row-span-2">
           <ProductionCardImage p={productions[2]}></ProductionCardImage>
         </div>
         <ProductionCard p={productions[4]}></ProductionCard>
@@ -51,7 +51,7 @@ const Productions: React.FC = () => {
           <ProductionCard p={productions[5]}></ProductionCard>
         </div>
 
-        <div className="mb-2 md:col-span-2 lg:hidden"></div>
+        <div className="mb-2 md:col-span-2"></div>
       </div>
     </ViewWrapper>
   );

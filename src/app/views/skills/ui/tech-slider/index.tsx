@@ -24,7 +24,7 @@ export const TechSlider: React.FC<TechCarouselProps> = ({ techs, reverse }) => {
 
   return (
     <Slider
-      gradientBaseColor="from-base-200"
+      gradientBaseColor="from-base-300"
       element={infinityItem}
       reverse={reverse}
     ></Slider>

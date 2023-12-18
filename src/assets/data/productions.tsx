@@ -53,7 +53,7 @@ export const productions: Production[] = [
     link: "https://personagedle.vercel.app/",
     title: "Personagedle",
     // icon: <VscGame color="#ffffff" size={60}></VscGame>,
-    description: "A web word like game, with auth, scores, and ranking.",
+    description: "A web word game, with auth, scores, and ranking.",
     imgSrc: "personagedle.png",
   },
 ];

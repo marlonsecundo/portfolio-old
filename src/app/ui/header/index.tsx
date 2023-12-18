@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           )}
         >
           <li>
-            <a>
+            <a href="#home">
               <Image
                 className="w-5 h-5 rounded-full"
                 alt="Profile Image"
