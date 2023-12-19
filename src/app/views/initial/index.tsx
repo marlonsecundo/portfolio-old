@@ -12,7 +12,7 @@ const Initial: React.FC = () => {
       <NegativePadding className="">
         <div
           id="home"
-          className="flex flex-1 justify-center  lg:scale-75 xl:scale-90 lg:-translate-y-1/4"
+          className="flex flex-1 justify-center  lg:scale-[.85] xl:scale-90 lg:-translate-y-1/4"
         >
           <div className="hidden w-full lg:flex justify-end translate-x-10">
             <Terminal></Terminal>

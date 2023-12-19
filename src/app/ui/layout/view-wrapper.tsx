@@ -2,7 +2,10 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import Noise from "../noise";
 import "./index.css";
+
 import RadialCursorEffect from "../radial-cursor-effect";
+import ViewBody from "./view-body";
+import { paddingClass } from "@/app/styles/metrics";
 interface ViewWrapperProps {
   className?: string | undefined;
   children?: React.ReactNode;
@@ -17,8 +20,6 @@ interface ViewPaddingProps {
   className?: string | undefined;
   children?: React.ReactNode;
 }
-
-export const paddingClass = "px-5 xs:px-[5vw] lg:px-[5vw] 2xl:px-[15vw]";
 
 export const ViewPadding: React.FC<ViewPaddingProps> = ({
   children,
@@ -41,15 +42,7 @@ const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
 
       <RadialCursorEffect></RadialCursorEffect>
 
-      <div
-        className={twMerge(
-          "flex flex-col w-full h-full overflow-y-scroll hide-scrollbar z-0",
-          paddingClass,
-          innerClassName
-        )}
-      >
-        {children}
-      </div>
+      <ViewBody className={innerClassName}>{children}</ViewBody>
     </section>
   );
 };
