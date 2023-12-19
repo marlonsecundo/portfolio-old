@@ -6,6 +6,7 @@ import profileImg from "@/assets/images/me.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 import { useWindowScroll, useMediaQuery, useHover } from "@uidotdev/usehooks";
+import { ViewsIDs } from "@/app/constants/page.constants";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const Header: React.FC = () => {
           )}
         >
           <li>
-            <a href="#home">
+            <a href={"#" + ViewsIDs.home}>
               <Image
                 className="w-5 h-5 rounded-full"
                 alt="Profile Image"
@@ -60,23 +61,23 @@ const Header: React.FC = () => {
             </a>
           </li>
           <li>
-            <a onClick={() => handleOnLinkClick()} href="#skills">
+            <a onClick={() => handleOnLinkClick()} href={"#" + ViewsIDs.skills}>
               Skills
             </a>
           </li>
           <li>
-            <a onClick={() => handleOnLinkClick()} href="#works">
+            <a onClick={() => handleOnLinkClick()} href={"#" + ViewsIDs.works}>
               Works
             </a>
           </li>
 
           <li className="ml-2 xs:ml-0">
-            <a onClick={() => handleOnLinkClick()} href="#apps">
+            <a onClick={() => handleOnLinkClick()} href={"#" + ViewsIDs.apps}>
               Apps
             </a>
           </li>
           <li className="mr-2 xs:ml-0">
-            <a onClick={() => handleOnLinkClick()} href="#about">
+            <a onClick={() => handleOnLinkClick()} href={"#" + ViewsIDs.about}>
               About
             </a>
           </li>

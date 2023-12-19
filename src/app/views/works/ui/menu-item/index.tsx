@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
@@ -15,10 +17,13 @@ const MenuItem: React.FC<MenuItemProps> = ({
   onClick,
 }) => {
   return (
-    <li className="my-2 flex items-center " onClick={() => onClick(index)}>
+    <li
+      className="my-2 flex items-center cursor-pointer"
+      onClick={() => onClick(index)}
+    >
       <p
         className={twMerge(
-          selected && "ml-4 mr-2 text-accent",
+          selected && "ml-4 mr-2 text-accent animate-fade",
           !selected &&
             "ml-4 mr-2 text-secondary select-none opacity-0 lg:hidden"
         )}
@@ -26,23 +31,29 @@ const MenuItem: React.FC<MenuItemProps> = ({
         ~
       </p>
 
-      <p
+      <div
         className={twMerge(
-          "opacity-40 hover:opacity-100",
-          selected && "text-accent opacity-100 pr-0"
+          "flex opacity-40 hover:opacity-100",
+          selected && "text-accent opacity-100 pr-0",
+          // !selected && "hover:translate-x-5 transition-all"
+          "group transition-all"
         )}
       >
+        <div
+          className={twMerge(
+            "w-0 group-hover:w-9 transition-all",
+            selected && "hidden"
+          )}
+        ></div>
         {text.toLowerCase()}
-      </p>
 
-      <p
-        className={twMerge(
-          "ml-4 mr-2 text-secondary select-none opacity-0",
-          selected && "lg:hidden"
-        )}
-      >
-        ~
-      </p>
+        <div
+          className={twMerge(
+            "w-9 group-hover:w-0 transition-all",
+            selected && "hidden"
+          )}
+        ></div>
+      </div>
     </li>
   );
 };

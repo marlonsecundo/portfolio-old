@@ -12,19 +12,19 @@ const Initial: React.FC = () => {
       <NegativePadding className="">
         <div
           id="home"
-          className="flex flex-1 justify-center  lg:scale-[.85] xl:scale-90 lg:-translate-y-1/4"
+          className="flex flex-1 justify-center  lg:scale-[.85] xl:scale-95 lg:-translate-y-1/4"
         >
-          <div className="hidden w-full lg:flex justify-end translate-x-10">
+          <div className="hidden w-full lg:flex lg:flex-col items-end translate-x-10 translate-y-1/3">
             <Terminal></Terminal>
           </div>
 
-          <div className="w-full flex justify-center lg:justify-normal lg:-translate-x-10">
+          <div className="w-full flex justify-center lg:justify-normal lg:-translate-x-10 ">
             <ProfileCard></ProfileCard>
           </div>
         </div>
       </NegativePadding>
 
-      <div className="self-center">
+      <div className="self-center lg:hidden">
         <ResumeButton></ResumeButton>
       </div>
 

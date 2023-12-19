@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface TechCardProps {
   tech: Technology;
@@ -7,7 +8,12 @@ interface TechCardProps {
 }
 const TechCard: React.FC<TechCardProps> = ({ tech, titleVisible = true }) => {
   return (
-    <div className="flex flex-col h-full opacity-50 hover:opacity-100 relative justify-center ">
+    <div
+      className={twMerge(
+        "flex flex-col h-full opacity-40 hover:opacity-100 relative justify-center",
+        "transition-opacity duration-500"
+      )}
+    >
       {titleVisible && (
         <p className="bottom-0 absolute self-center">{tech.title}</p>
       )}

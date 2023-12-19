@@ -5,15 +5,25 @@ import { twMerge } from "tailwind-merge";
 
 interface ProductionCardImageProps {
   p: Production;
+
+  index: number;
 }
 
-const ProductionCardImage: React.FC<ProductionCardImageProps> = ({ p }) => {
+const ProductionCardImage: React.FC<ProductionCardImageProps> = ({
+  p,
+  index,
+}) => {
   return (
-    <a href={p.link} target="_blank" className="">
+    <a
+      href={p.link}
+      target="_blank"
+      className="hover:-translate-y-3 transition-all flex-1"
+    >
       <div
         className={twMerge(
-          "card bg-base-200 bg-opacity-0 h-full p-3 image-full"
+          "card bg-base-200 bg-opacity-0 h-full p-3 image-full animate-fade-down"
         )}
+        style={{ animationDelay: `${100 * index}ms` }}
       >
         {p.imgSrc && (
           <figure>

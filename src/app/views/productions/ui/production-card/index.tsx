@@ -4,14 +4,30 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 interface ProductionCardProps {
+  index: number;
   p: Production;
   vertical?: boolean;
 }
 
-const ProductionCard: React.FC<ProductionCardProps> = ({ p, vertical }) => {
+const ProductionCard: React.FC<ProductionCardProps> = ({
+  p,
+  vertical,
+  index,
+}) => {
   return (
-    <a href={p.link} target="_blank">
-      <div className="card bg-base-200 bg-opacity-40 card-bordered border-2 h-full">
+    <a
+      href={p.link}
+      target="_blank"
+      className="hover:-translate-y-3 transition-all flex-1"
+    >
+      <div
+        className={twMerge(
+          "card bg-base-300 bg-opacity-40  h-full animate-fade-down",
+          "hover:bg-opacity-100 ",
+          "transition-all duration-300"
+        )}
+        style={{ animationDelay: `${100 * index}ms` }}
+      >
         <div
           className={twMerge(
             "card-body flex-row items-center justify-between",

@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 const Header = dynamic(() => import("@/app/ui/header"), { ssr: false });
+const ScrollProgress = dynamic(() => import("@/app/ui/scroll-progress"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header></Header>
         {children}
+        <ScrollProgress></ScrollProgress>
       </body>
     </html>
   );

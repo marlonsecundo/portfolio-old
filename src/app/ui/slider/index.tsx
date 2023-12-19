@@ -21,10 +21,10 @@ export const Slider: React.FC<CarouselProps> = ({
         {element}
       </div>
       <div
-        className={`absolute z-20 left-0 top-0 bottom-0 w-1/6 md:w-1/5 h-full bg-gradient-to-r ${gradientBaseColor} from-5% to-transparent to-100%`}
+        className={` pointer-events-none absolute z-20 left-0 top-0 bottom-0 w-1/6 md:w-1/5 h-full bg-gradient-to-r ${gradientBaseColor} from-5% to-transparent to-100%`}
       ></div>
       <div
-        className={`absolute z-20 right-0 top-0 bottom-0 w-1/6 md:w-1/5 h-full bg-gradient-to-l ${gradientBaseColor} from-5% to-transparent to-100%`}
+        className={`pointer-events-none absolute z-20 right-0 top-0 bottom-0 w-1/6 md:w-1/5 h-full bg-gradient-to-l ${gradientBaseColor} from-5% to-transparent to-100%`}
       ></div>
     </div>
   );

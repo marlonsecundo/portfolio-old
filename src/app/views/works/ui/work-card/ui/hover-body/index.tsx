@@ -12,10 +12,12 @@ interface HoverBodyProps {
 export const HoverBody: React.FC<HoverBodyProps> = ({ work, visible }) => {
   return (
     <div
+      key={work.title}
       className={twMerge(
         "absolute bg-base-300 h-full w-full z-20 top-0 px-10 flex flex-col justify-between transition-all ease-out duration-300",
         "md:relative md:bg-transparent md:h-auto md:max-w-xs",
-        visible ? "h-full" : "h-0 overflow-hidden"
+        visible ? "h-full" : "h-0 overflow-hidden",
+        "animate-fade"
       )}
     >
       <div className="flex flex-col">
@@ -32,24 +34,26 @@ export const HoverBody: React.FC<HoverBodyProps> = ({ work, visible }) => {
         <p>{work.bulletPoints}</p>
       </div> */}
 
-      <div>
-        <p className="text-secondary mb-2">Stack</p>
+      {work.technologies.length > 0 && (
+        <div>
+          <p className="text-secondary mb-2">Stack</p>
 
-        <div className="grid grid-cols-3 justify-start gap-2">
-          {work.technologies.map((t) => (
-            <div
-              key={t.title}
-              style={{
-                backgroundColor: t.color,
-                color: getContrastColor(t.color),
-              }}
-              className="badge rounded-md p-4 w-full"
-            >
-              {t.title}
-            </div>
-          ))}
+          <div className="grid grid-cols-3 justify-start gap-2">
+            {work.technologies.map((t) => (
+              <div
+                key={t.title}
+                style={{
+                  backgroundColor: t.color,
+                  color: getContrastColor(t.color),
+                }}
+                className="badge rounded-md p-4 w-full"
+              >
+                {t.title}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="mb-5"></div>
     </div>

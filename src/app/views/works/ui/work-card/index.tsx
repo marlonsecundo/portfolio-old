@@ -1,7 +1,7 @@
 "use client";
 
 import { DevType, Work } from "@/app/models/work";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { useHover } from "@uidotdev/usehooks";
 import { PhoneBody } from "./ui/phone-body";
@@ -9,6 +9,7 @@ import { HoverBody } from "./ui/hover-body";
 import { FrontBody } from "./ui/front-body";
 import BackendBody from "./ui/backend-body";
 import { twMerge } from "tailwind-merge";
+import { useAnimateWhenVisible } from "@/app/hooks/useAnimateWhenVisible";
 
 interface WorkCardProps {
   work: Work;
@@ -19,17 +20,27 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
 
   const [visible, setVisible] = useState(false);
 
+  const [ref, animate] = useAnimateWhenVisible();
+
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
     <div
+      ref={ref}
       className={twMerge(
         "flex h-full shadow-md rounded-lg pb-0 relative max-w-sm",
         "bg-gradient-to-br from-base-100 from-20% to-base-300",
         "md:max-w-none",
-        "lg:max-h-[35rem] self-end"
+        "lg:max-h-[35rem] self-end",
+        animate && "animate-fade-left animate-delay-300"
       )}
       onClick={() => setVisible((prev) => !prev)}
     >
-      <section className="w-full h-full flex flex-col pt-10 relative max-w-sm rounded-lg rounded-b-none">
+      <section
+        key={work.title}
+        ref={sectionRef}
+        className="w-full h-full flex flex-col pt-10 relative max-w-sm rounded-lg rounded-b-none  animate-fade"
+      >
         <h5 className="text-lg absolute top-0 pt-10 self-center mb-5 z-30">
           {title}
         </h5>

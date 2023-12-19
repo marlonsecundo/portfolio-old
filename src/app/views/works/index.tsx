@@ -11,6 +11,7 @@ import TitleDivider from "@/app/ui/divider";
 import Menu from "./ui/menu";
 import "@/app/styles/hide-scrollbar.css";
 import { NegativePadding } from "@/app/ui/layout/negative-padding";
+import ViewDescription from "@/app/ui/layout/view-description";
 
 const Works: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(works[0].title);
@@ -27,11 +28,11 @@ const Works: React.FC = () => {
         <ViewTitle text=".works"></ViewTitle>
       </div>
 
-      <p className="mt-1  text-base max-w-sm text-center self-center ">
+      <ViewDescription className="">
         During my formation in I.T at IMD I worked on university projects and
         development stages in partnership with companies. Below I show some
         products that I participated in developing/creating.
-      </p>
+      </ViewDescription>
 
       <div className="mt-5"></div>
 

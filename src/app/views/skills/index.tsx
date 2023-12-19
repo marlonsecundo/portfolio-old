@@ -7,6 +7,7 @@ import { TechSlider } from "./ui/tech-slider";
 import TitleDivider from "@/app/ui/divider";
 
 import "@/app/styles/hide-scrollbar.css";
+import ViewDescription from "@/app/ui/layout/view-description";
 
 const Skills: React.FC = () => {
   return (
@@ -17,12 +18,12 @@ const Skills: React.FC = () => {
         <ViewTitle text=".skills"></ViewTitle>
       </div>
 
-      <p className="mt-1 text-base max-w-lg self-center text-center mb-5">
+      <ViewDescription>
         Over the past 8 years of learning many languages and coding in dev
         teams, in the last year I have been moving towards the goal of becoming
         a senior developer, always learning new stuff and challenging myself on
         different kinds of projects.
-      </p>
+      </ViewDescription>
 
       <TitleDivider></TitleDivider>
 

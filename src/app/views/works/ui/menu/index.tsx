@@ -8,6 +8,7 @@ import { twMerge } from "tailwind-merge";
 import Carousel from "@/app/ui/carousel";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { useAnimateWhenVisible } from "@/app/hooks/useAnimateWhenVisible";
 
 interface MenuProps {
   index: string;
@@ -20,12 +21,19 @@ const Menu: React.FC<MenuProps> = ({ index, onSelectedItem }) => {
   const backendWorks = works.filter((w) => w.devType === DevType.BACKEND);
 
   const divRef = useRef<HTMLUListElement>(null);
-  const { width } = useWindowSize();
+
+  const [ref, animate] = useAnimateWhenVisible();
 
   const scrollLength = divRef.current ? divRef.current.scrollWidth / 3 : 150;
 
   return (
-    <div className="flex relative self-center my-5">
+    <div
+      ref={ref}
+      className={twMerge(
+        "flex relative self-center my-5 ",
+        animate && "animate-fade-right animate-delay-300"
+      )}
+    >
       <div
         className={twMerge(
           "absolute w-20 h-1 bg-secondary top-0 left-0 -translate-x-5 -translate-y-0 rounded-md",

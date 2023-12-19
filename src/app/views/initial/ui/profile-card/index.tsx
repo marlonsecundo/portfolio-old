@@ -9,7 +9,7 @@ const ProfileCard: React.FC = () => {
     <div
       className={twMerge(
         "flex flex-col items-center bg-base-200 p-5 rounded-2xl shadow",
-        "lg:items-start lg:p-10 lg:col-span-1 w-fit lg:w-full max-w-xl"
+        "lg:items-start lg:p-10 lg:col-span-1 w-fit lg:w-full max-w-xl lg:animate-fadeLeft"
       )}
     >
       <Image
