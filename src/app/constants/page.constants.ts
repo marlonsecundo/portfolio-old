@@ -1,3 +1,5 @@
+const debug = process.env.NODE_ENV !== "production";
+
 export const PAGE_VIEWS_COUNT = 5;
 
 export enum ViewsIDs {
@@ -7,3 +9,5 @@ export enum ViewsIDs {
   apps = "apps",
   about = "about",
 }
+
+export const BASE_URL = debug ? "" : "portfolio";

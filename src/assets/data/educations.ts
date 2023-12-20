@@ -1,5 +1,4 @@
 import ifrnLogo from "@/assets/images/education/ifrn.png";
-import ufrnLogo from "@/assets/images/education/ufrn.png";
 import imdLogo from "@/assets/images/education/imd.png";
 import rocketseatLogo from "@/assets/images/education/rocketseat.png";
 

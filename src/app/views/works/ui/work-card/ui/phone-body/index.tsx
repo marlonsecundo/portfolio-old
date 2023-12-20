@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { BASE_URL } from "@/app/constants/page.constants";
 
 interface PhoneBodyProps {
   srcImg: string;
@@ -14,7 +15,11 @@ export const PhoneBody: React.FC<PhoneBodyProps> = ({ srcImg, title }) => {
         <div className="display border-10">
           <Image
             className="w-full"
-            src={{ src: "/imgs/works/" + srcImg, width: 300, height: 100 }}
+            src={{
+              src: BASE_URL + "/imgs/works/" + srcImg,
+              width: 300,
+              height: 100,
+            }}
             alt={title}
           ></Image>
         </div>

@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/app/constants/page.constants";
 import { Extra } from "@/app/models/extra";
 import Image from "next/image";
 import React from "react";
@@ -15,7 +16,7 @@ const ExtraCard: React.FC<ExtraCardProps> = ({ extra }) => {
             <Image
               className="h-7 object-contain"
               src={{
-                src: "/imgs/extras/" + extra.imgSrc,
+                src: BASE_URL + "/imgs/extras/" + extra.imgSrc,
                 width: 100,
                 height: 100,
               }}
