@@ -49,4 +49,6 @@ const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
 
 ViewWrapper.TopSpace = () => <div className="mt-10 md:mt-20"></div>;
 
+ViewWrapper.TopSpace.displayName = "ViewWrapper.TopSpace";
+
 export default ViewWrapper;
