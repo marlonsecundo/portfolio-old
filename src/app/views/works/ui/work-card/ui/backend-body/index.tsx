@@ -8,7 +8,7 @@ interface BackendBodyProps {
 
 const BackendBody: React.FC<BackendBodyProps> = ({ work }) => {
   return (
-    <div className="mockup-code -mx-5">
+    <div className="mockup-code -mx-5 hover:scale-110 transition-all">
       <div className="w-full justify-center flex">
         <Image
           className="w-3/4 self-center mt-2"

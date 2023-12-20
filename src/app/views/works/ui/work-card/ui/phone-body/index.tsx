@@ -8,7 +8,7 @@ interface PhoneBodyProps {
 
 export const PhoneBody: React.FC<PhoneBodyProps> = ({ srcImg, title }) => {
   return (
-    <div className="h-72 overflow-hidden max-w-xxs">
+    <div className="h-72 overflow-hidden max-w-xxs hover:scale-110 transition-all">
       <div className="mockup-phone border p-1.5">
         <div className="camera -translate-y-2 scale-[70%]"></div>
         <div className="display border-10">

@@ -36,6 +36,8 @@ const Header: React.FC = () => {
     setIsOpen(true);
   }, [y]);
 
+  console.log;
+
   return (
     <header>
       <nav
@@ -44,7 +46,7 @@ const Header: React.FC = () => {
       >
         <ul
           className={twMerge(
-            "menu menu-horizontal rounded-b-xl flex flex-wrap justify-around bg-base-300 -translate-y-28",
+            "menu menu-horizontal rounded-b-xl flex flex-wrap justify-around bg-base-300 -translate-y-28 z-10",
             "xs:rounded-box xs:m-3 sm:m-5",
             "hover:-translate-y-0",
             isOpen || isHovering || y === 0 ? "-translate-y-0" : "",

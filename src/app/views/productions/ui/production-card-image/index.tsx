@@ -2,16 +2,20 @@ import { Production } from "@/app/models/production";
 import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import { useAnimateWhenVisible } from "@/app/hooks/useAnimateWhenVisible";
 
 interface ProductionCardImageProps {
   p: Production;
 
   index: number;
+
+  visible: boolean;
 }
 
 const ProductionCardImage: React.FC<ProductionCardImageProps> = ({
   p,
   index,
+  visible,
 }) => {
   return (
     <a
@@ -21,7 +25,8 @@ const ProductionCardImage: React.FC<ProductionCardImageProps> = ({
     >
       <div
         className={twMerge(
-          "card bg-base-200 bg-opacity-0 h-full p-3 image-full animate-fade-down"
+          "card bg-base-200 bg-opacity-0 h-full p-3 image-full ",
+          visible && "animate-fade-down"
         )}
         style={{ animationDelay: `${100 * index}ms` }}
       >

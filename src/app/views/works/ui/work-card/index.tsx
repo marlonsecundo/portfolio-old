@@ -41,7 +41,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         ref={sectionRef}
         className="w-full h-full flex flex-col pt-10 relative max-w-sm rounded-lg rounded-b-none  animate-fade"
       >
-        <h5 className="text-lg absolute top-0 pt-10 self-center mb-5 z-30">
+        <h5 className="text-lg absolute top-0 pt-10 self-center mb-5 z-30 text-primary">
           {title}
         </h5>
 
@@ -62,7 +62,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             <BackendBody work={work}></BackendBody>
           )}
         </div>
-        <div className="absolute bottom-0 h-2/3 bg-gradient-to-b from-transparent from-20% to-base-200 to-100% w-full"></div>
+        <div className="absolute pointer-events-none bottom-0 h-2/3 bg-gradient-to-b from-transparent from-20% to-base-200 to-100% w-full"></div>
       </section>
       <HoverBody work={work} visible={visible}></HoverBody>
     </div>

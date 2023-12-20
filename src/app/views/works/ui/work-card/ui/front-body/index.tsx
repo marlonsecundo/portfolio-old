@@ -8,7 +8,7 @@ interface FrontBodyProps {
 
 export const FrontBody: React.FC<FrontBodyProps> = ({ work }) => {
   return (
-    <div className="mockup-browser border bg-base-300 pb-20 -mx-5">
+    <div className="mockup-browser border bg-base-300 pb-20 -mx-5 hover:scale-105 transition-all">
       <div className="mockup-browser-toolbar"></div>
 
       <div className="w-full flex justify-center">

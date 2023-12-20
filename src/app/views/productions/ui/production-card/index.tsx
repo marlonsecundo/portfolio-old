@@ -7,12 +7,14 @@ interface ProductionCardProps {
   index: number;
   p: Production;
   vertical?: boolean;
+  visible: boolean;
 }
 
 const ProductionCard: React.FC<ProductionCardProps> = ({
   p,
   vertical,
   index,
+  visible,
 }) => {
   return (
     <a
@@ -22,9 +24,10 @@ const ProductionCard: React.FC<ProductionCardProps> = ({
     >
       <div
         className={twMerge(
-          "card bg-base-300 bg-opacity-40  h-full animate-fade-down",
+          "card bg-base-300 bg-opacity-40  h-full ",
           "hover:bg-opacity-100 ",
-          "transition-all duration-300"
+          "transition-all duration-300",
+          visible && "animate-fade-down"
         )}
         style={{ animationDelay: `${100 * index}ms` }}
       >

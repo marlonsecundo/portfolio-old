@@ -1,7 +1,6 @@
 "use client";
 
 import { paddingClass } from "@/app/styles/metrics";
-import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 import React, { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
