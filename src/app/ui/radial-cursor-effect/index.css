@@ -1,0 +1,9 @@
+.radial-gradient {
+  background: radial-gradient(
+    circle,
+    oklch(var(--b1)) 20%,
+    rgba(0, 0, 0, 0) 60%
+  );
+
+  filter: brightness(110%);
+}
