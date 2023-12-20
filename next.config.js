@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig
+const debug = process.env.NODE_ENV !== "production";
+
+const nextConfig = {
+  assetPrefix: debug ? "" : "/portfolio/",
+};
+
+module.exports = nextConfig;

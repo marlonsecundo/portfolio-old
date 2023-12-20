@@ -20,3 +20,5 @@ export const NegativePadding = React.forwardRef<
     {props.children}
   </div>
 ));
+
+NegativePadding.displayName = "NegativePadding";
