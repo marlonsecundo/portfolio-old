@@ -10,4 +10,4 @@ export enum ViewsIDs {
   about = "about",
 }
 
-export const BASE_URL = debug ? "" : "portfolio";
+export const BASE_URL = debug ? "" : "/portfolio";
