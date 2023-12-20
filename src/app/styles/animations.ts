@@ -64,7 +64,6 @@ export const keyframes = {
       transform: "translateX(0)",
     },
   },
-
   fadeDown: {
     "0%": {
       opacity: 0,
@@ -75,26 +74,41 @@ export const keyframes = {
       transform: "translateY(0)",
     },
   },
-
   squareToCircle: {
     "0%": {
       "border-radius": "0 0 0 0",
       transform: "rotate(0deg)",
+      "border-color": "rgb(240, 218, 80)",
     },
 
     "100%": {
       "border-radius": "100% 100% 100% 100%",
       transform: "rotate(720deg)",
+      "border-color": "rgb(144, 241, 239)",
     },
   },
   circleToSquare: {
     "0%": {
       "border-radius": "100% 100% 100% 100%",
       transform: "rotate(720deg)",
+      "border-color": "rgb(144, 241, 239)",
     },
     "100%": {
       "border-radius": "0 0 0 0",
       transform: "rotate(0deg)",
+      "border-color": "rgb(240, 218, 80)",
+    },
+  },
+
+  float: {
+    "0%": {
+      transform: "translate(0rem, 0px)",
+    },
+    "50%": {
+      transform: "translate(0rem, -10px)",
+    },
+    "100%": {
+      transform: "translate(0rem, 0px)",
     },
   },
 };
@@ -107,6 +121,7 @@ export const animation = {
   fadeRight: "fadeRight 1s ease-out",
   fadeDown: "fadeDown 0.7s ease-out",
 
-  squareToCircle: "squareToCircle 1s ease-in-out",
-  circleToSquare: "circleToSquare 1s ease-in-out",
+  squareToCircle: "squareToCircle 1s ease-in",
+  circleToSquare: "circleToSquare 1s ease-out",
+  float: "float 5s ease-in-out infinite",
 };

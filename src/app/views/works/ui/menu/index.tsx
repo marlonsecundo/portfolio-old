@@ -30,7 +30,7 @@ const Menu: React.FC<MenuProps> = ({ index, onSelectedItem }) => {
     <div
       ref={ref}
       className={twMerge(
-        "flex relative self-center my-5 ",
+        "flex relative self-center my-5 w-4/6 sm:max-w-xxs lg:w-full lg:max-w-[9rem] ",
         animate && "animate-fade-right animate-delay-300"
       )}
     >
@@ -64,9 +64,9 @@ const Menu: React.FC<MenuProps> = ({ index, onSelectedItem }) => {
 
       <ul
         ref={divRef}
-        className="carousel self-center max-w-[40vw] gap-10 lg:flex-col lg:justify-center xl:gap-5"
+        className="carousel self-center gap-10 lg:flex-col lg:justify-center xl:gap-5"
       >
-        <div className="carousel-item w-full flex-col items-center lg:items-start">
+        <div className="carousel-item w-full flex-col items-center  lg:items-start">
           <h1 className="text-lg font-bold text-secondary mt-5 uppercase">
             Mobile
           </h1>

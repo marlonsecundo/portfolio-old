@@ -24,9 +24,12 @@ export function usePreviousMemo<T>(
   }, []);
 
   useEffect(() => {
-    setPreviousMemo(prevValueRef.current);
-
     const newValue = factory(prevValueRef.current);
+
+    if (newValue !== valueMemo) {
+      setPreviousMemo(valueMemo);
+    }
+
     setValueMemo(newValue);
     prevValueRef.current = newValue;
   }, deps);

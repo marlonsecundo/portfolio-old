@@ -39,6 +39,14 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
+
+          <div className="hidden lg:block flex-1"></div>
+
+          <Image
+            className=" hidden max-w-xxs self-center object-contain shadow  mask mask-squircle lg:block"
+            src={profileImg}
+            alt="Profile Image"
+          ></Image>
         </div>
 
         <NegativePadding className="flex-1 flex flex-col justify-center items-center lg:justify-center relative pb-10">

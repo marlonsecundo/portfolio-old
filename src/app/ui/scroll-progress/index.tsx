@@ -29,18 +29,21 @@ const ScrollProgress: React.FC = () => {
     0
   );
 
-  console.log({ index, prevIndex });
+  const handleOnClick = (index: number) => {
+    document.getElementById("root")?.scrollTo(0, viewsPostions[index]);
+  };
 
   return (
     <aside
       ref={asideRef}
-      className="hidden fixed md:flex flex-col self-center right-0 top-1/2 -translate-y-1/2 m-10 my-0 z-10 gap-5"
+      className="hidden fixed md:flex flex-col self-center right-0 top-1/2 -translate-y-1/2 m-5 xl:m-10 my-0 z-10 gap-5 lg:gap-10 xl:gap-12"
     >
       {Object.keys(ViewsIDs).map((_, i) => (
         <div
+          onClick={() => handleOnClick(i)}
           key={i}
           className={twMerge(
-            "w-5 h-5 bg-base-300 border-2 border-secondary  animate-fill-both",
+            "w-4 h-4 bg-base-300 border-2 border-secondary cursor-pointer animate-fill-both",
             i === index && "animate-squareToCircle",
             i === prevIndex && "animate-circleToSquare"
           )}
