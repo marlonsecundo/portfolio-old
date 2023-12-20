@@ -40,12 +40,12 @@ const ViewBody: React.FC<React.PropsWithChildren<ViewBodyProps>> = ({
 
   return (
     <div
-      onScroll={handleOnScroll}
+      // onScroll={handleOnScroll}
       className={twMerge(
         "flex flex-col w-full h-full overflow-y-scroll hide-scrollbar z-0",
         paddingClass,
-        className,
-        containScroll && "overscroll-contain"
+        className
+        // containScroll && "overscroll-contain"
       )}
     >
       {children}
