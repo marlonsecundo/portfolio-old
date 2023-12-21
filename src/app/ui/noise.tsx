@@ -1,23 +1,43 @@
-import React, { useRef } from "react";
+"use client";
+import React, { useMemo, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-import noiseImg from "@/assets/images/noise6.png";
-import { BASE_URL, debug } from "../constants/page.constants";
+import { debug } from "../constants/page.constants";
+import { useWindowScroll } from "@uidotdev/usehooks";
 
 const Noise: React.FC = () => {
-  const noiseUrl = noiseImg.src;
+  const bgClass = debug
+    ? `bg-[url('/imgs/noise6.png')]`
+    : `bg-[url('/portfolio/imgs/noise6.png')]`;
+
+  const [{ y }] = useWindowScroll();
+
+  const divRef = useRef<HTMLDivElement>(null);
+
+  const visible = useMemo(() => {
+    const scrollY = y ?? 0;
+
+    const scrollTop = divRef?.current?.getBoundingClientRect().y ?? 0;
+    const scrollBottom = divRef.current?.getBoundingClientRect().bottom ?? 0;
+
+    return (
+      scrollY >= scrollTop + scrollY - window.innerHeight &&
+      scrollY <= scrollBottom + scrollY + window.innerHeight
+    );
+  }, [y]);
 
   return (
-    <div className="absolute w-full h-full overflow-clip">
+    <div ref={divRef} className="absolute w-full h-full overflow-clip">
       <div className="w-full h-full relative">
         <div
           style={{
             filter: "brightness(0%)",
           }}
           className={twMerge(
-            "absolute inset-0 bg-[200px] bg-repeat opacity-50 pointer-events-none bg-[url('/portfolio/imgs/noise6.png')]  ",
+            "absolute inset-0 bg-[200px] bg-repeat opacity-50 pointer-events-none ",
             "top-[-300%] left-[-150%] h-[600%] w-[600%]",
-            "lg:animate-grain"
+            visible && "animate-grain",
+            bgClass
           )}
         />
       </div>

@@ -8,7 +8,7 @@ import { NegativePadding } from "@/app/ui/layout/negative-padding";
 
 const About: React.FC = () => {
   return (
-    <ViewWrapper className="">
+    <ViewWrapper className="h-screen">
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
       <div className="flex flex-col flex-1 lg:flex-row">
         <div className="flex flex-col lg:w-1/3 bg-base-200 p-7 ">

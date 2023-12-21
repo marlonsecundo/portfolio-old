@@ -32,7 +32,8 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         "bg-gradient-to-br from-base-100 from-20% to-base-300",
         "md:max-w-none",
         "lg:max-h-[35rem] self-end",
-        animate && "animate-fade-left animate-delay-300"
+        animate && "animate-fade-left animate-delay-300",
+        "self-center"
       )}
       onClick={() => setVisible((prev) => !prev)}
     >

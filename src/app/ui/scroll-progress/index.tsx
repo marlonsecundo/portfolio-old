@@ -21,7 +21,7 @@ const ScrollProgress: React.FC = () => {
   const [index, _, prevIndex] = usePreviousMemo(
     () => {
       for (let i = 0; i < viewsPostions.length; i++) {
-        if (scrollY < viewsPostions[i]) return i - 1;
+        if (scrollY + 10 < viewsPostions[i]) return i - 1;
       }
       return viewsPostions.length - 1;
     },
