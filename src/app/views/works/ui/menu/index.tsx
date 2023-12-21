@@ -2,11 +2,9 @@
 
 import { DevType } from "@/app/models/work";
 import { works } from "@/assets/data/works";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import MenuItem from "../menu-item";
 import { twMerge } from "tailwind-merge";
-import Carousel from "@/app/ui/carousel";
-import { useWindowSize } from "@uidotdev/usehooks";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useAnimateWhenVisible } from "@/app/hooks/useAnimateWhenVisible";
 

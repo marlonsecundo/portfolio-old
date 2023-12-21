@@ -3,7 +3,7 @@ import React, { useMemo, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 import { debug } from "../constants/page.constants";
-import { useWindowScroll } from "@uidotdev/usehooks";
+import { useWindowScroll, useWindowSize } from "@uidotdev/usehooks";
 
 const Noise: React.FC = () => {
   const bgClass = debug
@@ -11,20 +11,22 @@ const Noise: React.FC = () => {
     : `bg-[url('/portfolio/imgs/noise6.png')]`;
 
   const [{ y }] = useWindowScroll();
+  const { height } = useWindowSize();
 
   const divRef = useRef<HTMLDivElement>(null);
 
   const visible = useMemo(() => {
     const scrollY = y ?? 0;
+    const windowHeight = height ?? 0;
 
     const scrollTop = divRef?.current?.getBoundingClientRect().y ?? 0;
     const scrollBottom = divRef.current?.getBoundingClientRect().bottom ?? 0;
 
     return (
-      scrollY >= scrollTop + scrollY - window.innerHeight &&
-      scrollY <= scrollBottom + scrollY + window.innerHeight
+      scrollY >= scrollTop + scrollY - windowHeight &&
+      scrollY <= scrollBottom + scrollY + windowHeight
     );
-  }, [y]);
+  }, [y, height]);
 
   return (
     <div ref={divRef} className="absolute w-full h-full overflow-clip">
