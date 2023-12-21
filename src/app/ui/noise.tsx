@@ -5,7 +5,7 @@ import noiseImg from "@/assets/images/noise6.png";
 import { BASE_URL, debug } from "../constants/page.constants";
 
 const Noise: React.FC = () => {
-  const noiseUrl = BASE_URL + (debug ? "" : "/") + noiseImg.src;
+  const noiseUrl = BASE_URL + (debug ? "" : "") + noiseImg.src;
 
   return (
     <div className="absolute w-full h-full overflow-clip">
