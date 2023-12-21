@@ -34,7 +34,7 @@ const ViewWrapper: React.FC<ViewWrapperProps> & ViewWrapperComps = ({
   return (
     <section
       className={twMerge(
-        "bg-base-100 flex flex-col w-full snap-start bg-opacity-60 relative h-screen max-h-screen fix-z-index overflow-clip",
+        "bg-base-100 flex flex-col w-full lg:snap-start bg-opacity-60 relative lg:h-screen lg:max-h-screen fix-z-index lg:overflow-clip",
         className
       )}
     >

@@ -8,7 +8,7 @@ import { NegativePadding } from "@/app/ui/layout/negative-padding";
 
 const Initial: React.FC = () => {
   return (
-    <ViewWrapper innerClassName="justify-center">
+    <ViewWrapper innerClassName="justify-center h-screen ">
       <NegativePadding className="">
         <div
           id="home"

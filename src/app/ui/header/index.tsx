@@ -36,21 +36,21 @@ const Header: React.FC = () => {
     setIsOpen(true);
   }, [y]);
 
-  console.log;
+  const isVisible = isHovering || y === 0 || isOpen;
 
   return (
     <header>
       <nav
         ref={ref}
-        className="fixed z-30 w-full flex justify-start items-center"
+        className="fixed z-30 w-full flex justify-start items-center "
       >
         <ul
           className={twMerge(
             "menu menu-horizontal rounded-b-xl flex flex-wrap justify-around bg-base-300 -translate-y-28 z-10",
             "xs:rounded-box xs:m-3 sm:m-5",
             "hover:-translate-y-0",
-            isOpen || isHovering || y === 0 ? "-translate-y-0" : "",
-            "transition-all ease-out"
+            isVisible ? "-translate-y-0" : "",
+            "transition-all ease-out  lg:w-auto"
           )}
         >
           <li>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
 
-        {!isOpen && (
+        {!isVisible && (
           <button
             onClick={() => setIsOpen(true)}
             className="btn btn-circle right-2 absolute top-2 md:hidden"

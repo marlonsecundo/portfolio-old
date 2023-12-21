@@ -12,7 +12,7 @@ const RadialCursorEffect: React.FC = () => {
   const mouseY = y - (wY ?? 0);
 
   return (
-    <div className="absolute w-full h-full  ">
+    <div className="hidden lg:block absolute w-full h-full  overflow-clip ">
       <div
         className="absolute w-1/2 h-[50vw] radial-gradient rounded-full overflow-clip"
         style={{

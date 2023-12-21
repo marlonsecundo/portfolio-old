@@ -16,10 +16,10 @@ export default function Home() {
         </div>
         <div
           id="about"
-          className=" h-screen bg-transparent pointer-events-none snap-start"
+          className=" h-screen bg-transparent pointer-events-none lg:snap-start "
         ></div>
       </div>
-      <div className="fixed top-0 z-0 w-full">
+      <div className="fixed top-0 z-0 w-full ">
         <About></About>
       </div>
     </main>

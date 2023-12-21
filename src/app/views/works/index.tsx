@@ -21,7 +21,7 @@ const Works: React.FC = () => {
   }, [selectedIndex]);
 
   return (
-    <ViewWrapper className="shadow-2xl h-screen">
+    <ViewWrapper className="shadow-2xl">
       <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
 
       <div id="works" className="self-center">
@@ -38,13 +38,11 @@ const Works: React.FC = () => {
 
       <TitleDivider></TitleDivider>
 
-      <NegativePadding className="xl:mx-0 h-full">
-        <div className="flex flex-col justify-between  h-full lg:mt-0 lg:justify-center lg:gap-10 xl:justify-center lg:flex-row  xl:gap-32  ">
+      <NegativePadding className="xl:mx-0 lg:h-full ">
+        <div className="flex flex-col justify-between  h-full lg:mt-0 lg:justify-center lg:gap-10 xl:justify-center lg:flex-row  xl:gap-32  overflow-clip ">
           <Menu index={selectedIndex} onSelectedItem={setSelectedIndex}></Menu>
 
-          <NegativePadding className="lg:mx-0 xl:mx-0 2xl:mx-0 flex justify-center ">
-            <WorkCard work={currrentWork}></WorkCard>
-          </NegativePadding>
+          <WorkCard work={currrentWork}></WorkCard>
         </div>
       </NegativePadding>
 
