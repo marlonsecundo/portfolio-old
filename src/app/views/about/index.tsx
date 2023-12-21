@@ -9,7 +9,9 @@ import { NegativePadding } from "@/app/ui/layout/negative-padding";
 const About: React.FC = () => {
   return (
     <ViewWrapper className="h-screen">
-      <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
+      <div className="hidden lg:block">
+        <ViewWrapper.TopSpace></ViewWrapper.TopSpace>
+      </div>
       <div className="flex flex-col flex-1 lg:flex-row">
         <div className="flex flex-col lg:w-1/3 bg-base-200 p-7 ">
           <h3 className="text-primary text-sm">~/about</h3>
@@ -85,7 +87,7 @@ const About: React.FC = () => {
             Resume
           </a>
 
-          <div className="flex self-center mt-2 lg:text-lg lg:absolute lg:bottom-10">
+          <div className="hidden lg:flex self-center mt-2 lg:text-lg lg:absolute lg:bottom-10">
             <p>{new Date(Date.now()).getFullYear()} /</p>
             <a className="link ml-1 text-secondary">Natal - RN</a>
           </div>

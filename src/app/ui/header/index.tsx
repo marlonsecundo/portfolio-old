@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             "xs:rounded-box xs:m-3 sm:m-5",
             "hover:-translate-y-0",
             isVisible ? "-translate-y-0" : "",
-            "transition-all ease-out  lg:w-auto"
+            "transition-all ease-out w-full lg:w-auto"
           )}
         >
           <li>
