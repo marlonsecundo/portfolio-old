@@ -1,0 +1,53 @@
+{
+  "header": {
+    "skills": "Habilidades",
+    "works": "Trabalhos",
+    "apps": "Aplicativos",
+    "about": "Sobre"
+  },
+  "initial": {
+    "developer": "Desenvolvedor",
+
+    "profileCard": {
+      "text1": "Oi! Eu sou Marlon Secundo,",
+      "text2": "Sou Bacharel em TI.",
+      "text3": "e um pouco mais."
+    },
+    "resumeButton": {
+      "subtitle": "Com pressa?",
+      "title": "Baixe o Currículo"
+    }
+  },
+  "skills": {
+    "title": ".habilidades",
+    "subtitle": "Ao longo dos últimos 8 anos, aprendi várias linguagens e codifiquei em equipes de desenvolvimento. No último ano, tenho trabalhado para me tornar um desenvolvedor sênior, sempre aprendendo coisas novas e me desafiando em diferentes tipos de projetos.",
+    "experience": "Experiência com",
+    "education": "Educação"
+  },
+  "works": {
+    "title": ".trabalhos",
+    "subtitle": "Durante minha formação em TI no IMD, participei de projetos universitários e fases de desenvolvimento em parceria com empresas. Abaixo, apresento alguns produtos nos quais participei do desenvolvimento/criação."
+  },
+  "apps": {
+    "title": ".aplicativos",
+    "subtitle": "Uma compilação de projetos de clientes e pessoais, de sites,",
+    "subtitle2": "jogos e aplicativos móveis que criei."
+  },
+  "about": {
+    "title": ".sobre",
+    "subtitle1": "Prazer em",
+    "subtitle2": "conhecê-lo!",
+    "languages": "Idiomas",
+    "backend": "backend",
+    "frontend": "frontend",
+    "mobile": "móvel",
+    "libraries": "bibliotecas",
+
+    "links": {
+      "textMe": "Me envie uma mensagem no LinkedIn"
+    },
+    "mailMe": "Envie um email para",
+    "projects": "Veja meus projetos no",
+    "Resume": "Currículo"
+  }
+}

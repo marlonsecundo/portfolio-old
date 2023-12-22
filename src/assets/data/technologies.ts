@@ -137,4 +137,10 @@ export const technologies: Technology[] = [
     srcImg: "ejs-logo.png",
     color: "#ffd137",
   },
+  {
+    title: "NextJS",
+    description: "",
+    srcImg: "nextjs.png",
+    color: "#000000",
+  },
 ];

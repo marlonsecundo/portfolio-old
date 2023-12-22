@@ -1,0 +1,53 @@
+{
+  "header": {
+    "skills": "Skills",
+    "works": "Works",
+    "apps": "Apps",
+    "about": "About"
+  },
+  "initial": {
+    "developer": "Developer",
+
+    "profileCard": {
+      "text1": "Hi! I am Marlon Secundo,",
+      "text2": "I am a Dev Bachelor in I.T.",
+      "text3": "and a little more."
+    },
+    "resumeButton": {
+      "subtitle": "in a rush?",
+      "title": "Download Resume"
+    }
+  },
+  "skills": {
+    "title": ".skills",
+    "subtitle": "Over the past 8 years of learning many languages and coding in dev teams, in the last year I have been moving towards the goal of becoming a senior developer, always learning new stuff and challenging myself on different kinds of projects.",
+    "experience": "Experience with",
+    "education": "Education"
+  },
+  "works": {
+    "title": ".works",
+    "subtitle": "During my formation in I.T at IMD I worked on university projects and development stages in partnership with companies. Below I show some products that I participated in developing/creating."
+  },
+  "apps": {
+    "title": ".apps",
+    "subtitle": "A compilation of clients and personal projects, of sites, games",
+    "subtitle2": "and mobiles apps that I created."
+  },
+  "about": {
+    "title": ".about",
+    "subtitle1": "Nice to",
+    "subtitle2": "meet you!",
+    "languages": "Languages",
+    "backend": "backend",
+    "fronend": "frontend",
+    "mobile": "mobile",
+    "libraries": "libraries",
+
+    "links": {
+      "textMe": "Text me on linkedin"
+    },
+    "mailMe": "Mail me at",
+    "projects": "See my projects on",
+    "Resume": "Resume"
+  }
+}

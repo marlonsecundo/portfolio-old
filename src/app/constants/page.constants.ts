@@ -10,4 +10,6 @@ export enum ViewsIDs {
   about = "about",
 }
 
+export const LOCALES = ["pt", "en"];
+
 export const BASE_URL = debug ? "" : "/portfolio";
