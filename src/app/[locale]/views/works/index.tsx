@@ -13,7 +13,6 @@ import "@/app/styles/hide-scrollbar.css";
 import { NegativePadding } from "@/app/[locale]/ui/layout/negative-padding";
 import ViewDescription from "@/app/[locale]/ui/layout/view-description";
 import { useTranslations } from "next-intl";
-import { getLocale } from "@/app/utils/server/get-locale";
 import { useParams } from "next/navigation";
 import { RouteParams } from "../../route-params";
 

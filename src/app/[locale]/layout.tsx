@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { LOCALES } from "../constants/page.constants";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import Teste from "./ui/teste";
 import { getMessages } from "@/messages";
 import { RouteParams } from "./route-params";
 
@@ -21,10 +20,6 @@ const ScrollProgress = dynamic(
 
 const inter = Inter({ subsets: ["latin"] });
 
-export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
-}
-
 export const metadata: Metadata = {
   title: "Marlon Secundo",
   description: "Marlon Secundo Dev Site",
@@ -35,10 +30,16 @@ interface RootLayoutProps {
   params: RouteParams;
 }
 
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
+  unstable_setRequestLocale(params.locale);
+
   const messages = await getMessages(params.locale);
 
   return (

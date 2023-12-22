@@ -1,11 +1,19 @@
-import { headers } from "next/headers";
+import { LOCALES } from "../constants/page.constants";
+import { RouteParams } from "./route-params";
 import About from "./views/about";
 import Initial from "./views/initial";
 import Productions from "./views/productions";
 import Skills from "./views/skills";
 import Works from "./views/works";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
+
+export default function Home({ params }: { params: RouteParams }) {
+  unstable_setRequestLocale(params.locale);
+
   return (
     <main className="flex flex-col w-full m-0 p-0">
       <div className="z-10 bg-transparent pointer-events-none">
