@@ -1,7 +1,9 @@
 import React from "react";
 import DeveloperText from "../developer-text";
 import Image from "next/image";
-import profileImg from "@/assets/images/profile.jpg";
+
+import a from "@/../public/imgs/profile.jpg";
+
 import { twMerge } from "tailwind-merge";
 
 const ProfileCard: React.FC = () => {
@@ -15,7 +17,7 @@ const ProfileCard: React.FC = () => {
       <Image
         className="max-w-[10rem] md:max-w-[14rem] object-contain mask mask-circle animate-float"
         alt="Marlon Secundo Profile Picture"
-        src={profileImg}
+        src={{ src: "/imgs/profile.jpg", width: 300, height: 300 }}
       ></Image>
       <div className="mt-2 lg:self-start">
         <DeveloperText></DeveloperText>
