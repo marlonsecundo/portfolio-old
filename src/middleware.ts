@@ -1,19 +1,14 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ["pt", "en"],
-
-  // Used when no locale matches
-  defaultLocale: "pt",
-});
-
+// See "Matching Paths" below to learn more
 export const config = {
-  // Match only internationalized pathnames
-  matcher: [
-    "/",
-    "/(pt|en)/:path*",
-    "/portfolio",
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ],
+  matcher: ["/", "/portolfio"],
 };
+
+export function middleware(request: NextRequest) {
+  return createMiddleware({
+    locales: ["pt", "en"],
+    defaultLocale: "en",
+  })(request);
+}
