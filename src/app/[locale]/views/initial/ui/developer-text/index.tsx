@@ -5,8 +5,8 @@ import { twMerge } from "tailwind-merge";
 import { useTranslations } from "next-intl";
 
 const DeveloperText: React.FC = () => {
-  const t = useTranslations("initial");
-  const textBase = t("developer");
+  // const t = useTranslations("initial");
+  const textBase = "developer";
   const [text, setText] = useState("");
 
   useEffect(() => {

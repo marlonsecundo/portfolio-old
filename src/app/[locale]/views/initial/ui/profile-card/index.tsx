@@ -17,8 +17,11 @@ const ProfileCard: React.FC = () => {
       <Image
         className="max-w-[10rem] md:max-w-[14rem] object-contain mask mask-circle animate-float"
         alt="Marlon Secundo Profile Picture"
-        src={{ src: "/imgs/profile.jpg", width: 300, height: 300 }}
+        src={a.src}
+        width={300}
+        height={300}
       ></Image>
+
       <div className="mt-2 lg:self-start">
         <DeveloperText></DeveloperText>
       </div>

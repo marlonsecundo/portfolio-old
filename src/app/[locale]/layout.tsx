@@ -38,7 +38,7 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  unstable_setRequestLocale(params.locale);
+  // unstable_setRequestLocale(params.locale);
 
   const messages = await getMessages(params.locale);
 
@@ -49,11 +49,11 @@ export default async function RootLayout({
       className="lg:snap-y lg:snap-mandatory scroll-smooth"
     >
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          <Header></Header>
-          {children}
-          <ScrollProgress></ScrollProgress>
-        </NextIntlClientProvider>
+        {/* <NextIntlClientProvider messages={messages}> */}
+        {/* <Header></Header> */}
+        {children}
+        {/* <ScrollProgress></ScrollProgress> */}
+        {/* </NextIntlClientProvider> */}
       </body>
     </html>
   );

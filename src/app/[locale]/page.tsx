@@ -12,25 +12,23 @@ export function generateStaticParams() {
 }
 
 export default function Home({ params }: { params: RouteParams }) {
-  unstable_setRequestLocale(params.locale);
+  // unstable_setRequestLocale(params.locale);
 
   return (
     <main className="flex flex-col w-full m-0 p-0">
       <div className="z-10 bg-transparent pointer-events-none">
         <div className="pointer-events-auto bg-base-100">
           <Initial></Initial>
-          <Skills></Skills>
+          {/* <Skills></Skills>
           <Works></Works>
-          <Productions></Productions>
+          <Productions></Productions> */}
         </div>
         <div
           id="about"
           className="h-screen bg-transparent pointer-events-none lg:snap-start "
         ></div>
       </div>
-      <div className="fixed top-0 z-0 w-full ">
-        <About></About>
-      </div>
+      <div className="fixed top-0 z-0 w-full ">{/* <About></About> */}</div>
     </main>
   );
 }
