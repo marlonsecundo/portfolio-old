@@ -6,6 +6,10 @@ const withNextIntl = require("next-intl/plugin")();
 const nextConfig = withNextIntl({
   assetPrefix: debug ? "" : "/portfolio/",
   output: debug ? "standalone" : "export",
+  images: {
+    loader: "akamai",
+    path: debug ? "" : "/portfolio/",
+  },
 });
 
 module.exports = nextConfig;
