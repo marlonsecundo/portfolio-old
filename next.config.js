@@ -8,7 +8,7 @@ const nextConfig = withNextIntl({
   output: debug ? "standalone" : "export",
   images: {
     loader: "akamai",
-    path: debug ? "" : "/",
+    path: debug ? "" : "../",
   },
 });
 
