@@ -14,7 +14,7 @@ const BackendBody: React.FC<BackendBodyProps> = ({ work }) => {
         <Image
           className="w-3/4 self-center mt-2"
           src={{
-            src: BASE_URL + "/imgs/works/" + work.srcImg,
+            src: BASE_URL + "imgs/works/" + work.srcImg,
             width: 300,
             height: 300,
           }}

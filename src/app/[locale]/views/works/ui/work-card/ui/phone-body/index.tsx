@@ -16,7 +16,7 @@ export const PhoneBody: React.FC<PhoneBodyProps> = ({ srcImg, title }) => {
           <Image
             className="w-full"
             src={{
-              src: BASE_URL + "/imgs/works/" + srcImg,
+              src: BASE_URL + "imgs/works/" + srcImg,
               width: 300,
               height: 100,
             }}

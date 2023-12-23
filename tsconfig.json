@@ -27,6 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "middleware.ts",
     "src/app/[locale]/[locale]/views/skills/ui/tech-slider/index.js"
   ],
   "exclude": ["node_modules"]

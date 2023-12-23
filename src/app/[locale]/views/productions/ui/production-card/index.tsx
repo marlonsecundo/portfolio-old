@@ -47,7 +47,7 @@ const ProductionCard: React.FC<ProductionCardProps> = ({
             <Image
               className="mask mask-squircle object-cover w-20 h-20"
               src={{
-                src: BASE_URL + "/imgs/productions/" + p.imgSrc,
+                src: BASE_URL + "imgs/productions/" + p.imgSrc,
                 width: 300,
                 height: 300,
               }}

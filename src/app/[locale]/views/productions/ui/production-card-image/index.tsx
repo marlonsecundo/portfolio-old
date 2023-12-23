@@ -36,7 +36,7 @@ const ProductionCardImage: React.FC<ProductionCardImageProps> = ({
             <Image
               className="object-cover w-full"
               src={{
-                src: BASE_URL + "/imgs/productions/" + p.imgSrc,
+                src: BASE_URL + "imgs/productions/" + p.imgSrc,
                 width: 700,
                 height: 700,
               }}

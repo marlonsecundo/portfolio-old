@@ -23,7 +23,7 @@ const TechCard: React.FC<TechCardProps> = ({ tech, titleVisible = true }) => {
           "absolute object-contain" + (titleVisible ? " max-h-[55%] " : "")
         }
         src={{
-          src: BASE_URL + "/imgs/techs/" + tech.srcImg,
+          src: BASE_URL + "imgs/techs/" + tech.srcImg,
           width: 100,
           height: 100,
         }}
