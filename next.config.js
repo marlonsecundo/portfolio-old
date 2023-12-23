@@ -4,8 +4,8 @@ const withNextIntl = require("next-intl/plugin")();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withNextIntl({
-  basePath: "/portfolio",
-  assetPrefix: debug ? "" : "/portfolio/",
+  // basePath: "/portfolio",
+  assetPrefix: debug ? "/portfolio/" : "/portfolio/",
   output: debug ? "standalone" : "export",
   // images: {
   //   loader: "akamai",
