@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/", "/portolfio"],
+  matcher: ["/", "/portfolio"],
 };
 
 export function middleware(request: NextRequest) {
