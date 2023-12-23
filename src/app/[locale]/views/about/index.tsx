@@ -5,15 +5,14 @@ import React from "react";
 
 import profileImg from "@/assets/images/profile.jpg";
 import { NegativePadding } from "@/app/[locale]/ui/layout/negative-padding";
-import { useTranslations } from "next-intl";
-// import { useTranslations, useLocale } from "next-intl";
-// import { LocaleValue } from "../../route-params";
+import { useTranslations, useLocale } from "next-intl";
+import { LocaleValue } from "../../route-params";
 
 interface Props {}
 
 const About: React.FC = () => {
   const t = useTranslations("about");
-  // const locale = useLocale() as LocaleValue;
+  const locale = useLocale() as LocaleValue;
 
   return (
     <ViewWrapper className="h-screen">
@@ -22,13 +21,13 @@ const About: React.FC = () => {
       </div>
       <div className="flex flex-col flex-1 lg:flex-row">
         <div className="flex flex-col lg:w-1/3 bg-base-200 p-7 ">
-          {/* <h3 className="text-primary text-sm">{t("title")}</h3> */}
+          <h3 className="text-primary text-sm">{t("title")}</h3>
 
           <div className="flex justify-between w-full  overflow-hidden ">
             <h1 className="whitespace-nowrap text-secondary text-2xl py-5 ">
-              {/* {t("subtitle1")} */}
+              {t("subtitle1")}
               <br />
-              {/* {t("subtitle2")} */}
+              {t("subtitle2")}
             </h1>
 
             <div className="relative flex-shrink-0 h-full w-1/4 lg:hidden">
@@ -41,14 +40,14 @@ const About: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-5 pr-5">
-            {/* {abouts[locale].map((a) => (
+            {abouts[locale].map((a) => (
               <div key={a.title}>
                 <h4 className="underline underline-offset-2 text-sm">
                   {a.title}
                 </h4>
                 <p className="text-xs mt-1">{a.desc}</p>
               </div>
-            ))} */}
+            ))}
           </div>
 
           <div className="hidden lg:block flex-1"></div>
@@ -66,7 +65,7 @@ const About: React.FC = () => {
             target="_blank"
             className="btn btn-ghost lg:text-xl "
           >
-            {/* {t("links.textMe")} */}
+            {t("links.textMe")}
           </a>
 
           <a
@@ -74,7 +73,7 @@ const About: React.FC = () => {
             target="_blank"
             className="btn btn-ghost h-fit p-5 lg:text-xl"
           >
-            {/* {t("mailMe")}{" "} */}
+            {t("mailMe")}{" "}
             <span className="text-sm lg:text-base">
               marlon_secundo@outlook.com
             </span>
@@ -85,7 +84,7 @@ const About: React.FC = () => {
             target="_blank"
             className="btn btn-ghost  h-fit p-5 lg:text-xl"
           >
-            {/* {t("projects")} Github */}
+            {t("projects")} Github
           </a>
 
           <a
@@ -93,7 +92,7 @@ const About: React.FC = () => {
             target="_blank"
             className="btn btn-ghost h-fit p-5 lg:text-xl"
           >
-            {/* {t("Resume")} */}
+            {t("Resume")}
           </a>
 
           <div className="hidden lg:flex self-center mt-2 lg:text-lg lg:absolute lg:bottom-10">
